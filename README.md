@@ -102,8 +102,8 @@ on typical modern systems, because it is instead optimized to be:
 3.  Optimizer-friendly - code optimized for optimization eventually
     performs as well or better than code optimized for performance.
 
-4.  Safe, with good and bounded worst-case runspace and runtime even in
-    the face of pathological `errno` values (such as `-1` or `INT_MAX`).
+4.  Safe - well-defined and well-bounded worst-case runspace and runtime
+    even with pathological `errno` values (such as `-1` or `INT_MAX`).
 
 However, if you need better execution speed or code size, and
 you understand the downsides relative to the above four points,
