@@ -95,8 +95,8 @@ on typical modern systems, because it is instead optimized to be:
 1.  Simple - trivial for a human to mentally verify as robustly correct,
     with minimal room for edge cases to slip past human thinking.
 
-2.  Portable - strictly ANSI C, no assumptions beyond what that standard
-    guarantees, except perhaps to guide optimizations without changing
+2.  Portable - code as portable as possible, no unportable assumptions
+    (except perhaps to guide optimizations without changing
     correctness or introducing pathological worst-case behavior).
 
 3.  Optimizer-friendly - code optimized for optimization eventually
