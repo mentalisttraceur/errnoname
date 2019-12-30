@@ -1,0 +1,9 @@
+    };
+    if(errno_ >= 0 && errno_ < (sizeof(names) / sizeof(*names)))
+    {
+	return names[errno_];
+    }
+    return 0;
+#else
+    switch(errno_)
+    {

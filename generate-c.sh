@@ -14,15 +14,30 @@
 
 skip_1_if_same_as_2()
 {
-    sed "s/#ifdef $1/#if defined($1) \&\& (!defined($2) || $1 != $2)/"
+    sed "s/#   ifdef $1/#   if defined($1) \&\& (!defined($2) || $1 != $2)/"
 }
 
 # errno list comes in on stdin, errnoname.c comes out on stdout
 
+# spooling it all into memory is easiest way to use it twice
+errno_list=`cat`
+
 cat errnoname.c.head
-sed 's/^.*$/#ifdef &\n        case &: return "&";\n#endif/' \
+
+printf '%s\n' "$errno_list" \
+| sed 's/^.*$/#   ifdef &\n        [&] = "&",\n#   endif/' \
 | skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
 | skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
 | skip_1_if_same_as_2 ECANCELLED ECANCELED
+
+cat errnoname.c.middle
+
+printf '%s\n' "$errno_list" \
+| sed 's/^.*$/#   ifdef &\n        case &: return "&";\n#   endif/' \
+| skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
+| skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
+| skip_1_if_same_as_2 EDEADLOCK EDEADLK \
+| skip_1_if_same_as_2 ECANCELLED ECANCELED
+
 cat errnoname.c.tail

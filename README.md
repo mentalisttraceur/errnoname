@@ -87,6 +87,31 @@ Just compile and link `errnoname.c` as normal.
 You can ignore all the other files in here -
 they are just for making new releases.
 
+## Optimization
+
+The *default* implementation in `errnoname.c` is not the most efficient
+on typical modern systems, because it is instead optimized to be:
+
+1.  Simple - trivial for a human to mentally verify as robustly correct,
+    with minimal room for edge cases to slip past human thinking.
+
+2.  Portable - strictly ANSI C, no assumptions beyond what that standard
+    guarantees, except perhaps to guide optimizations without changing
+    correctness or introducing pathological worst-case behavior).
+
+3.  Optimizer-friendly - code optimized for optimization eventually
+    performs as well or better than code optimized for performance.
+
+4.  Safe, with good and bounded worst-case runspace and runtime even in
+    the face of pathological `errno` values (such as `-1` or `INT_MAX`).
+
+However, if you need better execution speed or code size, and
+you understand the downsides relative to the above four points,
+`errnoname.c` provides an option you can enable at compile-time:
+
+*   If `ERRNONAME_SAFE_TO_USE_ARRAY` is defined, `errnoname.c`
+    will trust that it is safe to do the name lookups by using
+    an array of `errno` names indexed by `errno` values.
 
 # Contributing
 
@@ -106,7 +131,8 @@ we have the best coverage of `errno` names possible:
 
 You can also help by sharing your use-cases, what features you want,
 and design suggestions - the `errnoname` function is a good minimal
-foundation, but there might be other things worth adding.
+foundation, but there might be other features or performance
+ptimizations worth doing.
 
 And finally, this can be more than a C library -
 let's expand it to every language that needs it!

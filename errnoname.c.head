@@ -20,5 +20,6 @@
 
 char const * errnoname(int errno_)
 {
-    switch(errno_)
+#ifdef ERRNONAME_SAFE_TO_USE_ARRAY
+    static char const * const names[] =
     {
