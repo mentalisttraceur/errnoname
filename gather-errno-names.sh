@@ -119,7 +119,7 @@ _historical()
     #    **and**
     # 2. they come from old systems that no longer get new releases.
     #
-    # this seems like the cleanest ways to support old systems.
+    # this seems like the cleanest way to support old systems.
 
     printf '%s\n' \
         EAIO \
