@@ -1,6 +1,0 @@
-    }
-    return 0;
-#endif
-}
-
-#endif /* ERRNONAME_C */

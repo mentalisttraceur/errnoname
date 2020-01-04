@@ -22,7 +22,7 @@ skip_1_if_same_as_2()
 # spooling it all into memory is easiest way to use it twice
 errno_list=`cat`
 
-cat errnoname.c.head
+sed '/{{ array_entries }}/,$ d' errnoname.c.template
 
 printf '%s\n' "$errno_list" \
 | sed 's/^.*$/#   ifdef &\n        [&] = "&",\n#   endif/' \
@@ -31,7 +31,8 @@ printf '%s\n' "$errno_list" \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
 | skip_1_if_same_as_2 ECANCELLED ECANCELED
 
-cat errnoname.c.middle
+sed '1,/{{ array_entries }}/ d; /{{ switch_entries }}/,$ d' \
+    errnoname.c.template
 
 printf '%s\n' "$errno_list" \
 | sed 's/^.*$/#   ifdef &\n        case &: return "&";\n#   endif/' \
@@ -40,4 +41,4 @@ printf '%s\n' "$errno_list" \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
 | skip_1_if_same_as_2 ECANCELLED ECANCELED
 
-cat errnoname.c.tail
+sed '1,/{{ switch_entries }}/ d' errnoname.c.template

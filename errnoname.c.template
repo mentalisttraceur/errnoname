@@ -23,3 +23,20 @@ char const * errnoname(int errno_)
 #ifdef ERRNONAME_SAFE_TO_USE_ARRAY
     static char const * const names[] =
     {
+{{ array_entries }}
+    };
+    if(errno_ >= 0 && errno_ < (sizeof(names) / sizeof(*names)))
+    {
+	return names[errno_];
+    }
+    return 0;
+#else
+    switch(errno_)
+    {
+{{ switch_entries }}
+    }
+    return 0;
+#endif
+}
+
+#endif /* ERRNONAME_C */
