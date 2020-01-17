@@ -17,12 +17,23 @@ skip_1_if_same_as_2()
     sed "s/ifdef $1/if defined($1) \&\& (!defined($2) || $1 != $2)/"
 }
 
+only_up_to()
+{
+    sed "/$1/,$ d"
+}
+
+only_after()
+{
+    sed "1,/$1/ d"
+}
+
 # errno list comes in on stdin, errnoname.c comes out on stdout
 
 # spooling it all into memory is easiest way to use it twice
 errno_list=`cat`
 
-sed '/{{ array_entries }}/,$ d' errnoname.c.template
+cat errnoname.c.template \
+| only_up_to '{{ array_entries }}'
 
 printf '%s\n' "$errno_list" \
 | sed 's/^.*$/    #ifdef &\n        [&] = "&",\n    #endif/' \
@@ -31,8 +42,9 @@ printf '%s\n' "$errno_list" \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
 | skip_1_if_same_as_2 ECANCELLED ECANCELED
 
-sed '1,/{{ array_entries }}/ d; /{{ switch_entries }}/,$ d' \
-    errnoname.c.template
+cat errnoname.c.template \
+| only_after '{{ array_entries }}' \
+| only_up_to '{{ switch_entries }}'
 
 printf '%s\n' "$errno_list" \
 | sed 's/^.*$/    #ifdef &\n        case &: return "&";\n    #endif/' \
@@ -41,4 +53,5 @@ printf '%s\n' "$errno_list" \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
 | skip_1_if_same_as_2 ECANCELLED ECANCELED
 
-sed '1,/{{ switch_entries }}/ d' errnoname.c.template
+cat errnoname.c.template \
+| only_after '{{ switch_entries }}'
