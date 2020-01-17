@@ -14,7 +14,7 @@
 
 skip_1_if_same_as_2()
 {
-    sed "s/#   ifdef $1/#   if defined($1) \&\& (!defined($2) || $1 != $2)/"
+    sed "s/ifdef $1/if defined($1) \&\& (!defined($2) || $1 != $2)/"
 }
 
 # errno list comes in on stdin, errnoname.c comes out on stdout
