@@ -3,7 +3,7 @@
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
  * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
@@ -683,7 +683,7 @@ char const * errnoname(int errno_)
     };
     if(errno_ >= 0 && errno_ < (sizeof(names) / sizeof(*names)))
     {
-	return names[errno_];
+        return names[errno_];
     }
     return 0;
 #else
