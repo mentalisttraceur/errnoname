@@ -686,7 +686,7 @@ char const * errnoname(int errno_)
         return names[errno_];
     }
     return 0;
-#else
+#else /* ERRNONAME_SAFE_TO_USE_ARRAY */
     switch(errno_)
     {
 #   ifdef E2BIG
@@ -1348,7 +1348,7 @@ char const * errnoname(int errno_)
 #   endif
     }
     return 0;
-#endif
+#endif /* ERRNONAME_SAFE_TO_USE_ARRAY */
 }
 
 #endif /* ERRNONAME_C */
