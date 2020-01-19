@@ -99,7 +99,7 @@ solaris()
     ` &&
     get "$errno_documentation" \
     | grep '<dt>[0-9]* E' | cut -d\> -f2 | cut -d\< -f1 | cut -d' ' -f2 \
-    | sed 's/EMGSIZE/EMSGSIZE/'  # fix what seems to be a documentation typo
+    | sed 's/EMGSIZE/EMSGSIZE/'  # fix documentation typo
 }
 
 hpux()
