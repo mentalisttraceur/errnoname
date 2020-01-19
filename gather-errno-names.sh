@@ -31,10 +31,10 @@ extract_c()
 
 linux()
 {
-    (
-        github torvalds/linux/master/include/uapi/asm-generic/errno-base.h &&
-        github torvalds/linux/master/include/uapi/asm-generic/errno.h
-    ) | extract_c
+    github torvalds/linux/master/include/uapi/asm-generic/errno-base.h \
+    | extract_c &
+    github torvalds/linux/master/include/uapi/asm-generic/errno.h \
+    | extract_c
 }
 
 darwin()  # MacOS, iOS, etc.
