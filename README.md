@@ -135,7 +135,7 @@ we have the best coverage of `errno` names possible:
 You can also help by sharing your use-cases, what features you want,
 and design suggestions - the `errnoname` function is a good minimal
 foundation, but there might be other features or performance
-ptimizations worth doing.
+otimizations worth doing.
 
 And finally, this can be more than a C library -
 let's expand it to every language that needs it!
