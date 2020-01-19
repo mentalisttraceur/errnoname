@@ -114,7 +114,7 @@ you understand the downsides relative to the above four points,
     an array of `errno` names indexed by `errno` values.
 
     Note that modern compilers can already do this automatically
-    in common cases when optimazations are turned on high enough.
+    in common cases when optimizations are turned on high enough.
 
 # Contributing
 
