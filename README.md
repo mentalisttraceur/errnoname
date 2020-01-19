@@ -113,6 +113,9 @@ you understand the downsides relative to the above four points,
     will trust that it is safe to do the name lookups by using
     an array of `errno` names indexed by `errno` values.
 
+    Note that modern compilers can already do this automatically
+    in common cases when optimazations are turned on high enough.
+
 # Contributing
 
 The best way to help this library is making sure that
