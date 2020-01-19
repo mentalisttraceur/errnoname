@@ -89,8 +89,8 @@ they are not needed to use the library.
 
 ## Optimization
 
-The *default* implementation in `errnoname.c` is not the most efficient
-on typical modern systems, because it is instead optimized to be:
+The *default* implementation in `errnoname.c` might not always produce
+the most efficient code, because it is instead optimized to be:
 
 1.  Simple - trivial for a human to mentally verify as robustly correct,
     with minimal room for edge cases to slip past human thinking.
