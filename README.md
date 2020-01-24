@@ -126,7 +126,7 @@ we have the best coverage of `errno` names possible:
   for `errno` names - maybe you know of a better way
   to get the latest ones for some system.
 
-* Chech if the errno list file is missing any of the
+* Check if the errno list file is missing any of the
   `errno` names that exist on the systems you use.
 
 * Check if all `errno` names that might be equivalent
