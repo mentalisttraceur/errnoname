@@ -25,7 +25,7 @@ errno_list=`cat`
 sed '/{{ array_entries }}/,$ d' errnoname.c.template
 
 printf '%s\n' "$errno_list" \
-| sed 's/^.*$/#   ifdef &\n        [&] = "&",\n#   endif/' \
+| sed 's/^.*$/    #ifdef &\n        [&] = "&",\n    #endif/' \
 | skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
 | skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
@@ -35,7 +35,7 @@ sed '1,/{{ array_entries }}/ d; /{{ switch_entries }}/,$ d' \
     errnoname.c.template
 
 printf '%s\n' "$errno_list" \
-| sed 's/^.*$/#   ifdef &\n        case &: return "&";\n#   endif/' \
+| sed 's/^.*$/    #ifdef &\n        case &: return "&";\n    #endif/' \
 | skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
 | skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
