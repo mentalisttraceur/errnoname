@@ -12,16 +12,6 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-skip_1_if_same_as_2()
-{
-    # Given the arguments 'EWOULDBLOCK' and 'EAGAIN', turns lines like
-    #     #ifdef EWOULDBLOCK
-    # into lines like
-    #     #if defined(EWOULDBLOCK) && (!defined(EAGAIN) || EWOULDBLOCK != EAGAIN)
-
-    sed "s/ifdef $1/if defined($1) \&\& (!defined($2) || $1 != $2)/"
-}
-
 only_up_to()
 {
     # Only print stdin up to the line that matches the first argument
@@ -58,6 +48,16 @@ format_as_switch_entries()
     #     #endif
 
     sed 's/^.*$/    #ifdef &\n        case &: return "&";\n    #endif/'
+}
+
+skip_1_if_same_as_2()
+{
+    # Given the arguments 'EWOULDBLOCK' and 'EAGAIN', turns lines like
+    #     #ifdef EWOULDBLOCK
+    # into lines like
+    #     #if defined(EWOULDBLOCK) && (!defined(EAGAIN) || EWOULDBLOCK != EAGAIN)
+
+    sed "s/ifdef $1/if defined($1) \&\& (!defined($2) || $1 != $2)/"
 }
 
 # errno list comes in on stdin, errnoname.c comes out on stdout
