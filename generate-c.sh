@@ -43,7 +43,7 @@ skip_1_if_same_as_2()
     # Given arguments "EWOULDBLOCK" and "EAGAIN", turns lines like
     #     EWOULDBLOCK
     # into lines like
-    #             #if !defined(EAGAIN) || EAGAIN != EWOULDBLOCK
+    #             #if !defined(EAGAIN) || EWOULDBLOCK != EAGAIN
     #     EWOULDBLOCK
     #             #endif
 
