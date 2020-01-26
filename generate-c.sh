@@ -27,6 +27,16 @@ only_after()
     sed "1,/$1/ d"
 }
 
+format_as_array_entries()
+{
+    sed 's/^.*$/    #ifdef &\n        [&] = "&",\n    #endif/'
+}
+
+format_as_switch_entries()
+{
+    sed 's/^.*$/    #ifdef &\n        case &: return "&";\n    #endif/'
+}
+
 # errno list comes in on stdin, errnoname.c comes out on stdout
 
 # spooling it all into memory is easiest way to use it twice
@@ -36,7 +46,7 @@ cat errnoname.c.template \
 | only_up_to '{{ array_entries }}'
 
 printf '%s\n' "$errno_list" \
-| sed 's/^.*$/    #ifdef &\n        [&] = "&",\n    #endif/' \
+| format_as_array_entries \
 | skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
 | skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
@@ -47,7 +57,7 @@ cat errnoname.c.template \
 | only_up_to '{{ switch_entries }}'
 
 printf '%s\n' "$errno_list" \
-| sed 's/^.*$/    #ifdef &\n        case &: return "&";\n    #endif/' \
+| format_as_switch_entries \
 | skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
 | skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
