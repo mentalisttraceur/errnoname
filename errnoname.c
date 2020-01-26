@@ -107,8 +107,10 @@ char const * errnoname(int errno_)
     #ifdef ECANCELED
         [ECANCELED] = "ECANCELED",
     #endif
-    #if defined(ECANCELLED) && (!defined(ECANCELED) || ECANCELLED != ECANCELED)
+    #ifdef ECANCELLED
+        #if !defined(ECANCELED) || ECANCELLED != ECANCELED
         [ECANCELLED] = "ECANCELLED",
+        #endif
     #endif
     #ifdef ECAPMODE
         [ECAPMODE] = "ECAPMODE",
@@ -152,8 +154,10 @@ char const * errnoname(int errno_)
     #ifdef EDEADLK
         [EDEADLK] = "EDEADLK",
     #endif
-    #if defined(EDEADLOCK) && (!defined(EDEADLK) || EDEADLOCK != EDEADLK)
+    #ifdef EDEADLOCK
+        #if !defined(EDEADLK) || EDEADLOCK != EDEADLK
         [EDEADLOCK] = "EDEADLOCK",
+        #endif
     #endif
     #ifdef EDESTADDREQ
         [EDESTADDREQ] = "EDESTADDREQ",
@@ -500,8 +504,10 @@ char const * errnoname(int errno_)
     #ifdef EOPCOMPLETE
         [EOPCOMPLETE] = "EOPCOMPLETE",
     #endif
-    #if defined(EOPNOTSUPP) && (!defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP)
+    #ifdef EOPNOTSUPP
+        #if !defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP
         [EOPNOTSUPP] = "EOPNOTSUPP",
+        #endif
     #endif
     #ifdef EOVERFLOW
         [EOVERFLOW] = "EOVERFLOW",
@@ -665,8 +671,10 @@ char const * errnoname(int errno_)
     #ifdef EVERSION
         [EVERSION] = "EVERSION",
     #endif
-    #if defined(EWOULDBLOCK) && (!defined(EAGAIN) || EWOULDBLOCK != EAGAIN)
+    #ifdef EWOULDBLOCK
+        #if !defined(EAGAIN) || EWOULDBLOCK != EAGAIN
         [EWOULDBLOCK] = "EWOULDBLOCK",
+        #endif
     #endif
     #ifdef EWRONGFS
         [EWRONGFS] = "EWRONGFS",
@@ -773,8 +781,10 @@ char const * errnoname(int errno_)
     #ifdef ECANCELED
         case ECANCELED: return "ECANCELED";
     #endif
-    #if defined(ECANCELLED) && (!defined(ECANCELED) || ECANCELLED != ECANCELED)
+    #ifdef ECANCELLED
+        #if !defined(ECANCELED) || ECANCELLED != ECANCELED
         case ECANCELLED: return "ECANCELLED";
+        #endif
     #endif
     #ifdef ECAPMODE
         case ECAPMODE: return "ECAPMODE";
@@ -818,8 +828,10 @@ char const * errnoname(int errno_)
     #ifdef EDEADLK
         case EDEADLK: return "EDEADLK";
     #endif
-    #if defined(EDEADLOCK) && (!defined(EDEADLK) || EDEADLOCK != EDEADLK)
+    #ifdef EDEADLOCK
+        #if !defined(EDEADLK) || EDEADLOCK != EDEADLK
         case EDEADLOCK: return "EDEADLOCK";
+        #endif
     #endif
     #ifdef EDESTADDREQ
         case EDESTADDREQ: return "EDESTADDREQ";
@@ -1166,8 +1178,10 @@ char const * errnoname(int errno_)
     #ifdef EOPCOMPLETE
         case EOPCOMPLETE: return "EOPCOMPLETE";
     #endif
-    #if defined(EOPNOTSUPP) && (!defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP)
+    #ifdef EOPNOTSUPP
+        #if !defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP
         case EOPNOTSUPP: return "EOPNOTSUPP";
+        #endif
     #endif
     #ifdef EOVERFLOW
         case EOVERFLOW: return "EOVERFLOW";
@@ -1331,8 +1345,10 @@ char const * errnoname(int errno_)
     #ifdef EVERSION
         case EVERSION: return "EVERSION";
     #endif
-    #if defined(EWOULDBLOCK) && (!defined(EAGAIN) || EWOULDBLOCK != EAGAIN)
+    #ifdef EWOULDBLOCK
+        #if !defined(EAGAIN) || EWOULDBLOCK != EAGAIN
         case EWOULDBLOCK: return "EWOULDBLOCK";
+        #endif
     #endif
     #ifdef EWRONGFS
         case EWRONGFS: return "EWRONGFS";
