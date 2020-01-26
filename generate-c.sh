@@ -14,26 +14,49 @@
 
 skip_1_if_same_as_2()
 {
+    # Given the arguments 'EWOULDBLOCK' and 'EAGAIN', turns lines like
+    #     #ifdef EWOULDBLOCK
+    # into lines like
+    #     #if defined(EWOULDBLOCK) && (!defined(EAGAIN) || EWOULDBLOCK != EAGAIN)
+
     sed "s/ifdef $1/if defined($1) \&\& (!defined($2) || $1 != $2)/"
 }
 
 only_up_to()
 {
+    # Only print stdin up to the line that matches the first argument
+
     sed "/$1/,$ d"
 }
 
 only_after()
 {
+    # Only print stdin after the line that matches the first argument
+
     sed "1,/$1/ d"
 }
 
 format_as_array_entries()
 {
+    # Turns lines like
+    #     EAGAIN
+    # into lines like
+    #     #ifdef EAGAIN
+    #         [EAGAIN] = "EAGAIN",
+    #     #endif
+
     sed 's/^.*$/    #ifdef &\n        [&] = "&",\n    #endif/'
 }
 
 format_as_switch_entries()
 {
+    # Turns lines like
+    #     EAGAIN
+    # into lines like
+    #     #ifdef EAGAIN
+    #         case EAGAIN: return "EAGAIN";
+    #     #endif
+
     sed 's/^.*$/    #ifdef &\n        case &: return "&";\n    #endif/'
 }
 
