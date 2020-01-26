@@ -12,16 +12,18 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-print_only_lines_up_to()
+only_lines_before()
 {
-    # Only prints stdin up to the line that matches the first argument
+    # Only prints the lines before the line
+    # that matches the first argument.
 
     sed "/$1/,$ d"
 }
 
-print_only_lines_after()
+only_lines_after()
 {
-    # Only prints stdin after the line that matches the first argument
+    # Only prints the lines after the line
+    # that matches the first argument.
 
     sed "1,/$1/ d"
 }
@@ -40,7 +42,8 @@ wrap_in_ifdef_blocks()
 
 skip_1_if_same_as_2()
 {
-    # Given arguments "EWOULDBLOCK" and "EAGAIN", turns lines like
+    # Given the arguments "EWOULDBLOCK"
+    # and "EAGAIN", turns lines like
     #     EWOULDBLOCK
     # into lines like
     #             #if !defined(EAGAIN) || EWOULDBLOCK != EAGAIN
@@ -76,7 +79,7 @@ format_as_switch_cases()
 errno_list=`cat`
 
 cat errnoname.c.template \
-| print_only_lines_up_to '{{ array_entries }}'
+| only_lines_before '{{ array_entries }}'
 
 printf '%s\n' "$errno_list" \
 | wrap_in_ifdef_blocks \
@@ -87,8 +90,8 @@ printf '%s\n' "$errno_list" \
 | format_as_array_designated_initializers
 
 cat errnoname.c.template \
-| print_only_lines_after '{{ array_entries }}' \
-| print_only_lines_up_to '{{ switch_entries }}'
+| only_lines_after '{{ array_entries }}' \
+| only_lines_before '{{ switch_entries }}'
 
 printf '%s\n' "$errno_list" \
 | wrap_in_ifdef_blocks \
@@ -99,4 +102,4 @@ printf '%s\n' "$errno_list" \
 | format_as_switch_cases
 
 cat errnoname.c.template \
-| print_only_lines_after '{{ switch_entries }}'
+| only_lines_after '{{ switch_entries }}'
