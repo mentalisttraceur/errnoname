@@ -14,14 +14,14 @@
 
 print_only_lines_up_to()
 {
-    # Only print stdin up to the line that matches the first argument
+    # Only prints stdin up to the line that matches the first argument
 
     sed "/$1/,$ d"
 }
 
 print_only_lines_after()
 {
-    # Only print stdin after the line that matches the first argument
+    # Only prints stdin after the line that matches the first argument
 
     sed "1,/$1/ d"
 }
