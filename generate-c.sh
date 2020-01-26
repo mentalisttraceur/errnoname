@@ -12,14 +12,14 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-only_up_to()
+print_only_lines_up_to()
 {
     # Only print stdin up to the line that matches the first argument
 
     sed "/$1/,$ d"
 }
 
-only_after()
+print_only_lines_after()
 {
     # Only print stdin after the line that matches the first argument
 
@@ -76,7 +76,7 @@ format_as_switch_cases()
 errno_list=`cat`
 
 cat errnoname.c.template \
-| only_up_to '{{ array_entries }}'
+| print_only_lines_up_to '{{ array_entries }}'
 
 printf '%s\n' "$errno_list" \
 | wrap_in_ifdef_blocks \
@@ -87,8 +87,8 @@ printf '%s\n' "$errno_list" \
 | format_as_array_designated_initializers
 
 cat errnoname.c.template \
-| only_after '{{ array_entries }}' \
-| only_up_to '{{ switch_entries }}'
+| print_only_lines_after '{{ array_entries }}' \
+| print_only_lines_up_to '{{ switch_entries }}'
 
 printf '%s\n' "$errno_list" \
 | wrap_in_ifdef_blocks \
@@ -99,4 +99,4 @@ printf '%s\n' "$errno_list" \
 | format_as_switch_cases
 
 cat errnoname.c.template \
-| only_after '{{ switch_entries }}'
+| print_only_lines_after '{{ switch_entries }}'
