@@ -74,6 +74,11 @@ opensolaris()
     github nxmirrors/onnv/master/usr/src/uts/common/sys/errno.h | extract_c
 }
 
+cygwin()
+{
+    github cygwin/cygwin/master/newlib/libc/include/sys/errno.h | extract_c
+}
+
 aix()
 {
     # IBM does not seem to provide any URL to any AIX errno
@@ -154,6 +159,7 @@ _historical()
 
 {
     aix &
+    cygwin &
     darwin &
     dragonflybsd &
     freebsd &

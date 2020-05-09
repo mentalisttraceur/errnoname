@@ -115,6 +115,9 @@ char const * errnoname(int errno_)
     #ifdef ECAPMODE
         [ECAPMODE] = "ECAPMODE",
     #endif
+    #ifdef ECASECLASH
+        [ECASECLASH] = "ECASECLASH",
+    #endif
     #ifdef ECHILD
         [ECHILD] = "ECHILD",
     #endif
@@ -291,6 +294,9 @@ char const * errnoname(int errno_)
     #ifdef EL3RST
         [EL3RST] = "EL3RST",
     #endif
+    #ifdef ELBIN
+        [ELBIN] = "ELBIN",
+    #endif
     #ifdef ELIBACC
         [ELIBACC] = "ELIBACC",
     #endif
@@ -366,6 +372,9 @@ char const * errnoname(int errno_)
     #ifdef ENFSREMOTE
         [ENFSREMOTE] = "ENFSREMOTE",
     #endif
+    #ifdef ENMFILE
+        [ENMFILE] = "ENMFILE",
+    #endif
     #ifdef ENOANO
         [ENOANO] = "ENOANO",
     #endif
@@ -434,6 +443,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOREG
         [ENOREG] = "ENOREG",
+    #endif
+    #ifdef ENOSHARE
+        [ENOSHARE] = "ENOSHARE",
     #endif
     #ifdef ENOSPC
         [ENOSPC] = "ENOSPC",
@@ -789,6 +801,9 @@ char const * errnoname(int errno_)
     #ifdef ECAPMODE
         case ECAPMODE: return "ECAPMODE";
     #endif
+    #ifdef ECASECLASH
+        case ECASECLASH: return "ECASECLASH";
+    #endif
     #ifdef ECHILD
         case ECHILD: return "ECHILD";
     #endif
@@ -965,6 +980,9 @@ char const * errnoname(int errno_)
     #ifdef EL3RST
         case EL3RST: return "EL3RST";
     #endif
+    #ifdef ELBIN
+        case ELBIN: return "ELBIN";
+    #endif
     #ifdef ELIBACC
         case ELIBACC: return "ELIBACC";
     #endif
@@ -1040,6 +1058,9 @@ char const * errnoname(int errno_)
     #ifdef ENFSREMOTE
         case ENFSREMOTE: return "ENFSREMOTE";
     #endif
+    #ifdef ENMFILE
+        case ENMFILE: return "ENMFILE";
+    #endif
     #ifdef ENOANO
         case ENOANO: return "ENOANO";
     #endif
@@ -1108,6 +1129,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOREG
         case ENOREG: return "ENOREG";
+    #endif
+    #ifdef ENOSHARE
+        case ENOSHARE: return "ENOSHARE";
     #endif
     #ifdef ENOSPC
         case ENOSPC: return "ENOSPC";
