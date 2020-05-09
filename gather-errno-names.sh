@@ -88,6 +88,20 @@ aix()
     | grep 'Errno' | awk '{ print $1 }'
 }
 
+zos()
+{
+    # IBM does not seem to provide a stable URL to the latest
+    # z/OS errno list, so we have to find and extract it:
+
+    errno_documentation=`
+        get https://www.ibm.com/it-infrastructure/z/zos \
+        | grep 'Find z/OS documentation' | cut -d\" -f6 \
+        | sed 's|/en/homepage.html$|.bpxbd00/errnoh.htm?view=embed|'
+    ` &&
+    get "$errno_documentation" \
+    | grep '<td class="nrule">E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
+}
+
 solaris()
 {
     # Oracle does not seem to provide a stable URL to the latest
@@ -170,5 +184,6 @@ _historical()
     openbsd &
     opensolaris &
     solaris &
+    zos &
     _historical &
 } | sort -u
