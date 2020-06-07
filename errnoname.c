@@ -23,6 +23,7 @@ char const * errnoname(int errno_)
 #ifdef ERRNONAME_SAFE_TO_USE_ARRAY
     static char const * const names[] =
     {
+        [0] = 0,
     #ifdef E2BIG
         [E2BIG] = "E2BIG",
     #endif
@@ -817,6 +818,7 @@ char const * errnoname(int errno_)
 #else /* ERRNONAME_SAFE_TO_USE_ARRAY */
     switch(errno_)
     {
+        case 0: return 0;
     #ifdef E2BIG
         case E2BIG: return "E2BIG";
     #endif
