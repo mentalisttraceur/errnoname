@@ -89,32 +89,14 @@ they are not needed to use the library.
 
 ## Optimization
 
-The *default* implementation in `errnoname.c` might not always produce
-the most efficient code, because it is instead optimized to be:
+If `ERRNONAME_SAFE_TO_USE_ARRAY` is defined, `errnoname.c` will
+use an array of `errno` names indexed by `errno` values instead
+of a `switch` statement.
 
-1.  Simple - trivial for a human to mentally verify as robustly correct,
-    with minimal room for edge cases to slip past human thinking.
+Note that modern compilers can already automatically convert
+the switch to an array lookup when optimizations are turned
+up high enough and it is safe and more efficient to do so.
 
-2.  Portable - code as portable as possible, no unportable assumptions
-    (except perhaps to guide optimizations without changing
-    correctness or introducing pathological worst-case behavior).
-
-3.  Optimizer-friendly - code optimized for optimization eventually
-    performs as well or better than code optimized for performance.
-
-4.  Safe - well-defined and well-bounded worst-case runspace and runtime
-    even with pathological `errno` values (such as `-1` or `INT_MAX`).
-
-However, if you need better execution speed or code size, and
-you understand the downsides relative to the above four points,
-`errnoname.c` provides an option you can enable at compile-time:
-
-*   If `ERRNONAME_SAFE_TO_USE_ARRAY` is defined, `errnoname.c`
-    will trust that it is safe to do the name lookups by using
-    an array of `errno` names indexed by `errno` values.
-
-    Note that modern compilers can already do this automatically
-    in common cases when optimizations are turned up high enough.
 
 # Contributing
 
