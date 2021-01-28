@@ -89,13 +89,13 @@ they are not needed to use the library.
 
 ## Optimization
 
-If `ERRNONAME_SAFE_TO_USE_ARRAY` is defined, `errnoname.c` will
-use an array of `errno` names indexed by `errno` values instead
-of a `switch` statement.
+If `errnoname.c` is compiled with the `ERRNONAME_SAFE_TO_USE_ARRAY`
+preprocessor macro defined, it will use a C array of `errno` names
+indexed by `errno` values instead of a `switch` statement.
 
 Note that modern compilers can already automatically convert
 the switch to an array lookup when optimizations are turned
-up high enough and it is safe and more efficient to do so.
+up high enough if it is safe and more efficient to do so.
 
 
 # Contributing
