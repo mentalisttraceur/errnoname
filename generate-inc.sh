@@ -1,5 +1,6 @@
 #!/bin/sh -
 # Copyright 2019 Alexander Kozhevnikov <mentalisttraceur@gmail.com>
+# Copyright 2021 Alejandro Colomar <alx.manpages@gmail.com>
 #
 # Permission to use, copy, modify, and distribute this software for any
 # purpose with or without fee is hereby granted.
@@ -11,22 +12,6 @@
 # WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-only_lines_before()
-{
-    # Only prints the lines before the line
-    # that matches the first argument.
-
-    sed "/$1/,$ d"
-}
-
-only_lines_after()
-{
-    # Only prints the lines after the line
-    # that matches the first argument.
-
-    sed "1,/$1/ d"
-}
 
 wrap_in_ifdef_blocks()
 {
@@ -73,33 +58,23 @@ format_as_switch_cases()
     sed '/#/! s/^.*$/        case &: return "&";/'
 }
 
-# errno list comes in on stdin, errnoname.c comes out on stdout
+# errno list comes in on stdin, errnoname_{array,switch}.c.inc come out
+tmpfile=tmp;	#`mktemp -t errnoname.XXXXX`;
 
-# spooling it all into memory is easiest way to use it twice
-errno_list=`cat`
-
-cat errnoname.c.template \
-| only_lines_before '{{ array_entries }}'
-
-printf '%s\n' "$errno_list" \
+cat \
 | wrap_in_ifdef_blocks \
 | skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
 | skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
 | skip_1_if_same_as_2 EDEADLOCK EDEADLK \
 | skip_1_if_same_as_2 ECANCELLED ECANCELED \
-| format_as_array_designated_initializers
+> ${tmpfile};
 
-cat errnoname.c.template \
-| only_lines_after '{{ array_entries }}' \
-| only_lines_before '{{ switch_entries }}'
+< ${tmpfile} \
+format_as_array_designated_initializers \
+> errnoname_array.c.inc;
 
-printf '%s\n' "$errno_list" \
-| wrap_in_ifdef_blocks \
-| skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
-| skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
-| skip_1_if_same_as_2 EDEADLOCK EDEADLK \
-| skip_1_if_same_as_2 ECANCELLED ECANCELED \
-| format_as_switch_cases
+< ${tmpfile} \
+format_as_switch_cases \
+> errnoname_switch.c.inc;
 
-cat errnoname.c.template \
-| only_lines_after '{{ switch_entries }}'
+rm ${tmpfile};
