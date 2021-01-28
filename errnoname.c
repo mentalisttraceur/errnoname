@@ -1,5 +1,6 @@
 /*****************************************************************************\
  * Copyright 2019 Alexander Kozhevnikov <mentalisttraceur@gmail.com>
+ * Copyright 2021 Alejandro Colomar <alx.manpages@gmail.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted.
@@ -24,7 +25,7 @@ char const * errnoname(int errno_)
     static char const * const names[] =
     {
         [0] = 0,
-{{ array_entries }}
+#include "errnoname_array.c.inc"
     };
     if(errno_ >= 0 && errno_ < (sizeof(names) / sizeof(*names)))
     {
@@ -35,7 +36,7 @@ char const * errnoname(int errno_)
     switch(errno_)
     {
         case 0: return 0;
-{{ switch_entries }}
+#include "errnoname_switch.c.inc"
     }
     return 0;
 #endif /* ERRNONAME_SAFE_TO_USE_ARRAY */
