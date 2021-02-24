@@ -40,17 +40,16 @@ wrap_in_ifdef_blocks()
     sed 's/^.*$/    #ifdef &\n&\n    #endif/'
 }
 
-skip_1_if_same_as_2()
+handle_possible_duplicate()
 {
-    # Given the arguments "EWOULDBLOCK"
-    # and "EAGAIN", turns lines like
+    # Given the arguments "EAGAIN" and "EWOULDBLOCK", turns lines like
     #     EWOULDBLOCK
     # into lines like
     #             #if !defined(EAGAIN) || EWOULDBLOCK != EAGAIN
     #     EWOULDBLOCK
     #             #endif
 
-    sed "/#/! s/$1/        #if !defined($2) || $1 != $2\n$1\n        #endif/"
+    sed "/#/! s/$2/        #if !defined($1) || $2 != $1\n$2\n        #endif/"
 }
 
 format_as_array_designated_initializers()
@@ -83,10 +82,10 @@ cat errnoname.c.template \
 
 printf '%s\n' "$errno_list" \
 | wrap_in_ifdef_blocks \
-| skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
-| skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
-| skip_1_if_same_as_2 EDEADLOCK EDEADLK \
-| skip_1_if_same_as_2 ECANCELLED ECANCELED \
+| handle_possible_duplicate EAGAIN EWOULDBLOCK \
+| handle_possible_duplicate ENOTSUP EOPNOTSUPP \
+| handle_possible_duplicate EDEADLK EDEADLOCK \
+| handle_possible_duplicate ECANCELED ECANCELLED \
 | format_as_array_designated_initializers
 
 cat errnoname.c.template \
@@ -95,10 +94,10 @@ cat errnoname.c.template \
 
 printf '%s\n' "$errno_list" \
 | wrap_in_ifdef_blocks \
-| skip_1_if_same_as_2 EWOULDBLOCK EAGAIN \
-| skip_1_if_same_as_2 EOPNOTSUPP ENOTSUP \
-| skip_1_if_same_as_2 EDEADLOCK EDEADLK \
-| skip_1_if_same_as_2 ECANCELLED ECANCELED \
+| handle_possible_duplicate EAGAIN EWOULDBLOCK \
+| handle_possible_duplicate ENOTSUP EOPNOTSUPP \
+| handle_possible_duplicate EDEADLK EDEADLOCK \
+| handle_possible_duplicate ECANCELED ECANCELLED \
 | format_as_switch_cases
 
 cat errnoname.c.template \
