@@ -52,6 +52,15 @@ handle_possible_duplicate()
     sed "/#/! s/$2/        #if !defined($1) || $2 != $1\n$2\n        #endif/"
 }
 
+wrap_in_preprocessor_checks()
+{
+    wrap_in_ifdef_blocks \
+    | handle_possible_duplicate EAGAIN EWOULDBLOCK \
+    | handle_possible_duplicate ENOTSUP EOPNOTSUPP \
+    | handle_possible_duplicate EDEADLK EDEADLOCK \
+    | handle_possible_duplicate ECANCELED ECANCELLED
+}
+
 format_as_array_designated_initializers()
 {
     # Turns lines like
@@ -81,11 +90,7 @@ cat errnoname.c.template \
 | only_lines_before '{{ array_entries }}'
 
 printf '%s\n' "$errno_list" \
-| wrap_in_ifdef_blocks \
-| handle_possible_duplicate EAGAIN EWOULDBLOCK \
-| handle_possible_duplicate ENOTSUP EOPNOTSUPP \
-| handle_possible_duplicate EDEADLK EDEADLOCK \
-| handle_possible_duplicate ECANCELED ECANCELLED \
+| wrap_in_preprocessor_checks \
 | format_as_array_designated_initializers
 
 cat errnoname.c.template \
@@ -93,11 +98,7 @@ cat errnoname.c.template \
 | only_lines_before '{{ switch_entries }}'
 
 printf '%s\n' "$errno_list" \
-| wrap_in_ifdef_blocks \
-| handle_possible_duplicate EAGAIN EWOULDBLOCK \
-| handle_possible_duplicate ENOTSUP EOPNOTSUPP \
-| handle_possible_duplicate EDEADLK EDEADLOCK \
-| handle_possible_duplicate ECANCELED ECANCELLED \
+| wrap_in_preprocessor_checks \
 | format_as_switch_cases
 
 cat errnoname.c.template \
