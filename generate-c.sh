@@ -40,7 +40,7 @@ wrap_in_ifdef_blocks()
     sed 's/^.*$/    #ifdef &\n&\n    #endif/'
 }
 
-handle_possible_duplicate()
+handle_possible_alias()
 {
     # Given the arguments "EAGAIN" and "EWOULDBLOCK", turns lines like
     #     EWOULDBLOCK
@@ -55,10 +55,10 @@ handle_possible_duplicate()
 wrap_in_preprocessor_checks()
 {
     wrap_in_ifdef_blocks \
-    | handle_possible_duplicate EAGAIN EWOULDBLOCK \
-    | handle_possible_duplicate ENOTSUP EOPNOTSUPP \
-    | handle_possible_duplicate EDEADLK EDEADLOCK \
-    | handle_possible_duplicate ECANCELED ECANCELLED
+    | handle_possible_alias EAGAIN EWOULDBLOCK \
+    | handle_possible_alias ENOTSUP EOPNOTSUPP \
+    | handle_possible_alias EDEADLK EDEADLOCK \
+    | handle_possible_alias ECANCELED ECANCELLED
 }
 
 format_as_array_designated_initializers()
