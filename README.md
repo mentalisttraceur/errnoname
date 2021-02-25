@@ -91,16 +91,18 @@ up high enough if it is safe and more efficient to do so.
 The best way to help this library is making sure that
 we have the best coverage of `errno` names possible:
 
-* Check if the `gather-errno-names.sh` script has the
-  most complete and up-to-date sources of information
-  for `errno` names - maybe you know of a better way
-  to get the latest ones for some system.
+* Check if the `for-maintainers/gather-errno-names.sh`
+  script has the most complete and up-to-date sources
+  of information for `errno` names - maybe you know a
+  better way to get the latest ones for some system,
+  and maybe we are missing a source we should include.
 
-* Check if the errno list file is missing any of the
-  `errno` names that exist on the systems you use.
+* Check if the `for-maintainers/errno-list.txt` file
+  is missing any `errno` names that you know about.
 
-* Check if all `errno` names that might be equivalent
-  on some systems are handled in the generate script.
+* Check if the `for-maintainers/generate-c.sh` script
+  file handles all `errno` names that alias the same
+  errno value on any system.
 
 You can also help by sharing your use-cases, what features
 you want, and design suggestions - the `errnoname`
