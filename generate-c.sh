@@ -14,27 +14,25 @@
 
 main()
 {
-    # errno list comes in on stdin, errnoname.c comes out on stdout
+    list=${1?'first argument must be the errno-list.txt file'}
+    template=${2?'second argument must be the errnoname.c.template file'}
 
-    # spooling it all into memory is easiest way to use it twice
-    errno_list=`cat`
-
-    cat errnoname.c.template \
+    cat "$template" \
     | only_lines_before '{{ array_entries }}'
 
-    printf '%s\n' "$errno_list" \
+    cat "$list" \
     | wrap_in_preprocessor_checks \
     | format_as_array_designated_initializers
 
-    cat errnoname.c.template \
+    cat "$template" \
     | only_lines_after '{{ array_entries }}' \
     | only_lines_before '{{ switch_entries }}'
 
-    printf '%s\n' "$errno_list" \
+    cat "$list" \
     | wrap_in_preprocessor_checks \
     | format_as_switch_cases
 
-    cat errnoname.c.template \
+    cat "$template" \
     | only_lines_after '{{ switch_entries }}'
 }
 
