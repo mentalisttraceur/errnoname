@@ -40,6 +40,9 @@
     #ifdef EBADARCH
         [EBADARCH] = "EBADARCH",
     #endif
+    #ifdef EBADCOOKIE
+        [EBADCOOKIE] = "EBADCOOKIE",
+    #endif
     #ifdef EBADE
         [EBADE] = "EBADE",
     #endif
@@ -51,6 +54,9 @@
     #endif
     #ifdef EBADFD
         [EBADFD] = "EBADFD",
+    #endif
+    #ifdef EBADHANDLE
+        [EBADHANDLE] = "EBADHANDLE",
     #endif
     #ifdef EBADMACHO
         [EBADMACHO] = "EBADMACHO",
@@ -69,6 +75,9 @@
     #endif
     #ifdef EBADSLT
         [EBADSLT] = "EBADSLT",
+    #endif
+    #ifdef EBADTYPE
+        [EBADTYPE] = "EBADTYPE",
     #endif
     #ifdef EBADVER
         [EBADVER] = "EBADVER",
@@ -270,6 +279,9 @@
     #ifdef EIO
         [EIO] = "EIO",
     #endif
+    #ifdef EIOCBQUEUED
+        [EIOCBQUEUED] = "EIOCBQUEUED",
+    #endif
     #ifdef EIPSEC
         [EIPSEC] = "EIPSEC",
     #endif
@@ -281,6 +293,9 @@
     #endif
     #ifdef EISNAM
         [EISNAM] = "EISNAM",
+    #endif
+    #ifdef EJUKEBOX
+        [EJUKEBOX] = "EJUKEBOX",
     #endif
     #ifdef EJUSTRETURN
         [EJUSTRETURN] = "EJUSTRETURN",
@@ -486,6 +501,9 @@
     #ifdef ENOIOCTL
         [ENOIOCTL] = "ENOIOCTL",
     #endif
+    #ifdef ENOIOCTLCMD
+        [ENOIOCTLCMD] = "ENOIOCTLCMD",
+    #endif
     #ifdef ENOKEY
         [ENOKEY] = "ENOKEY",
     #endif
@@ -512,6 +530,9 @@
     #endif
     #ifdef ENONET
         [ENONET] = "ENONET",
+    #endif
+    #ifdef ENOPARAM
+        [ENOPARAM] = "ENOPARAM",
     #endif
     #ifdef ENOPKG
         [ENOPKG] = "ENOPKG",
@@ -582,6 +603,12 @@
     #ifdef ENOTSUP
         [ENOTSUP] = "ENOTSUP",
     #endif
+    #ifdef ENOTSUPP
+        [ENOTSUPP] = "ENOTSUPP",
+    #endif
+    #ifdef ENOTSYNC
+        [ENOTSYNC] = "ENOTSYNC",
+    #endif
     #ifdef ENOTTY
         [ENOTTY] = "ENOTTY",
     #endif
@@ -608,6 +635,9 @@
     #endif
     #ifdef EOPCOMPLETE
         [EOPCOMPLETE] = "EOPCOMPLETE",
+    #endif
+    #ifdef EOPENSTALE
+        [EOPENSTALE] = "EOPENSTALE",
     #endif
     #ifdef EOPNOTSUPP
         #if !defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP
@@ -637,6 +667,9 @@
     #endif
     #ifdef EPOWERF
         [EPOWERF] = "EPOWERF",
+    #endif
+    #ifdef EPROBE_DEFER
+        [EPROBE_DEFER] = "EPROBE_DEFER",
     #endif
     #ifdef EPROCLIM
         [EPROCLIM] = "EPROCLIM",
@@ -670,6 +703,9 @@
     #endif
     #ifdef ERANGE
         [ERANGE] = "ERANGE",
+    #endif
+    #ifdef ERECALLCONFLICT
+        [ERECALLCONFLICT] = "ERECALLCONFLICT",
     #endif
     #ifdef ERECYCLE
         [ERECYCLE] = "ERECYCLE",
@@ -709,6 +745,18 @@
     #ifdef ERESTART
         [ERESTART] = "ERESTART",
     #endif
+    #ifdef ERESTARTNOHAND
+        [ERESTARTNOHAND] = "ERESTARTNOHAND",
+    #endif
+    #ifdef ERESTARTNOINTR
+        [ERESTARTNOINTR] = "ERESTARTNOINTR",
+    #endif
+    #ifdef ERESTARTSYS
+        [ERESTARTSYS] = "ERESTARTSYS",
+    #endif
+    #ifdef ERESTART_RESTARTBLOCK
+        [ERESTART_RESTARTBLOCK] = "ERESTART_RESTARTBLOCK",
+    #endif
     #ifdef ERFKILL
         [ERFKILL] = "ERFKILL",
     #endif
@@ -723,6 +771,9 @@
     #endif
     #ifdef ESAD
         [ESAD] = "ESAD",
+    #endif
+    #ifdef ESERVERFAULT
+        [ESERVERFAULT] = "ESERVERFAULT",
     #endif
     #ifdef ESHLIBVERS
         [ESHLIBVERS] = "ESHLIBVERS",
@@ -765,6 +816,9 @@
     #endif
     #ifdef ETOOMANYREFS
         [ETOOMANYREFS] = "ETOOMANYREFS",
+    #endif
+    #ifdef ETOOSMALL
+        [ETOOSMALL] = "ETOOSMALL",
     #endif
     #ifdef ETXTBSY
         [ETXTBSY] = "ETXTBSY",

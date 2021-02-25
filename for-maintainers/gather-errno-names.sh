@@ -31,6 +31,17 @@ extract_c()
 
 linux()
 {
+    github torvalds/linux/master/arch/alpha/include/uapi/asm/errno.h \
+    | extract_c &
+    github torvalds/linux/master/arch/mips/include/uapi/asm/errno.h \
+    | extract_c &
+    github torvalds/linux/master/arch/parisc/include/uapi/asm/errno.h \
+    | extract_c &
+    github torvalds/linux/master/arch/powerpc/include/uapi/asm/errno.h \
+    | extract_c &
+    github torvalds/linux/master/arch/sparc/include/uapi/asm/errno.h \
+    | extract_c &
+    github torvalds/linux/master/include/linux/errno.h | extract_c &
     github torvalds/linux/master/include/uapi/asm-generic/errno-base.h \
     | extract_c &
     github torvalds/linux/master/include/uapi/asm-generic/errno.h \
@@ -143,14 +154,12 @@ _historical()
         EAIO \
         EALIGN \
         EBADVER \
-        ECANCELLED \
         ECKPT \
         ECONFIG \
         EDIRTY \
         EDUPPKG \
         EFAIL \
         EFSCORRUPTED \
-        EINIT \
         EINPROG \
         EMTIMERS \
         ENFSREMOTE \
@@ -164,8 +173,6 @@ _historical()
         EPOWERF \
         ERELOC \
         ERELOCATED \
-        EREMDEV \
-        EREMOTERELEASE \
         EVERSION \
         EWRONGFS
 }

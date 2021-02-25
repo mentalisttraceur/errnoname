@@ -66,6 +66,9 @@ char const * errnoname(int errno_)
     #ifdef EBADARCH
         [EBADARCH] = "EBADARCH",
     #endif
+    #ifdef EBADCOOKIE
+        [EBADCOOKIE] = "EBADCOOKIE",
+    #endif
     #ifdef EBADE
         [EBADE] = "EBADE",
     #endif
@@ -77,6 +80,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBADFD
         [EBADFD] = "EBADFD",
+    #endif
+    #ifdef EBADHANDLE
+        [EBADHANDLE] = "EBADHANDLE",
     #endif
     #ifdef EBADMACHO
         [EBADMACHO] = "EBADMACHO",
@@ -95,6 +101,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBADSLT
         [EBADSLT] = "EBADSLT",
+    #endif
+    #ifdef EBADTYPE
+        [EBADTYPE] = "EBADTYPE",
     #endif
     #ifdef EBADVER
         [EBADVER] = "EBADVER",
@@ -296,6 +305,9 @@ char const * errnoname(int errno_)
     #ifdef EIO
         [EIO] = "EIO",
     #endif
+    #ifdef EIOCBQUEUED
+        [EIOCBQUEUED] = "EIOCBQUEUED",
+    #endif
     #ifdef EIPSEC
         [EIPSEC] = "EIPSEC",
     #endif
@@ -307,6 +319,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EISNAM
         [EISNAM] = "EISNAM",
+    #endif
+    #ifdef EJUKEBOX
+        [EJUKEBOX] = "EJUKEBOX",
     #endif
     #ifdef EJUSTRETURN
         [EJUSTRETURN] = "EJUSTRETURN",
@@ -512,6 +527,9 @@ char const * errnoname(int errno_)
     #ifdef ENOIOCTL
         [ENOIOCTL] = "ENOIOCTL",
     #endif
+    #ifdef ENOIOCTLCMD
+        [ENOIOCTLCMD] = "ENOIOCTLCMD",
+    #endif
     #ifdef ENOKEY
         [ENOKEY] = "ENOKEY",
     #endif
@@ -538,6 +556,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENONET
         [ENONET] = "ENONET",
+    #endif
+    #ifdef ENOPARAM
+        [ENOPARAM] = "ENOPARAM",
     #endif
     #ifdef ENOPKG
         [ENOPKG] = "ENOPKG",
@@ -608,6 +629,12 @@ char const * errnoname(int errno_)
     #ifdef ENOTSUP
         [ENOTSUP] = "ENOTSUP",
     #endif
+    #ifdef ENOTSUPP
+        [ENOTSUPP] = "ENOTSUPP",
+    #endif
+    #ifdef ENOTSYNC
+        [ENOTSYNC] = "ENOTSYNC",
+    #endif
     #ifdef ENOTTY
         [ENOTTY] = "ENOTTY",
     #endif
@@ -634,6 +661,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EOPCOMPLETE
         [EOPCOMPLETE] = "EOPCOMPLETE",
+    #endif
+    #ifdef EOPENSTALE
+        [EOPENSTALE] = "EOPENSTALE",
     #endif
     #ifdef EOPNOTSUPP
         #if !defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP
@@ -663,6 +693,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EPOWERF
         [EPOWERF] = "EPOWERF",
+    #endif
+    #ifdef EPROBE_DEFER
+        [EPROBE_DEFER] = "EPROBE_DEFER",
     #endif
     #ifdef EPROCLIM
         [EPROCLIM] = "EPROCLIM",
@@ -696,6 +729,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ERANGE
         [ERANGE] = "ERANGE",
+    #endif
+    #ifdef ERECALLCONFLICT
+        [ERECALLCONFLICT] = "ERECALLCONFLICT",
     #endif
     #ifdef ERECYCLE
         [ERECYCLE] = "ERECYCLE",
@@ -735,6 +771,18 @@ char const * errnoname(int errno_)
     #ifdef ERESTART
         [ERESTART] = "ERESTART",
     #endif
+    #ifdef ERESTARTNOHAND
+        [ERESTARTNOHAND] = "ERESTARTNOHAND",
+    #endif
+    #ifdef ERESTARTNOINTR
+        [ERESTARTNOINTR] = "ERESTARTNOINTR",
+    #endif
+    #ifdef ERESTARTSYS
+        [ERESTARTSYS] = "ERESTARTSYS",
+    #endif
+    #ifdef ERESTART_RESTARTBLOCK
+        [ERESTART_RESTARTBLOCK] = "ERESTART_RESTARTBLOCK",
+    #endif
     #ifdef ERFKILL
         [ERFKILL] = "ERFKILL",
     #endif
@@ -749,6 +797,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ESAD
         [ESAD] = "ESAD",
+    #endif
+    #ifdef ESERVERFAULT
+        [ESERVERFAULT] = "ESERVERFAULT",
     #endif
     #ifdef ESHLIBVERS
         [ESHLIBVERS] = "ESHLIBVERS",
@@ -791,6 +842,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ETOOMANYREFS
         [ETOOMANYREFS] = "ETOOMANYREFS",
+    #endif
+    #ifdef ETOOSMALL
+        [ETOOSMALL] = "ETOOSMALL",
     #endif
     #ifdef ETXTBSY
         [ETXTBSY] = "ETXTBSY",
@@ -876,6 +930,9 @@ char const * errnoname(int errno_)
     #ifdef EBADARCH
         case EBADARCH: return "EBADARCH";
     #endif
+    #ifdef EBADCOOKIE
+        case EBADCOOKIE: return "EBADCOOKIE";
+    #endif
     #ifdef EBADE
         case EBADE: return "EBADE";
     #endif
@@ -887,6 +944,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBADFD
         case EBADFD: return "EBADFD";
+    #endif
+    #ifdef EBADHANDLE
+        case EBADHANDLE: return "EBADHANDLE";
     #endif
     #ifdef EBADMACHO
         case EBADMACHO: return "EBADMACHO";
@@ -905,6 +965,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBADSLT
         case EBADSLT: return "EBADSLT";
+    #endif
+    #ifdef EBADTYPE
+        case EBADTYPE: return "EBADTYPE";
     #endif
     #ifdef EBADVER
         case EBADVER: return "EBADVER";
@@ -1106,6 +1169,9 @@ char const * errnoname(int errno_)
     #ifdef EIO
         case EIO: return "EIO";
     #endif
+    #ifdef EIOCBQUEUED
+        case EIOCBQUEUED: return "EIOCBQUEUED";
+    #endif
     #ifdef EIPSEC
         case EIPSEC: return "EIPSEC";
     #endif
@@ -1117,6 +1183,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EISNAM
         case EISNAM: return "EISNAM";
+    #endif
+    #ifdef EJUKEBOX
+        case EJUKEBOX: return "EJUKEBOX";
     #endif
     #ifdef EJUSTRETURN
         case EJUSTRETURN: return "EJUSTRETURN";
@@ -1322,6 +1391,9 @@ char const * errnoname(int errno_)
     #ifdef ENOIOCTL
         case ENOIOCTL: return "ENOIOCTL";
     #endif
+    #ifdef ENOIOCTLCMD
+        case ENOIOCTLCMD: return "ENOIOCTLCMD";
+    #endif
     #ifdef ENOKEY
         case ENOKEY: return "ENOKEY";
     #endif
@@ -1348,6 +1420,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENONET
         case ENONET: return "ENONET";
+    #endif
+    #ifdef ENOPARAM
+        case ENOPARAM: return "ENOPARAM";
     #endif
     #ifdef ENOPKG
         case ENOPKG: return "ENOPKG";
@@ -1418,6 +1493,12 @@ char const * errnoname(int errno_)
     #ifdef ENOTSUP
         case ENOTSUP: return "ENOTSUP";
     #endif
+    #ifdef ENOTSUPP
+        case ENOTSUPP: return "ENOTSUPP";
+    #endif
+    #ifdef ENOTSYNC
+        case ENOTSYNC: return "ENOTSYNC";
+    #endif
     #ifdef ENOTTY
         case ENOTTY: return "ENOTTY";
     #endif
@@ -1444,6 +1525,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EOPCOMPLETE
         case EOPCOMPLETE: return "EOPCOMPLETE";
+    #endif
+    #ifdef EOPENSTALE
+        case EOPENSTALE: return "EOPENSTALE";
     #endif
     #ifdef EOPNOTSUPP
         #if !defined(ENOTSUP) || EOPNOTSUPP != ENOTSUP
@@ -1473,6 +1557,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EPOWERF
         case EPOWERF: return "EPOWERF";
+    #endif
+    #ifdef EPROBE_DEFER
+        case EPROBE_DEFER: return "EPROBE_DEFER";
     #endif
     #ifdef EPROCLIM
         case EPROCLIM: return "EPROCLIM";
@@ -1506,6 +1593,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ERANGE
         case ERANGE: return "ERANGE";
+    #endif
+    #ifdef ERECALLCONFLICT
+        case ERECALLCONFLICT: return "ERECALLCONFLICT";
     #endif
     #ifdef ERECYCLE
         case ERECYCLE: return "ERECYCLE";
@@ -1545,6 +1635,18 @@ char const * errnoname(int errno_)
     #ifdef ERESTART
         case ERESTART: return "ERESTART";
     #endif
+    #ifdef ERESTARTNOHAND
+        case ERESTARTNOHAND: return "ERESTARTNOHAND";
+    #endif
+    #ifdef ERESTARTNOINTR
+        case ERESTARTNOINTR: return "ERESTARTNOINTR";
+    #endif
+    #ifdef ERESTARTSYS
+        case ERESTARTSYS: return "ERESTARTSYS";
+    #endif
+    #ifdef ERESTART_RESTARTBLOCK
+        case ERESTART_RESTARTBLOCK: return "ERESTART_RESTARTBLOCK";
+    #endif
     #ifdef ERFKILL
         case ERFKILL: return "ERFKILL";
     #endif
@@ -1559,6 +1661,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ESAD
         case ESAD: return "ESAD";
+    #endif
+    #ifdef ESERVERFAULT
+        case ESERVERFAULT: return "ESERVERFAULT";
     #endif
     #ifdef ESHLIBVERS
         case ESHLIBVERS: return "ESHLIBVERS";
@@ -1601,6 +1706,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ETOOMANYREFS
         case ETOOMANYREFS: return "ETOOMANYREFS";
+    #endif
+    #ifdef ETOOSMALL
+        case ETOOSMALL: return "ETOOSMALL";
     #endif
     #ifdef ETXTBSY
         case ETXTBSY: return "ETXTBSY";
