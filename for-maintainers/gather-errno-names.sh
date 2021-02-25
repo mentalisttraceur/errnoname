@@ -39,7 +39,7 @@ linux()
 
 darwin()  # MacOS, iOS, etc.
 {
-    github apple/darwin-xnu/master/bsd/sys/errno.h | extract_c | grep -v ELAST
+    github apple/darwin-xnu/main/bsd/sys/errno.h | extract_c | grep -v ELAST
 }
 
 freebsd()
