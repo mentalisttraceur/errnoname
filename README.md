@@ -102,10 +102,10 @@ we have the best coverage of `errno` names possible:
 * Check if all `errno` names that might be equivalent
   on some systems are handled in the generate script.
 
-You can also help by sharing your use-cases, what features you want,
-and design suggestions - the `errnoname` function is a good minimal
-foundation, but there might be other features or performance
-optimizations worth doing.
+You can also help by sharing your use-cases, what features
+you want, and design suggestions - the `errnoname`
+function is a good minimal foundation, but there might be
+other features or performance optimizations worth doing.
 
 And finally, this can be more than a C library -
 let's expand it to every language that needs it!
