@@ -84,9 +84,6 @@ So names like `errno_name`, `errnoName`, `ErrnoName`, or
 
 Just compile and link `errnoname.c` as normal.
 
-You can ignore all the other files in here -
-they are not needed to use the library.
-
 ## Optimization
 
 If `errnoname.c` is compiled with the `ERRNONAME_SAFE_TO_USE_ARRAY`
