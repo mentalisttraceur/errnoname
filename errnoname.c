@@ -167,7 +167,9 @@ char const * errnoname(int errno_)
         #endif
     #endif
     #ifdef EDESTADDREQ
+        #if !defined(EDESTADDRREQ) || EDESTADDREQ != EDESTADDRREQ
         [EDESTADDREQ] = "EDESTADDREQ",
+        #endif
     #endif
     #ifdef EDESTADDRREQ
         [EDESTADDRREQ] = "EDESTADDRREQ",
@@ -263,7 +265,9 @@ char const * errnoname(int errno_)
         [EINIT] = "EINIT",
     #endif
     #ifdef EINPROG
+        #if !defined(EINPROGRESS) || EINPROG != EINPROGRESS
         [EINPROG] = "EINPROG",
+        #endif
     #endif
     #ifdef EINPROGRESS
         [EINPROGRESS] = "EINPROGRESS",
@@ -691,7 +695,9 @@ char const * errnoname(int errno_)
         [EREDRIVEOPEN] = "EREDRIVEOPEN",
     #endif
     #ifdef EREFUSED
+        #if !defined(ECONNREFUSED) || EREFUSED != ECONNREFUSED
         [EREFUSED] = "EREFUSED",
+        #endif
     #endif
     #ifdef ERELOC
         [ERELOC] = "ERELOC",
@@ -962,7 +968,9 @@ char const * errnoname(int errno_)
         #endif
     #endif
     #ifdef EDESTADDREQ
+        #if !defined(EDESTADDRREQ) || EDESTADDREQ != EDESTADDRREQ
         case EDESTADDREQ: return "EDESTADDREQ";
+        #endif
     #endif
     #ifdef EDESTADDRREQ
         case EDESTADDRREQ: return "EDESTADDRREQ";
@@ -1058,7 +1066,9 @@ char const * errnoname(int errno_)
         case EINIT: return "EINIT";
     #endif
     #ifdef EINPROG
+        #if !defined(EINPROGRESS) || EINPROG != EINPROGRESS
         case EINPROG: return "EINPROG";
+        #endif
     #endif
     #ifdef EINPROGRESS
         case EINPROGRESS: return "EINPROGRESS";
@@ -1486,7 +1496,9 @@ char const * errnoname(int errno_)
         case EREDRIVEOPEN: return "EREDRIVEOPEN";
     #endif
     #ifdef EREFUSED
+        #if !defined(ECONNREFUSED) || EREFUSED != ECONNREFUSED
         case EREFUSED: return "EREFUSED";
+        #endif
     #endif
     #ifdef ERELOC
         case ERELOC: return "ERELOC";
