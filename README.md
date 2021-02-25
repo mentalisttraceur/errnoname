@@ -17,8 +17,8 @@ char const * errnoname(int)
 Pass an `errno` value in, get back a pointer to
 a null-terminated string containing the name.
 
-If the `errno` value does not match a known name, a null pointer is
-returned. (This includes `errno` value `0` on all modern systems.)
+If the `errno` value does not match a known name, a null pointer
+is returned. (This intentionally includes `errno` value `0`.)
 
 This function is always thread-safe and reentrant.
 
