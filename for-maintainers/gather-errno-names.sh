@@ -134,10 +134,19 @@ solaris()
 hpux()
 {
     # HP does not seem to provide any URL to any HP-UX
-    # errno list, so we resort to a public manpage mirror:
+    # errno list, so we use a public manpage mirror:
 
     get https://nixdoc.net/man-pages/HP-UX/man2/errno.2.html \
     | grep '\[E.*\]' | cut -d\] -f1 | cut -d\[ -f2
+}
+
+irix()
+{
+    # SGI no longer exists and IRIX is discontinued but was
+    # not open-sourced, so we use a public manpage mirror:
+
+    get https://nixdoc.net/man-pages/IRIX/man2/intro.2.html \
+    | sed 's/\t/ /g; s/  */ /g' | grep '[1-9][0-9]*  *E' | cut -d' ' -f3
 }
 
 _historical()
@@ -154,15 +163,12 @@ _historical()
         EAIO \
         EALIGN \
         EBADVER \
-        ECKPT \
         ECONFIG \
         EDIRTY \
         EDUPPKG \
         EFAIL \
-        EFSCORRUPTED \
         EINPROG \
         EMTIMERS \
-        ENFSREMOTE \
         ENOLOAD \
         ENOMATCH \
         ENOREG \
@@ -173,8 +179,7 @@ _historical()
         EPOWERF \
         ERELOC \
         ERELOCATED \
-        EVERSION \
-        EWRONGFS
+        EVERSION
 }
 
 all()
@@ -186,6 +191,7 @@ all()
     freebsd &
     hpux &
     illumos &
+    irix &
     linux &
     netbsd &
     openbsd &
