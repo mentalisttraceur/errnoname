@@ -105,6 +105,9 @@
     #ifdef ECKPT
         [ECKPT] = "ECKPT",
     #endif
+    #ifdef ECKSUM
+        [ECKSUM] = "ECKSUM",
+    #endif
     #ifdef ECLONEME
         [ECLONEME] = "ECLONEME",
     #endif
@@ -195,6 +198,9 @@
     #endif
     #ifdef EFORMAT
         [EFORMAT] = "EFORMAT",
+    #endif
+    #ifdef EFRAGS
+        [EFRAGS] = "EFRAGS",
     #endif
     #ifdef EFSCORRUPTED
         [EFSCORRUPTED] = "EFSCORRUPTED",

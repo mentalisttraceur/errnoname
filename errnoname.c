@@ -131,6 +131,9 @@ char const * errnoname(int errno_)
     #ifdef ECKPT
         [ECKPT] = "ECKPT",
     #endif
+    #ifdef ECKSUM
+        [ECKSUM] = "ECKSUM",
+    #endif
     #ifdef ECLONEME
         [ECLONEME] = "ECLONEME",
     #endif
@@ -221,6 +224,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EFORMAT
         [EFORMAT] = "EFORMAT",
+    #endif
+    #ifdef EFRAGS
+        [EFRAGS] = "EFRAGS",
     #endif
     #ifdef EFSCORRUPTED
         [EFSCORRUPTED] = "EFSCORRUPTED",
@@ -935,6 +941,9 @@ char const * errnoname(int errno_)
     #ifdef ECKPT
         case ECKPT: return "ECKPT";
     #endif
+    #ifdef ECKSUM
+        case ECKSUM: return "ECKSUM";
+    #endif
     #ifdef ECLONEME
         case ECLONEME: return "ECLONEME";
     #endif
@@ -1025,6 +1034,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EFORMAT
         case EFORMAT: return "EFORMAT";
+    #endif
+    #ifdef EFRAGS
+        case EFRAGS: return "EFRAGS";
     #endif
     #ifdef EFSCORRUPTED
         case EFSCORRUPTED: return "EFSCORRUPTED";

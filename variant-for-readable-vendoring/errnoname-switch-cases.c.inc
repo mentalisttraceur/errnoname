@@ -105,6 +105,9 @@
     #ifdef ECKPT
         case ECKPT: return "ECKPT";
     #endif
+    #ifdef ECKSUM
+        case ECKSUM: return "ECKSUM";
+    #endif
     #ifdef ECLONEME
         case ECLONEME: return "ECLONEME";
     #endif
@@ -195,6 +198,9 @@
     #endif
     #ifdef EFORMAT
         case EFORMAT: return "EFORMAT";
+    #endif
+    #ifdef EFRAGS
+        case EFRAGS: return "EFRAGS";
     #endif
     #ifdef EFSCORRUPTED
         case EFSCORRUPTED: return "EFSCORRUPTED";
