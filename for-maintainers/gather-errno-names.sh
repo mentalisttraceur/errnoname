@@ -95,7 +95,7 @@ zos()
 
     errno_documentation=`
         get https://www.ibm.com/it-infrastructure/z/zos \
-        | grep 'Find z/OS documentation' | cut -d\" -f2 \
+        | grep 'Find z/OS documentation' | sed 's/.* href="//; s/".*//' \
         | sed 's|/en/homepage.html$|.bpxbd00/errnoh.htm?view=embed|'
     ` &&
     get "$errno_documentation" \
