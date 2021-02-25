@@ -49,7 +49,7 @@ handle_possible_alias()
     #     EWOULDBLOCK
     #             #endif
 
-    sed "/#/! s/$2/        #if !defined($1) || $2 != $1\n$2\n        #endif/"
+    sed "/#/! s/^$2$/        #if !defined($1) || $2 != $1\n$2\n        #endif/"
 }
 
 wrap_in_preprocessor_checks()
