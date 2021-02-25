@@ -117,8 +117,7 @@ solaris()
         | sed 's/^http:/https:/; s|/index.html$|/intro-2.html|'
     ` &&
     get "$errno_documentation" \
-    | grep '<dt>[0-9]* E' | cut -d\> -f2 | cut -d\< -f1 | cut -d' ' -f2 \
-    | sed 's/EMGSIZE/EMSGSIZE/'  # fix documentation typo
+    | grep '<dt>[0-9]* E' | cut -d\> -f2 | cut -d\< -f1 | cut -d' ' -f2
 }
 
 hpux()
