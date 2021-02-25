@@ -158,6 +158,9 @@ char const * errnoname(int errno_)
     #ifdef ECVPERORR
         [ECVPERORR] = "ECVPERORR",
     #endif
+    #ifdef EDATALESS
+        [EDATALESS] = "EDATALESS",
+    #endif
     #ifdef EDEADLK
         [EDEADLK] = "EDEADLK",
     #endif
@@ -958,6 +961,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ECVPERORR
         case ECVPERORR: return "ECVPERORR";
+    #endif
+    #ifdef EDATALESS
+        case EDATALESS: return "EDATALESS";
     #endif
     #ifdef EDEADLK
         case EDEADLK: return "EDEADLK";

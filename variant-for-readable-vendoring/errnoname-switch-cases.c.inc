@@ -132,6 +132,9 @@
     #ifdef ECVPERORR
         case ECVPERORR: return "ECVPERORR";
     #endif
+    #ifdef EDATALESS
+        case EDATALESS: return "EDATALESS";
+    #endif
     #ifdef EDEADLK
         case EDEADLK: return "EDEADLK";
     #endif

@@ -132,6 +132,9 @@
     #ifdef ECVPERORR
         [ECVPERORR] = "ECVPERORR",
     #endif
+    #ifdef EDATALESS
+        [EDATALESS] = "EDATALESS",
+    #endif
     #ifdef EDEADLK
         [EDEADLK] = "EDEADLK",
     #endif
