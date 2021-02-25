@@ -1,16 +1,7 @@
 # `errnoname` - The `errno` Name Library
 
-Finally, a way to get the symbolic name of `errno`!
-
-`errnoname` is
-
-1. A C library that provides a way to get the symbolic
-   name string for each `errno` integer value.
-
-2. A list of `errno` names in use on many operating systems.
-
-3. A handful of simple scripts for gathering that list of
-   `errno` names and generating the library code from it.
+`errnoname` is a C library that provides a way to get
+the symbolic name for each `errno` integer value.
 
 
 # Usage
