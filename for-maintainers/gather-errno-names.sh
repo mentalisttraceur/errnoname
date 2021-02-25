@@ -171,6 +171,7 @@ _historical()
         EWRONGFS
 }
 
+all()
 {
     aix &
     cygwin &
@@ -186,4 +187,8 @@ _historical()
     solaris &
     zos &
     _historical &
-} | sort -u
+}
+
+for argument
+do "$argument" &
+done | sort -u
