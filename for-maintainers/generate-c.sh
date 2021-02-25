@@ -14,43 +14,20 @@
 
 main()
 {
-    list=${1?'first argument must be the errno-list.txt file'}
-    template=${2?'second argument must be the errnoname.c.template file'}
+    directory=${1='first argument must be the output directory'}
 
-    cat "$template" \
-    | only_lines_before '{{ array_entries }}'
+    # Read the errno list from stdin:
+    list=`cat`
 
-    cat "$list" \
+    printf '%s\n' "$list" \
     | wrap_in_preprocessor_checks \
-    | format_as_array_designated_initializers
+    | format_as_array_designated_initializers \
+    > "${directory}"/errnoname-array-elements.c.inc
 
-    cat "$template" \
-    | only_lines_after '{{ array_entries }}' \
-    | only_lines_before '{{ switch_entries }}'
-
-    cat "$list" \
+    printf '%s\n' "$list" \
     | wrap_in_preprocessor_checks \
-    | format_as_switch_cases
-
-    cat "$template" \
-    | only_lines_after '{{ switch_entries }}'
-}
-
-
-only_lines_before()
-{
-    # Only prints the lines before the line
-    # that matches the first argument.
-
-    sed "/$1/,$ d"
-}
-
-only_lines_after()
-{
-    # Only prints the lines after the line
-    # that matches the first argument.
-
-    sed "1,/$1/ d"
+    | format_as_switch_cases \
+    > "${directory}"/errnoname-switch-cases.c.inc
 }
 
 wrap_in_preprocessor_checks()

@@ -24,7 +24,7 @@ char const * errnoname(int errno_)
     static char const * const names[] =
     {
         [0] = 0,
-{{ array_entries }}
+#include "errnoname-array-elements.c.inc"
     };
     if(errno_ >= 0 && errno_ < (sizeof(names) / sizeof(*names)))
     {
@@ -35,7 +35,7 @@ char const * errnoname(int errno_)
     switch(errno_)
     {
         case 0: return 0;
-{{ switch_entries }}
+#include "errnoname-switch-cases.c.inc"
     }
     return 0;
 #endif /* ERRNONAME_SAFE_TO_USE_ARRAY */
