@@ -1,7 +1,7 @@
 # `errnoname` - The `errno` Name Library
 
-`errnoname` is a C library that provides a way to get
-the symbolic name for each `errno` integer value.
+`errnoname` is a C library that lets us get the
+symbolic name for each `errno` integer value.
 
 
 # Usage
