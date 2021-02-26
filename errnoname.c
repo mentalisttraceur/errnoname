@@ -81,6 +81,9 @@ char const * errnoname(int errno_)
     #ifdef EBADFD
         [EBADFD] = "EBADFD",
     #endif
+    #ifdef EBADFSYS
+        [EBADFSYS] = "EBADFSYS",
+    #endif
     #ifdef EBADHANDLE
         [EBADHANDLE] = "EBADHANDLE",
     #endif
@@ -164,6 +167,9 @@ char const * errnoname(int errno_)
     #ifdef ECORRUPT
         [ECORRUPT] = "ECORRUPT",
     #endif
+    #ifdef ECTRLTERM
+        [ECTRLTERM] = "ECTRLTERM",
+    #endif
     #ifdef ECVCERORR
         [ECVCERORR] = "ECVCERORR",
     #endif
@@ -218,6 +224,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EDUPPKG
         [EDUPPKG] = "EDUPPKG",
+    #endif
+    #ifdef EENDIAN
+        [EENDIAN] = "EENDIAN",
     #endif
     #ifdef EEXIST
         [EEXIST] = "EEXIST",
@@ -404,6 +413,9 @@ char const * errnoname(int errno_)
     #ifdef EMLINK
         [EMLINK] = "EMLINK",
     #endif
+    #ifdef EMORE
+        [EMORE] = "EMORE",
+    #endif
     #ifdef EMOUNTEXIT
         [EMOUNTEXIT] = "EMOUNTEXIT",
     #endif
@@ -539,6 +551,9 @@ char const * errnoname(int errno_)
     #ifdef ENOLCK
         [ENOLCK] = "ENOLCK",
     #endif
+    #ifdef ENOLIC
+        [ENOLIC] = "ENOLIC",
+    #endif
     #ifdef ENOLINK
         [ENOLINK] = "ENOLINK",
     #endif
@@ -557,6 +572,9 @@ char const * errnoname(int errno_)
     #ifdef ENOMSG
         [ENOMSG] = "ENOMSG",
     #endif
+    #ifdef ENONDP
+        [ENONDP] = "ENONDP",
+    #endif
     #ifdef ENONET
         [ENONET] = "ENONET",
     #endif
@@ -574,6 +592,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOREG
         [ENOREG] = "ENOREG",
+    #endif
+    #ifdef ENOREMOTE
+        [ENOREMOTE] = "ENOREMOTE",
     #endif
     #ifdef ENOREUSE
         [ENOREUSE] = "ENOREUSE",
@@ -801,6 +822,9 @@ char const * errnoname(int errno_)
     #ifdef ESAD
         [ESAD] = "ESAD",
     #endif
+    #ifdef ESECTYPEINVAL
+        [ESECTYPEINVAL] = "ESECTYPEINVAL",
+    #endif
     #ifdef ESERVERFAULT
         [ESERVERFAULT] = "ESERVERFAULT",
     #endif
@@ -827,6 +851,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ESRMNT
         [ESRMNT] = "ESRMNT",
+    #endif
+    #ifdef ESRVRFAULT
+        [ESRVRFAULT] = "ESRVRFAULT",
     #endif
     #ifdef ESTALE
         [ESTALE] = "ESTALE",
@@ -948,6 +975,9 @@ char const * errnoname(int errno_)
     #ifdef EBADFD
         case EBADFD: return "EBADFD";
     #endif
+    #ifdef EBADFSYS
+        case EBADFSYS: return "EBADFSYS";
+    #endif
     #ifdef EBADHANDLE
         case EBADHANDLE: return "EBADHANDLE";
     #endif
@@ -1031,6 +1061,9 @@ char const * errnoname(int errno_)
     #ifdef ECORRUPT
         case ECORRUPT: return "ECORRUPT";
     #endif
+    #ifdef ECTRLTERM
+        case ECTRLTERM: return "ECTRLTERM";
+    #endif
     #ifdef ECVCERORR
         case ECVCERORR: return "ECVCERORR";
     #endif
@@ -1085,6 +1118,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EDUPPKG
         case EDUPPKG: return "EDUPPKG";
+    #endif
+    #ifdef EENDIAN
+        case EENDIAN: return "EENDIAN";
     #endif
     #ifdef EEXIST
         case EEXIST: return "EEXIST";
@@ -1271,6 +1307,9 @@ char const * errnoname(int errno_)
     #ifdef EMLINK
         case EMLINK: return "EMLINK";
     #endif
+    #ifdef EMORE
+        case EMORE: return "EMORE";
+    #endif
     #ifdef EMOUNTEXIT
         case EMOUNTEXIT: return "EMOUNTEXIT";
     #endif
@@ -1406,6 +1445,9 @@ char const * errnoname(int errno_)
     #ifdef ENOLCK
         case ENOLCK: return "ENOLCK";
     #endif
+    #ifdef ENOLIC
+        case ENOLIC: return "ENOLIC";
+    #endif
     #ifdef ENOLINK
         case ENOLINK: return "ENOLINK";
     #endif
@@ -1424,6 +1466,9 @@ char const * errnoname(int errno_)
     #ifdef ENOMSG
         case ENOMSG: return "ENOMSG";
     #endif
+    #ifdef ENONDP
+        case ENONDP: return "ENONDP";
+    #endif
     #ifdef ENONET
         case ENONET: return "ENONET";
     #endif
@@ -1441,6 +1486,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOREG
         case ENOREG: return "ENOREG";
+    #endif
+    #ifdef ENOREMOTE
+        case ENOREMOTE: return "ENOREMOTE";
     #endif
     #ifdef ENOREUSE
         case ENOREUSE: return "ENOREUSE";
@@ -1668,6 +1716,9 @@ char const * errnoname(int errno_)
     #ifdef ESAD
         case ESAD: return "ESAD";
     #endif
+    #ifdef ESECTYPEINVAL
+        case ESECTYPEINVAL: return "ESECTYPEINVAL";
+    #endif
     #ifdef ESERVERFAULT
         case ESERVERFAULT: return "ESERVERFAULT";
     #endif
@@ -1694,6 +1745,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ESRMNT
         case ESRMNT: return "ESRMNT";
+    #endif
+    #ifdef ESRVRFAULT
+        case ESRVRFAULT: return "ESRVRFAULT";
     #endif
     #ifdef ESTALE
         case ESTALE: return "ESTALE";

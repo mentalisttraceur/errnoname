@@ -137,6 +137,24 @@ solaris()
     | grep '<dt>[0-9]* E' | cut -d\> -f2 | cut -d\< -f1 | cut -d' ' -f2
 }
 
+qnx()
+{
+    # BlackBerry does not seem to provide a stable URL to the latest
+    # QNX errno list, so we have to find and extract it:
+
+    errno_documentation=`
+        get https://www.qnx.com/developers/docs/ \
+        | grep -A1 'QNX Software Development Platform' \
+        | head -n2 | tail -n1 \
+        | sed 's/.*href="//; s/".*//' \
+        | sed 's|#.*|com.qnx.doc.neutrino.lib_ref/topic/e/errno.html|' \
+        | sed 's/^http:/https:/'
+    `
+    get "$errno_documentation" \
+    | grep 'keyword const">E' | sed 's/.*>E/E/; s/<.*//' \
+    | grep -v EOK
+}
+
 hpux()
 {
     # HP does not seem to provide any URL to any HP-UX
@@ -204,6 +222,7 @@ all()
     openbsd &
     opensolaris &
     solaris &
+    qnx &
     zos &
     _historical &
 }

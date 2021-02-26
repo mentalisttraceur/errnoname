@@ -55,6 +55,9 @@
     #ifdef EBADFD
         [EBADFD] = "EBADFD",
     #endif
+    #ifdef EBADFSYS
+        [EBADFSYS] = "EBADFSYS",
+    #endif
     #ifdef EBADHANDLE
         [EBADHANDLE] = "EBADHANDLE",
     #endif
@@ -138,6 +141,9 @@
     #ifdef ECORRUPT
         [ECORRUPT] = "ECORRUPT",
     #endif
+    #ifdef ECTRLTERM
+        [ECTRLTERM] = "ECTRLTERM",
+    #endif
     #ifdef ECVCERORR
         [ECVCERORR] = "ECVCERORR",
     #endif
@@ -192,6 +198,9 @@
     #endif
     #ifdef EDUPPKG
         [EDUPPKG] = "EDUPPKG",
+    #endif
+    #ifdef EENDIAN
+        [EENDIAN] = "EENDIAN",
     #endif
     #ifdef EEXIST
         [EEXIST] = "EEXIST",
@@ -378,6 +387,9 @@
     #ifdef EMLINK
         [EMLINK] = "EMLINK",
     #endif
+    #ifdef EMORE
+        [EMORE] = "EMORE",
+    #endif
     #ifdef EMOUNTEXIT
         [EMOUNTEXIT] = "EMOUNTEXIT",
     #endif
@@ -513,6 +525,9 @@
     #ifdef ENOLCK
         [ENOLCK] = "ENOLCK",
     #endif
+    #ifdef ENOLIC
+        [ENOLIC] = "ENOLIC",
+    #endif
     #ifdef ENOLINK
         [ENOLINK] = "ENOLINK",
     #endif
@@ -531,6 +546,9 @@
     #ifdef ENOMSG
         [ENOMSG] = "ENOMSG",
     #endif
+    #ifdef ENONDP
+        [ENONDP] = "ENONDP",
+    #endif
     #ifdef ENONET
         [ENONET] = "ENONET",
     #endif
@@ -548,6 +566,9 @@
     #endif
     #ifdef ENOREG
         [ENOREG] = "ENOREG",
+    #endif
+    #ifdef ENOREMOTE
+        [ENOREMOTE] = "ENOREMOTE",
     #endif
     #ifdef ENOREUSE
         [ENOREUSE] = "ENOREUSE",
@@ -775,6 +796,9 @@
     #ifdef ESAD
         [ESAD] = "ESAD",
     #endif
+    #ifdef ESECTYPEINVAL
+        [ESECTYPEINVAL] = "ESECTYPEINVAL",
+    #endif
     #ifdef ESERVERFAULT
         [ESERVERFAULT] = "ESERVERFAULT",
     #endif
@@ -801,6 +825,9 @@
     #endif
     #ifdef ESRMNT
         [ESRMNT] = "ESRMNT",
+    #endif
+    #ifdef ESRVRFAULT
+        [ESRVRFAULT] = "ESRVRFAULT",
     #endif
     #ifdef ESTALE
         [ESTALE] = "ESTALE",

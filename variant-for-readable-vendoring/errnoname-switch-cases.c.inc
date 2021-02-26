@@ -55,6 +55,9 @@
     #ifdef EBADFD
         case EBADFD: return "EBADFD";
     #endif
+    #ifdef EBADFSYS
+        case EBADFSYS: return "EBADFSYS";
+    #endif
     #ifdef EBADHANDLE
         case EBADHANDLE: return "EBADHANDLE";
     #endif
@@ -138,6 +141,9 @@
     #ifdef ECORRUPT
         case ECORRUPT: return "ECORRUPT";
     #endif
+    #ifdef ECTRLTERM
+        case ECTRLTERM: return "ECTRLTERM";
+    #endif
     #ifdef ECVCERORR
         case ECVCERORR: return "ECVCERORR";
     #endif
@@ -192,6 +198,9 @@
     #endif
     #ifdef EDUPPKG
         case EDUPPKG: return "EDUPPKG";
+    #endif
+    #ifdef EENDIAN
+        case EENDIAN: return "EENDIAN";
     #endif
     #ifdef EEXIST
         case EEXIST: return "EEXIST";
@@ -378,6 +387,9 @@
     #ifdef EMLINK
         case EMLINK: return "EMLINK";
     #endif
+    #ifdef EMORE
+        case EMORE: return "EMORE";
+    #endif
     #ifdef EMOUNTEXIT
         case EMOUNTEXIT: return "EMOUNTEXIT";
     #endif
@@ -513,6 +525,9 @@
     #ifdef ENOLCK
         case ENOLCK: return "ENOLCK";
     #endif
+    #ifdef ENOLIC
+        case ENOLIC: return "ENOLIC";
+    #endif
     #ifdef ENOLINK
         case ENOLINK: return "ENOLINK";
     #endif
@@ -531,6 +546,9 @@
     #ifdef ENOMSG
         case ENOMSG: return "ENOMSG";
     #endif
+    #ifdef ENONDP
+        case ENONDP: return "ENONDP";
+    #endif
     #ifdef ENONET
         case ENONET: return "ENONET";
     #endif
@@ -548,6 +566,9 @@
     #endif
     #ifdef ENOREG
         case ENOREG: return "ENOREG";
+    #endif
+    #ifdef ENOREMOTE
+        case ENOREMOTE: return "ENOREMOTE";
     #endif
     #ifdef ENOREUSE
         case ENOREUSE: return "ENOREUSE";
@@ -775,6 +796,9 @@
     #ifdef ESAD
         case ESAD: return "ESAD";
     #endif
+    #ifdef ESECTYPEINVAL
+        case ESECTYPEINVAL: return "ESECTYPEINVAL";
+    #endif
     #ifdef ESERVERFAULT
         case ESERVERFAULT: return "ESERVERFAULT";
     #endif
@@ -801,6 +825,9 @@
     #endif
     #ifdef ESRMNT
         case ESRMNT: return "ESRMNT";
+    #endif
+    #ifdef ESRVRFAULT
+        case ESRVRFAULT: return "ESRVRFAULT";
     #endif
     #ifdef ESTALE
         case ESTALE: return "ESTALE";
