@@ -208,6 +208,9 @@
     #ifdef EFORMAT
         case EFORMAT: return "EFORMAT";
     #endif
+    #ifdef EFPOS
+        case EFPOS: return "EFPOS";
+    #endif
     #ifdef EFRAGS
         case EFRAGS: return "EFRAGS";
     #endif
@@ -780,6 +783,9 @@
     #endif
     #ifdef ESHUTDOWN
         case ESHUTDOWN: return "ESHUTDOWN";
+    #endif
+    #ifdef ESIGPARM
+        case ESIGPARM: return "ESIGPARM";
     #endif
     #ifdef ESOCKTNOSUPPORT
         case ESOCKTNOSUPPORT: return "ESOCKTNOSUPPORT";

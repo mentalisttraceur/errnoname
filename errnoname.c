@@ -234,6 +234,9 @@ char const * errnoname(int errno_)
     #ifdef EFORMAT
         [EFORMAT] = "EFORMAT",
     #endif
+    #ifdef EFPOS
+        [EFPOS] = "EFPOS",
+    #endif
     #ifdef EFRAGS
         [EFRAGS] = "EFRAGS",
     #endif
@@ -807,6 +810,9 @@ char const * errnoname(int errno_)
     #ifdef ESHUTDOWN
         [ESHUTDOWN] = "ESHUTDOWN",
     #endif
+    #ifdef ESIGPARM
+        [ESIGPARM] = "ESIGPARM",
+    #endif
     #ifdef ESOCKTNOSUPPORT
         [ESOCKTNOSUPPORT] = "ESOCKTNOSUPPORT",
     #endif
@@ -1094,6 +1100,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EFORMAT
         case EFORMAT: return "EFORMAT";
+    #endif
+    #ifdef EFPOS
+        case EFPOS: return "EFPOS";
     #endif
     #ifdef EFRAGS
         case EFRAGS: return "EFRAGS";
@@ -1667,6 +1676,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ESHUTDOWN
         case ESHUTDOWN: return "ESHUTDOWN";
+    #endif
+    #ifdef ESIGPARM
+        case ESIGPARM: return "ESIGPARM";
     #endif
     #ifdef ESOCKTNOSUPPORT
         case ESOCKTNOSUPPORT: return "ESOCKTNOSUPPORT";

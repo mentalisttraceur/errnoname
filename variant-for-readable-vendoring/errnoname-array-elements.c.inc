@@ -208,6 +208,9 @@
     #ifdef EFORMAT
         [EFORMAT] = "EFORMAT",
     #endif
+    #ifdef EFPOS
+        [EFPOS] = "EFPOS",
+    #endif
     #ifdef EFRAGS
         [EFRAGS] = "EFRAGS",
     #endif
@@ -780,6 +783,9 @@
     #endif
     #ifdef ESHUTDOWN
         [ESHUTDOWN] = "ESHUTDOWN",
+    #endif
+    #ifdef ESIGPARM
+        [ESIGPARM] = "ESIGPARM",
     #endif
     #ifdef ESOCKTNOSUPPORT
         [ESOCKTNOSUPPORT] = "ESOCKTNOSUPPORT",

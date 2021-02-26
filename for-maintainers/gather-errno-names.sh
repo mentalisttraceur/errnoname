@@ -26,7 +26,7 @@ github()
 
 extract_c()
 {
-    sed 's/\t/ /g' | grep '#define E' | cut -d' ' -f2
+    sed 's/\t/ /g; s/  */ /g; s/^ //' | grep '#define E' | cut -d' ' -f2
 }
 
 linux()
@@ -88,6 +88,12 @@ opensolaris()
 cygwin()
 {
     github cygwin/cygwin/master/newlib/libc/include/sys/errno.h | extract_c
+}
+
+haiku()
+{
+    github haiku/haiku/master/headers/os/support/Errors.h | extract_c &
+    github haiku/haiku/master/headers/build/os/support/Errors.h | extract_c
 }
 
 aix()
@@ -189,6 +195,7 @@ all()
     darwin &
     dragonflybsd &
     freebsd &
+    haiku &
     hpux &
     illumos &
     irix &
