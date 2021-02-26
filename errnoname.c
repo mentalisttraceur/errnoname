@@ -825,9 +825,6 @@ char const * errnoname(int errno_)
     #ifdef ESTALE
         [ESTALE] = "ESTALE",
     #endif
-    #ifdef ESTART
-        [ESTART] = "ESTART",
-    #endif
     #ifdef ESTRPIPE
         [ESTRPIPE] = "ESTRPIPE",
     #endif
@@ -1688,9 +1685,6 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ESTALE
         case ESTALE: return "ESTALE";
-    #endif
-    #ifdef ESTART
-        case ESTART: return "ESTART";
     #endif
     #ifdef ESTRPIPE
         case ESTRPIPE: return "ESTRPIPE";

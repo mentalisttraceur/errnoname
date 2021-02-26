@@ -799,9 +799,6 @@
     #ifdef ESTALE
         case ESTALE: return "ESTALE";
     #endif
-    #ifdef ESTART
-        case ESTART: return "ESTART";
-    #endif
     #ifdef ESTRPIPE
         case ESTRPIPE: return "ESTRPIPE";
     #endif

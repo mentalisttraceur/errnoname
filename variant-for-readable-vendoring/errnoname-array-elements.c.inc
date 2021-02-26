@@ -799,9 +799,6 @@
     #ifdef ESTALE
         [ESTALE] = "ESTALE",
     #endif
-    #ifdef ESTART
-        [ESTART] = "ESTART",
-    #endif
     #ifdef ESTRPIPE
         [ESTRPIPE] = "ESTRPIPE",
     #endif
