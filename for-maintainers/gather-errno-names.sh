@@ -139,7 +139,7 @@ qnx()
         | sed 's/.*href="//; s/".*//' \
         | sed 's|#.*|com.qnx.doc.neutrino.lib_ref/topic/e/errno.html|' \
         | sed 's/^http:/https:/'
-    `
+    ` &&
     get "$errno_documentation" \
     | grep 'keyword const">E' | sed 's/.*>E/E/; s/<.*//' \
     | grep -v EOK
