@@ -1,0 +1,32 @@
+name: Gather errno Names
+
+on:
+  schedule:
+  - cron: '0 0 1 * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Gather errno names
+      run: >
+        ./for-maintainers/gather-errno-names.sh all
+        >for-maintainers/errno-list.txt
+
+    - name: Generate C code
+      run: >
+        <for-maintainers/errno-list.txt
+        ./for-maintainers/generate-c.sh variant-for-readable-vendoring
+
+    - name: Combine C code
+      run: >
+        ./for-maintainers/combine-c.sh variant-for-readable-vendoring
+        >errnoname.c
+
+    - name: Check for changes
+      run: git diff --exit-code
