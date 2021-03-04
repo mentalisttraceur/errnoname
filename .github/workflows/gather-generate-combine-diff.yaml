@@ -11,6 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Safety check
+      # If you forked this repository on github, we probably don't want
+      # your fork to also start trying to download the same stuff every
+      # month just to check if any new errno names have been published
+      # in the known sources. If you're sure you want this, change this
+      # test to match your repository instead of mine. If you just want
+      # this GitHub Action to stop automatically running and failing,
+      # delete the `schedule:` and `cron:` lines up above.
+      run: test "$GITHUB_REPOSITORY" = 'mentalisttraceur/errnoname'
+
     - uses: actions/checkout@v2
 
     - name: Gather errno names
