@@ -1,0 +1,20 @@
+name: Gather errno Names
+
+on:
+  schedule:
+    cron: '0 0 1 * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Gather errno Names
+        run: ./for-maintainers/gather-errno-names.sh >./for-maintainers/errno-list.txt
+
+      - name: Check for Changes
+        run: git diff
