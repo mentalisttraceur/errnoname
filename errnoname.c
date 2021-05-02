@@ -125,9 +125,6 @@ char const * errnoname(int errno_)
     #ifdef ECHRNG
         [ECHRNG] = "ECHRNG",
     #endif
-    #ifdef ECICS
-        [ECICS] = "ECICS",
-    #endif
     #ifdef ECKPT
         [ECKPT] = "ECKPT",
     #endif
@@ -252,20 +249,14 @@ char const * errnoname(int errno_)
     #ifdef EHWPOISON
         [EHWPOISON] = "EHWPOISON",
     #endif
-    #ifdef EIBMBADCALL
-        [EIBMBADCALL] = "EIBMBADCALL",
-    #endif
-    #ifdef EIBMBADPARM
-        [EIBMBADPARM] = "EIBMBADPARM",
+    #ifdef EIBMBADTCPNAME
+        [EIBMBADTCPNAME] = "EIBMBADTCPNAME",
     #endif
     #ifdef EIBMCANCELLED
         [EIBMCANCELLED] = "EIBMCANCELLED",
     #endif
     #ifdef EIBMCONFLICT
         [EIBMCONFLICT] = "EIBMCONFLICT",
-    #endif
-    #ifdef EIBMIUCVERR
-        [EIBMIUCVERR] = "EIBMIUCVERR",
     #endif
     #ifdef EIBMSOCKINUSE
         [EIBMSOCKINUSE] = "EIBMSOCKINUSE",
@@ -353,18 +344,6 @@ char const * errnoname(int errno_)
     #ifdef ELBIN
         [ELBIN] = "ELBIN",
     #endif
-    #ifdef ELEMSGERR
-        [ELEMSGERR] = "ELEMSGERR",
-    #endif
-    #ifdef ELEMULTITHREAD
-        [ELEMULTITHREAD] = "ELEMULTITHREAD",
-    #endif
-    #ifdef ELEMULTITHREADFORK
-        [ELEMULTITHREADFORK] = "ELEMULTITHREADFORK",
-    #endif
-    #ifdef ELENOFORK
-        [ELENOFORK] = "ELENOFORK",
-    #endif
     #ifdef ELIBACC
         [ELIBACC] = "ELIBACC",
     #endif
@@ -419,8 +398,8 @@ char const * errnoname(int errno_)
     #ifdef EMULTIHOP
         [EMULTIHOP] = "EMULTIHOP",
     #endif
-    #ifdef EMVSBADCHAR
-        [EMVSBADCHAR] = "EMVSBADCHAR",
+    #ifdef EMVSARMERROR
+        [EMVSARMERROR] = "EMVSARMERROR",
     #endif
     #ifdef EMVSCATLG
         [EMVSCATLG] = "EMVSCATLG",
@@ -446,17 +425,14 @@ char const * errnoname(int errno_)
     #ifdef EMVSNORTL
         [EMVSNORTL] = "EMVSNORTL",
     #endif
-    #ifdef EMVSNOTXP
-        [EMVSNOTXP] = "EMVSNOTXP",
+    #ifdef EMVSNOTUP
+        [EMVSNOTUP] = "EMVSNOTUP",
     #endif
     #ifdef EMVSPARM
         [EMVSPARM] = "EMVSPARM",
     #endif
     #ifdef EMVSPASSWORD
         [EMVSPASSWORD] = "EMVSPASSWORD",
-    #endif
-    #ifdef EMVSPATHOPTS
-        [EMVSPATHOPTS] = "EMVSPATHOPTS",
     #endif
     #ifdef EMVSPFSFILE
         [EMVSPFSFILE] = "EMVSPFSFILE",
@@ -470,8 +446,8 @@ char const * errnoname(int errno_)
     #ifdef EMVSSAFEXTRERR
         [EMVSSAFEXTRERR] = "EMVSSAFEXTRERR",
     #endif
-    #ifdef EMVSTODNOTSET
-        [EMVSTODNOTSET] = "EMVSTODNOTSET",
+    #ifdef EMVSWLMERROR
+        [EMVSWLMERROR] = "EMVSWLMERROR",
     #endif
     #ifdef ENAMETOOLONG
         [ENAMETOOLONG] = "ENAMETOOLONG",
@@ -556,6 +532,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOMEM
         [ENOMEM] = "ENOMEM",
+    #endif
+    #ifdef ENOMOVE
+        [ENOMOVE] = "ENOMOVE",
     #endif
     #ifdef ENOMSG
         [ENOMSG] = "ENOMSG",
@@ -867,6 +846,24 @@ char const * errnoname(int errno_)
     #ifdef ETXTBSY
         [ETXTBSY] = "ETXTBSY",
     #endif
+    #ifdef ETcpBadObj
+        [ETcpBadObj] = "ETcpBadObj",
+    #endif
+    #ifdef ETcpClosed
+        [ETcpClosed] = "ETcpClosed",
+    #endif
+    #ifdef ETcpErr
+        [ETcpErr] = "ETcpErr",
+    #endif
+    #ifdef ETcpLinked
+        [ETcpLinked] = "ETcpLinked",
+    #endif
+    #ifdef ETcpOutOfState
+        [ETcpOutOfState] = "ETcpOutOfState",
+    #endif
+    #ifdef ETcpUnattach
+        [ETcpUnattach] = "ETcpUnattach",
+    #endif
     #ifdef EUCLEAN
         [EUCLEAN] = "EUCLEAN",
     #endif
@@ -1019,9 +1016,6 @@ char const * errnoname(int errno_)
     #ifdef ECHRNG
         case ECHRNG: return "ECHRNG";
     #endif
-    #ifdef ECICS
-        case ECICS: return "ECICS";
-    #endif
     #ifdef ECKPT
         case ECKPT: return "ECKPT";
     #endif
@@ -1146,20 +1140,14 @@ char const * errnoname(int errno_)
     #ifdef EHWPOISON
         case EHWPOISON: return "EHWPOISON";
     #endif
-    #ifdef EIBMBADCALL
-        case EIBMBADCALL: return "EIBMBADCALL";
-    #endif
-    #ifdef EIBMBADPARM
-        case EIBMBADPARM: return "EIBMBADPARM";
+    #ifdef EIBMBADTCPNAME
+        case EIBMBADTCPNAME: return "EIBMBADTCPNAME";
     #endif
     #ifdef EIBMCANCELLED
         case EIBMCANCELLED: return "EIBMCANCELLED";
     #endif
     #ifdef EIBMCONFLICT
         case EIBMCONFLICT: return "EIBMCONFLICT";
-    #endif
-    #ifdef EIBMIUCVERR
-        case EIBMIUCVERR: return "EIBMIUCVERR";
     #endif
     #ifdef EIBMSOCKINUSE
         case EIBMSOCKINUSE: return "EIBMSOCKINUSE";
@@ -1247,18 +1235,6 @@ char const * errnoname(int errno_)
     #ifdef ELBIN
         case ELBIN: return "ELBIN";
     #endif
-    #ifdef ELEMSGERR
-        case ELEMSGERR: return "ELEMSGERR";
-    #endif
-    #ifdef ELEMULTITHREAD
-        case ELEMULTITHREAD: return "ELEMULTITHREAD";
-    #endif
-    #ifdef ELEMULTITHREADFORK
-        case ELEMULTITHREADFORK: return "ELEMULTITHREADFORK";
-    #endif
-    #ifdef ELENOFORK
-        case ELENOFORK: return "ELENOFORK";
-    #endif
     #ifdef ELIBACC
         case ELIBACC: return "ELIBACC";
     #endif
@@ -1313,8 +1289,8 @@ char const * errnoname(int errno_)
     #ifdef EMULTIHOP
         case EMULTIHOP: return "EMULTIHOP";
     #endif
-    #ifdef EMVSBADCHAR
-        case EMVSBADCHAR: return "EMVSBADCHAR";
+    #ifdef EMVSARMERROR
+        case EMVSARMERROR: return "EMVSARMERROR";
     #endif
     #ifdef EMVSCATLG
         case EMVSCATLG: return "EMVSCATLG";
@@ -1340,17 +1316,14 @@ char const * errnoname(int errno_)
     #ifdef EMVSNORTL
         case EMVSNORTL: return "EMVSNORTL";
     #endif
-    #ifdef EMVSNOTXP
-        case EMVSNOTXP: return "EMVSNOTXP";
+    #ifdef EMVSNOTUP
+        case EMVSNOTUP: return "EMVSNOTUP";
     #endif
     #ifdef EMVSPARM
         case EMVSPARM: return "EMVSPARM";
     #endif
     #ifdef EMVSPASSWORD
         case EMVSPASSWORD: return "EMVSPASSWORD";
-    #endif
-    #ifdef EMVSPATHOPTS
-        case EMVSPATHOPTS: return "EMVSPATHOPTS";
     #endif
     #ifdef EMVSPFSFILE
         case EMVSPFSFILE: return "EMVSPFSFILE";
@@ -1364,8 +1337,8 @@ char const * errnoname(int errno_)
     #ifdef EMVSSAFEXTRERR
         case EMVSSAFEXTRERR: return "EMVSSAFEXTRERR";
     #endif
-    #ifdef EMVSTODNOTSET
-        case EMVSTODNOTSET: return "EMVSTODNOTSET";
+    #ifdef EMVSWLMERROR
+        case EMVSWLMERROR: return "EMVSWLMERROR";
     #endif
     #ifdef ENAMETOOLONG
         case ENAMETOOLONG: return "ENAMETOOLONG";
@@ -1450,6 +1423,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOMEM
         case ENOMEM: return "ENOMEM";
+    #endif
+    #ifdef ENOMOVE
+        case ENOMOVE: return "ENOMOVE";
     #endif
     #ifdef ENOMSG
         case ENOMSG: return "ENOMSG";
@@ -1760,6 +1736,24 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ETXTBSY
         case ETXTBSY: return "ETXTBSY";
+    #endif
+    #ifdef ETcpBadObj
+        case ETcpBadObj: return "ETcpBadObj";
+    #endif
+    #ifdef ETcpClosed
+        case ETcpClosed: return "ETcpClosed";
+    #endif
+    #ifdef ETcpErr
+        case ETcpErr: return "ETcpErr";
+    #endif
+    #ifdef ETcpLinked
+        case ETcpLinked: return "ETcpLinked";
+    #endif
+    #ifdef ETcpOutOfState
+        case ETcpOutOfState: return "ETcpOutOfState";
+    #endif
+    #ifdef ETcpUnattach
+        case ETcpUnattach: return "ETcpUnattach";
     #endif
     #ifdef EUCLEAN
         case EUCLEAN: return "EUCLEAN";

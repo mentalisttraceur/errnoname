@@ -111,9 +111,6 @@
     #ifdef ECHRNG
         [ECHRNG] = "ECHRNG",
     #endif
-    #ifdef ECICS
-        [ECICS] = "ECICS",
-    #endif
     #ifdef ECKPT
         [ECKPT] = "ECKPT",
     #endif
@@ -238,20 +235,14 @@
     #ifdef EHWPOISON
         [EHWPOISON] = "EHWPOISON",
     #endif
-    #ifdef EIBMBADCALL
-        [EIBMBADCALL] = "EIBMBADCALL",
-    #endif
-    #ifdef EIBMBADPARM
-        [EIBMBADPARM] = "EIBMBADPARM",
+    #ifdef EIBMBADTCPNAME
+        [EIBMBADTCPNAME] = "EIBMBADTCPNAME",
     #endif
     #ifdef EIBMCANCELLED
         [EIBMCANCELLED] = "EIBMCANCELLED",
     #endif
     #ifdef EIBMCONFLICT
         [EIBMCONFLICT] = "EIBMCONFLICT",
-    #endif
-    #ifdef EIBMIUCVERR
-        [EIBMIUCVERR] = "EIBMIUCVERR",
     #endif
     #ifdef EIBMSOCKINUSE
         [EIBMSOCKINUSE] = "EIBMSOCKINUSE",
@@ -339,18 +330,6 @@
     #ifdef ELBIN
         [ELBIN] = "ELBIN",
     #endif
-    #ifdef ELEMSGERR
-        [ELEMSGERR] = "ELEMSGERR",
-    #endif
-    #ifdef ELEMULTITHREAD
-        [ELEMULTITHREAD] = "ELEMULTITHREAD",
-    #endif
-    #ifdef ELEMULTITHREADFORK
-        [ELEMULTITHREADFORK] = "ELEMULTITHREADFORK",
-    #endif
-    #ifdef ELENOFORK
-        [ELENOFORK] = "ELENOFORK",
-    #endif
     #ifdef ELIBACC
         [ELIBACC] = "ELIBACC",
     #endif
@@ -405,8 +384,8 @@
     #ifdef EMULTIHOP
         [EMULTIHOP] = "EMULTIHOP",
     #endif
-    #ifdef EMVSBADCHAR
-        [EMVSBADCHAR] = "EMVSBADCHAR",
+    #ifdef EMVSARMERROR
+        [EMVSARMERROR] = "EMVSARMERROR",
     #endif
     #ifdef EMVSCATLG
         [EMVSCATLG] = "EMVSCATLG",
@@ -432,17 +411,14 @@
     #ifdef EMVSNORTL
         [EMVSNORTL] = "EMVSNORTL",
     #endif
-    #ifdef EMVSNOTXP
-        [EMVSNOTXP] = "EMVSNOTXP",
+    #ifdef EMVSNOTUP
+        [EMVSNOTUP] = "EMVSNOTUP",
     #endif
     #ifdef EMVSPARM
         [EMVSPARM] = "EMVSPARM",
     #endif
     #ifdef EMVSPASSWORD
         [EMVSPASSWORD] = "EMVSPASSWORD",
-    #endif
-    #ifdef EMVSPATHOPTS
-        [EMVSPATHOPTS] = "EMVSPATHOPTS",
     #endif
     #ifdef EMVSPFSFILE
         [EMVSPFSFILE] = "EMVSPFSFILE",
@@ -456,8 +432,8 @@
     #ifdef EMVSSAFEXTRERR
         [EMVSSAFEXTRERR] = "EMVSSAFEXTRERR",
     #endif
-    #ifdef EMVSTODNOTSET
-        [EMVSTODNOTSET] = "EMVSTODNOTSET",
+    #ifdef EMVSWLMERROR
+        [EMVSWLMERROR] = "EMVSWLMERROR",
     #endif
     #ifdef ENAMETOOLONG
         [ENAMETOOLONG] = "ENAMETOOLONG",
@@ -542,6 +518,9 @@
     #endif
     #ifdef ENOMEM
         [ENOMEM] = "ENOMEM",
+    #endif
+    #ifdef ENOMOVE
+        [ENOMOVE] = "ENOMOVE",
     #endif
     #ifdef ENOMSG
         [ENOMSG] = "ENOMSG",
@@ -852,6 +831,24 @@
     #endif
     #ifdef ETXTBSY
         [ETXTBSY] = "ETXTBSY",
+    #endif
+    #ifdef ETcpBadObj
+        [ETcpBadObj] = "ETcpBadObj",
+    #endif
+    #ifdef ETcpClosed
+        [ETcpClosed] = "ETcpClosed",
+    #endif
+    #ifdef ETcpErr
+        [ETcpErr] = "ETcpErr",
+    #endif
+    #ifdef ETcpLinked
+        [ETcpLinked] = "ETcpLinked",
+    #endif
+    #ifdef ETcpOutOfState
+        [ETcpOutOfState] = "ETcpOutOfState",
+    #endif
+    #ifdef ETcpUnattach
+        [ETcpUnattach] = "ETcpUnattach",
     #endif
     #ifdef EUCLEAN
         [EUCLEAN] = "EUCLEAN",

@@ -111,9 +111,6 @@
     #ifdef ECHRNG
         case ECHRNG: return "ECHRNG";
     #endif
-    #ifdef ECICS
-        case ECICS: return "ECICS";
-    #endif
     #ifdef ECKPT
         case ECKPT: return "ECKPT";
     #endif
@@ -238,20 +235,14 @@
     #ifdef EHWPOISON
         case EHWPOISON: return "EHWPOISON";
     #endif
-    #ifdef EIBMBADCALL
-        case EIBMBADCALL: return "EIBMBADCALL";
-    #endif
-    #ifdef EIBMBADPARM
-        case EIBMBADPARM: return "EIBMBADPARM";
+    #ifdef EIBMBADTCPNAME
+        case EIBMBADTCPNAME: return "EIBMBADTCPNAME";
     #endif
     #ifdef EIBMCANCELLED
         case EIBMCANCELLED: return "EIBMCANCELLED";
     #endif
     #ifdef EIBMCONFLICT
         case EIBMCONFLICT: return "EIBMCONFLICT";
-    #endif
-    #ifdef EIBMIUCVERR
-        case EIBMIUCVERR: return "EIBMIUCVERR";
     #endif
     #ifdef EIBMSOCKINUSE
         case EIBMSOCKINUSE: return "EIBMSOCKINUSE";
@@ -339,18 +330,6 @@
     #ifdef ELBIN
         case ELBIN: return "ELBIN";
     #endif
-    #ifdef ELEMSGERR
-        case ELEMSGERR: return "ELEMSGERR";
-    #endif
-    #ifdef ELEMULTITHREAD
-        case ELEMULTITHREAD: return "ELEMULTITHREAD";
-    #endif
-    #ifdef ELEMULTITHREADFORK
-        case ELEMULTITHREADFORK: return "ELEMULTITHREADFORK";
-    #endif
-    #ifdef ELENOFORK
-        case ELENOFORK: return "ELENOFORK";
-    #endif
     #ifdef ELIBACC
         case ELIBACC: return "ELIBACC";
     #endif
@@ -405,8 +384,8 @@
     #ifdef EMULTIHOP
         case EMULTIHOP: return "EMULTIHOP";
     #endif
-    #ifdef EMVSBADCHAR
-        case EMVSBADCHAR: return "EMVSBADCHAR";
+    #ifdef EMVSARMERROR
+        case EMVSARMERROR: return "EMVSARMERROR";
     #endif
     #ifdef EMVSCATLG
         case EMVSCATLG: return "EMVSCATLG";
@@ -432,17 +411,14 @@
     #ifdef EMVSNORTL
         case EMVSNORTL: return "EMVSNORTL";
     #endif
-    #ifdef EMVSNOTXP
-        case EMVSNOTXP: return "EMVSNOTXP";
+    #ifdef EMVSNOTUP
+        case EMVSNOTUP: return "EMVSNOTUP";
     #endif
     #ifdef EMVSPARM
         case EMVSPARM: return "EMVSPARM";
     #endif
     #ifdef EMVSPASSWORD
         case EMVSPASSWORD: return "EMVSPASSWORD";
-    #endif
-    #ifdef EMVSPATHOPTS
-        case EMVSPATHOPTS: return "EMVSPATHOPTS";
     #endif
     #ifdef EMVSPFSFILE
         case EMVSPFSFILE: return "EMVSPFSFILE";
@@ -456,8 +432,8 @@
     #ifdef EMVSSAFEXTRERR
         case EMVSSAFEXTRERR: return "EMVSSAFEXTRERR";
     #endif
-    #ifdef EMVSTODNOTSET
-        case EMVSTODNOTSET: return "EMVSTODNOTSET";
+    #ifdef EMVSWLMERROR
+        case EMVSWLMERROR: return "EMVSWLMERROR";
     #endif
     #ifdef ENAMETOOLONG
         case ENAMETOOLONG: return "ENAMETOOLONG";
@@ -542,6 +518,9 @@
     #endif
     #ifdef ENOMEM
         case ENOMEM: return "ENOMEM";
+    #endif
+    #ifdef ENOMOVE
+        case ENOMOVE: return "ENOMOVE";
     #endif
     #ifdef ENOMSG
         case ENOMSG: return "ENOMSG";
@@ -852,6 +831,24 @@
     #endif
     #ifdef ETXTBSY
         case ETXTBSY: return "ETXTBSY";
+    #endif
+    #ifdef ETcpBadObj
+        case ETcpBadObj: return "ETcpBadObj";
+    #endif
+    #ifdef ETcpClosed
+        case ETcpClosed: return "ETcpClosed";
+    #endif
+    #ifdef ETcpErr
+        case ETcpErr: return "ETcpErr";
+    #endif
+    #ifdef ETcpLinked
+        case ETcpLinked: return "ETcpLinked";
+    #endif
+    #ifdef ETcpOutOfState
+        case ETcpOutOfState: return "ETcpOutOfState";
+    #endif
+    #ifdef ETcpUnattach
+        case ETcpUnattach: return "ETcpUnattach";
     #endif
     #ifdef EUCLEAN
         case EUCLEAN: return "EUCLEAN";
