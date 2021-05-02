@@ -4,7 +4,7 @@
 
 main()
 {
-    directory=${1='first argument must be the output directory'}
+    directory=${1?'first argument must be the output directory'}
 
     # Read the errno list from stdin:
     list=`cat`
