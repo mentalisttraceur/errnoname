@@ -4,7 +4,7 @@
 
 get()
 {
-    curl --silent --show-error -- "$@"
+    curl --location --silent --show-error -- "$@"
     # Alternative for users who don't have curl:
     #wget --quiet --output-document - -- "$@"
 }
