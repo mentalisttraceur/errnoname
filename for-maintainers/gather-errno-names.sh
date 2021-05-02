@@ -86,6 +86,12 @@ haiku()
     github haiku/haiku/master/headers/build/os/support/Errors.h | extract_c
 }
 
+zos()
+{
+    get 'https://www.ibm.com/docs/en/zos/latest?topic=codes-return-errnos' \
+    | grep ' class="nrule">E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
+}
+
 aix()
 {
     # IBM does not seem to provide any URL to any AIX errno
@@ -93,12 +99,6 @@ aix()
 
     github golang/go/master/src/syscall/zerrors_aix_ppc64.go \
     | grep 'Errno' | awk '{ print $1 }'
-}
-
-zos()
-{
-    get 'https://www.ibm.com/docs/en/zos/latest?topic=codes-return-errnos' \
-    | grep ' class="nrule">E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
 }
 
 solaris()
