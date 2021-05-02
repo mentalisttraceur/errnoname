@@ -25,6 +25,33 @@
     #ifdef EAIO
         [EAIO] = "EAIO",
     #endif
+    #ifdef EAI_AGAIN
+        [EAI_AGAIN] = "EAI_AGAIN",
+    #endif
+    #ifdef EAI_BADFLAGS
+        [EAI_BADFLAGS] = "EAI_BADFLAGS",
+    #endif
+    #ifdef EAI_FAIL
+        [EAI_FAIL] = "EAI_FAIL",
+    #endif
+    #ifdef EAI_FAMILY
+        [EAI_FAMILY] = "EAI_FAMILY",
+    #endif
+    #ifdef EAI_MEMORY
+        [EAI_MEMORY] = "EAI_MEMORY",
+    #endif
+    #ifdef EAI_NONAME
+        [EAI_NONAME] = "EAI_NONAME",
+    #endif
+    #ifdef EAI_OVERFLOW
+        [EAI_OVERFLOW] = "EAI_OVERFLOW",
+    #endif
+    #ifdef EAI_SERVICE
+        [EAI_SERVICE] = "EAI_SERVICE",
+    #endif
+    #ifdef EAI_SOCKTYPE
+        [EAI_SOCKTYPE] = "EAI_SOCKTYPE",
+    #endif
     #ifdef EALIGN
         [EALIGN] = "EALIGN",
     #endif
@@ -67,6 +94,9 @@
     #ifdef EBADMSG
         [EBADMSG] = "EBADMSG",
     #endif
+    #ifdef EBADOBJ
+        [EBADOBJ] = "EBADOBJ",
+    #endif
     #ifdef EBADR
         [EBADR] = "EBADR",
     #endif
@@ -90,6 +120,9 @@
     #endif
     #ifdef EBUSY
         [EBUSY] = "EBUSY",
+    #endif
+    #ifdef ECANCEL
+        [ECANCEL] = "ECANCEL",
     #endif
     #ifdef ECANCELED
         [ECANCELED] = "ECANCELED",
@@ -120,6 +153,9 @@
     #ifdef ECLONEME
         [ECLONEME] = "ECLONEME",
     #endif
+    #ifdef ECLOSED
+        [ECLOSED] = "ECLOSED",
+    #endif
     #ifdef ECOMM
         [ECOMM] = "ECOMM",
     #endif
@@ -129,11 +165,17 @@
     #ifdef ECONNABORTED
         [ECONNABORTED] = "ECONNABORTED",
     #endif
+    #ifdef ECONNCLOSED
+        [ECONNCLOSED] = "ECONNCLOSED",
+    #endif
     #ifdef ECONNREFUSED
         [ECONNREFUSED] = "ECONNREFUSED",
     #endif
     #ifdef ECONNRESET
         [ECONNRESET] = "ECONNRESET",
+    #endif
+    #ifdef ECONSOLEINTERRUPT
+        [ECONSOLEINTERRUPT] = "ECONSOLEINTERRUPT",
     #endif
     #ifdef ECORRUPT
         [ECORRUPT] = "ECORRUPT",
@@ -180,6 +222,9 @@
     #endif
     #ifdef EDOM
         [EDOM] = "EDOM",
+    #endif
+    #ifdef EDOMAINSERVERFAILURE
+        [EDOMAINSERVERFAILURE] = "EDOMAINSERVERFAILURE",
     #endif
     #ifdef EDOOFUS
         [EDOOFUS] = "EDOOFUS",
@@ -229,14 +274,29 @@
     #ifdef EHOSTDOWN
         [EHOSTDOWN] = "EHOSTDOWN",
     #endif
+    #ifdef EHOSTNOTFOUND
+        [EHOSTNOTFOUND] = "EHOSTNOTFOUND",
+    #endif
     #ifdef EHOSTUNREACH
         [EHOSTUNREACH] = "EHOSTUNREACH",
     #endif
     #ifdef EHWPOISON
         [EHWPOISON] = "EHWPOISON",
     #endif
+    #ifdef EIBMBADCONNECTIONMATCH
+        [EIBMBADCONNECTIONMATCH] = "EIBMBADCONNECTIONMATCH",
+    #endif
+    #ifdef EIBMBADCONNECTIONSTATE
+        [EIBMBADCONNECTIONSTATE] = "EIBMBADCONNECTIONSTATE",
+    #endif
+    #ifdef EIBMBADREQUESTCODE
+        [EIBMBADREQUESTCODE] = "EIBMBADREQUESTCODE",
+    #endif
     #ifdef EIBMBADTCPNAME
         [EIBMBADTCPNAME] = "EIBMBADTCPNAME",
+    #endif
+    #ifdef EIBMCALLINPROGRESS
+        [EIBMCALLINPROGRESS] = "EIBMCALLINPROGRESS",
     #endif
     #ifdef EIBMCANCELLED
         [EIBMCANCELLED] = "EIBMCANCELLED",
@@ -244,11 +304,44 @@
     #ifdef EIBMCONFLICT
         [EIBMCONFLICT] = "EIBMCONFLICT",
     #endif
+    #ifdef EIBMINVDELETE
+        [EIBMINVDELETE] = "EIBMINVDELETE",
+    #endif
+    #ifdef EIBMINVSOCKET
+        [EIBMINVSOCKET] = "EIBMINVSOCKET",
+    #endif
+    #ifdef EIBMINVTCPCONNECTION
+        [EIBMINVTCPCONNECTION] = "EIBMINVTCPCONNECTION",
+    #endif
+    #ifdef EIBMINVTSRBUSERDATA
+        [EIBMINVTSRBUSERDATA] = "EIBMINVTSRBUSERDATA",
+    #endif
+    #ifdef EIBMINVUSERDATA
+        [EIBMINVUSERDATA] = "EIBMINVUSERDATA",
+    #endif
+    #ifdef EIBMIUCVERR
+        [EIBMIUCVERR] = "EIBMIUCVERR",
+    #endif
+    #ifdef EIBMNOACTIVETCP
+        [EIBMNOACTIVETCP] = "EIBMNOACTIVETCP",
+    #endif
+    #ifdef EIBMSELECTEXPOST
+        [EIBMSELECTEXPOST] = "EIBMSELECTEXPOST",
+    #endif
     #ifdef EIBMSOCKINUSE
         [EIBMSOCKINUSE] = "EIBMSOCKINUSE",
     #endif
     #ifdef EIBMSOCKOUTOFRANGE
         [EIBMSOCKOUTOFRANGE] = "EIBMSOCKOUTOFRANGE",
+    #endif
+    #ifdef EIBMTCPABEND
+        [EIBMTCPABEND] = "EIBMTCPABEND",
+    #endif
+    #ifdef EIBMTERMERROR
+        [EIBMTERMERROR] = "EIBMTERMERROR",
+    #endif
+    #ifdef EIBMUNAUTHORIZEDCALLER
+        [EIBMUNAUTHORIZEDCALLER] = "EIBMUNAUTHORIZEDCALLER",
     #endif
     #ifdef EIDRM
         [EIDRM] = "EIDRM",
@@ -279,11 +372,26 @@
     #ifdef EINVAL
         [EINVAL] = "EINVAL",
     #endif
+    #ifdef EINVALIDCLIENTID
+        [EINVALIDCLIENTID] = "EINVALIDCLIENTID",
+    #endif
+    #ifdef EINVALIDCOMBINATION
+        [EINVALIDCOMBINATION] = "EINVALIDCOMBINATION",
+    #endif
+    #ifdef EINVALIDNAME
+        [EINVALIDNAME] = "EINVALIDNAME",
+    #endif
+    #ifdef EINVALIDRXSOCKETCALL
+        [EINVALIDRXSOCKETCALL] = "EINVALIDRXSOCKETCALL",
+    #endif
     #ifdef EIO
         [EIO] = "EIO",
     #endif
     #ifdef EIOCBQUEUED
         [EIOCBQUEUED] = "EIOCBQUEUED",
+    #endif
+    #ifdef EIPADDRNOTFOUND
+        [EIPADDRNOTFOUND] = "EIPADDRNOTFOUND",
     #endif
     #ifdef EIPSEC
         [EIPSEC] = "EIPSEC",
@@ -345,6 +453,9 @@
     #ifdef ELIBSCN
         [ELIBSCN] = "ELIBSCN",
     #endif
+    #ifdef ELINKED
+        [ELINKED] = "ELINKED",
+    #endif
     #ifdef ELNRNG
         [ELNRNG] = "ELNRNG",
     #endif
@@ -354,6 +465,9 @@
     #ifdef ELOOP
         [ELOOP] = "ELOOP",
     #endif
+    #ifdef EMAXSOCKETSREACHED
+        [EMAXSOCKETSREACHED] = "EMAXSOCKETSREACHED",
+    #endif
     #ifdef EMEDIA
         [EMEDIA] = "EMEDIA",
     #endif
@@ -362,6 +476,9 @@
     #endif
     #ifdef EMFILE
         [EMFILE] = "EMFILE",
+    #endif
+    #ifdef EMISSED
+        [EMISSED] = "EMISSED",
     #endif
     #ifdef EMLINK
         [EMLINK] = "EMLINK",
@@ -459,6 +576,12 @@
     #ifdef ENFSREMOTE
         [ENFSREMOTE] = "ENFSREMOTE",
     #endif
+    #ifdef ENIVALIDFILENAME
+        [ENIVALIDFILENAME] = "ENIVALIDFILENAME",
+    #endif
+    #ifdef ENMELONG
+        [ENMELONG] = "ENMELONG",
+    #endif
     #ifdef ENMFILE
         [ENMFILE] = "ENMFILE",
     #endif
@@ -534,6 +657,9 @@
     #ifdef ENOPARAM
         [ENOPARAM] = "ENOPARAM",
     #endif
+    #ifdef ENOPARTNERINFO
+        [ENOPARTNERINFO] = "ENOPARTNERINFO",
+    #endif
     #ifdef ENOPKG
         [ENOPKG] = "ENOPKG",
     #endif
@@ -584,6 +710,9 @@
     #endif
     #ifdef ENOTDIR
         [ENOTDIR] = "ENOTDIR",
+    #endif
+    #ifdef ENOTEMPT
+        [ENOTEMPT] = "ENOTEMPT",
     #endif
     #ifdef ENOTEMPTY
         [ENOTEMPTY] = "ENOTEMPTY",
@@ -647,6 +776,9 @@
         [EOPNOTSUPP] = "EOPNOTSUPP",
         #endif
     #endif
+    #ifdef EOUTOFSTATE
+        [EOUTOFSTATE] = "EOUTOFSTATE",
+    #endif
     #ifdef EOVERFLOW
         [EOVERFLOW] = "EOVERFLOW",
     #endif
@@ -709,6 +841,9 @@
     #endif
     #ifdef ERECALLCONFLICT
         [ERECALLCONFLICT] = "ERECALLCONFLICT",
+    #endif
+    #ifdef ERECURSE
+        [ERECURSE] = "ERECURSE",
     #endif
     #ifdef ERECYCLE
         [ERECYCLE] = "ERECYCLE",
@@ -790,6 +925,12 @@
     #ifdef ESIGPARM
         [ESIGPARM] = "ESIGPARM",
     #endif
+    #ifdef ESOCKETNOTALLOCATED
+        [ESOCKETNOTALLOCATED] = "ESOCKETNOTALLOCATED",
+    #endif
+    #ifdef ESOCKETNOTDEFINED
+        [ESOCKETNOTDEFINED] = "ESOCKETNOTDEFINED",
+    #endif
     #ifdef ESOCKTNOSUPPORT
         [ESOCKTNOSUPPORT] = "ESOCKTNOSUPPORT",
     #endif
@@ -814,8 +955,20 @@
     #ifdef ESTRPIPE
         [ESTRPIPE] = "ESTRPIPE",
     #endif
+    #ifdef ESUBTASKALREADYACTIVE
+        [ESUBTASKALREADYACTIVE] = "ESUBTASKALREADYACTIVE",
+    #endif
+    #ifdef ESUBTASKINVALID
+        [ESUBTASKINVALID] = "ESUBTASKINVALID",
+    #endif
+    #ifdef ESUBTASKNOTACTIVE
+        [ESUBTASKNOTACTIVE] = "ESUBTASKNOTACTIVE",
+    #endif
     #ifdef ESYSERROR
         [ESYSERROR] = "ESYSERROR",
+    #endif
+    #ifdef ETERM
+        [ETERM] = "ETERM",
     #endif
     #ifdef ETIME
         [ETIME] = "ETIME",
@@ -855,6 +1008,9 @@
     #endif
     #ifdef EUNATCH
         [EUNATCH] = "EUNATCH",
+    #endif
+    #ifdef EUNKNOWN
+        [EUNKNOWN] = "EUNKNOWN",
     #endif
     #ifdef EUSERS
         [EUSERS] = "EUSERS",

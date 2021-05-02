@@ -25,6 +25,33 @@
     #ifdef EAIO
         case EAIO: return "EAIO";
     #endif
+    #ifdef EAI_AGAIN
+        case EAI_AGAIN: return "EAI_AGAIN";
+    #endif
+    #ifdef EAI_BADFLAGS
+        case EAI_BADFLAGS: return "EAI_BADFLAGS";
+    #endif
+    #ifdef EAI_FAIL
+        case EAI_FAIL: return "EAI_FAIL";
+    #endif
+    #ifdef EAI_FAMILY
+        case EAI_FAMILY: return "EAI_FAMILY";
+    #endif
+    #ifdef EAI_MEMORY
+        case EAI_MEMORY: return "EAI_MEMORY";
+    #endif
+    #ifdef EAI_NONAME
+        case EAI_NONAME: return "EAI_NONAME";
+    #endif
+    #ifdef EAI_OVERFLOW
+        case EAI_OVERFLOW: return "EAI_OVERFLOW";
+    #endif
+    #ifdef EAI_SERVICE
+        case EAI_SERVICE: return "EAI_SERVICE";
+    #endif
+    #ifdef EAI_SOCKTYPE
+        case EAI_SOCKTYPE: return "EAI_SOCKTYPE";
+    #endif
     #ifdef EALIGN
         case EALIGN: return "EALIGN";
     #endif
@@ -67,6 +94,9 @@
     #ifdef EBADMSG
         case EBADMSG: return "EBADMSG";
     #endif
+    #ifdef EBADOBJ
+        case EBADOBJ: return "EBADOBJ";
+    #endif
     #ifdef EBADR
         case EBADR: return "EBADR";
     #endif
@@ -90,6 +120,9 @@
     #endif
     #ifdef EBUSY
         case EBUSY: return "EBUSY";
+    #endif
+    #ifdef ECANCEL
+        case ECANCEL: return "ECANCEL";
     #endif
     #ifdef ECANCELED
         case ECANCELED: return "ECANCELED";
@@ -120,6 +153,9 @@
     #ifdef ECLONEME
         case ECLONEME: return "ECLONEME";
     #endif
+    #ifdef ECLOSED
+        case ECLOSED: return "ECLOSED";
+    #endif
     #ifdef ECOMM
         case ECOMM: return "ECOMM";
     #endif
@@ -129,11 +165,17 @@
     #ifdef ECONNABORTED
         case ECONNABORTED: return "ECONNABORTED";
     #endif
+    #ifdef ECONNCLOSED
+        case ECONNCLOSED: return "ECONNCLOSED";
+    #endif
     #ifdef ECONNREFUSED
         case ECONNREFUSED: return "ECONNREFUSED";
     #endif
     #ifdef ECONNRESET
         case ECONNRESET: return "ECONNRESET";
+    #endif
+    #ifdef ECONSOLEINTERRUPT
+        case ECONSOLEINTERRUPT: return "ECONSOLEINTERRUPT";
     #endif
     #ifdef ECORRUPT
         case ECORRUPT: return "ECORRUPT";
@@ -180,6 +222,9 @@
     #endif
     #ifdef EDOM
         case EDOM: return "EDOM";
+    #endif
+    #ifdef EDOMAINSERVERFAILURE
+        case EDOMAINSERVERFAILURE: return "EDOMAINSERVERFAILURE";
     #endif
     #ifdef EDOOFUS
         case EDOOFUS: return "EDOOFUS";
@@ -229,14 +274,29 @@
     #ifdef EHOSTDOWN
         case EHOSTDOWN: return "EHOSTDOWN";
     #endif
+    #ifdef EHOSTNOTFOUND
+        case EHOSTNOTFOUND: return "EHOSTNOTFOUND";
+    #endif
     #ifdef EHOSTUNREACH
         case EHOSTUNREACH: return "EHOSTUNREACH";
     #endif
     #ifdef EHWPOISON
         case EHWPOISON: return "EHWPOISON";
     #endif
+    #ifdef EIBMBADCONNECTIONMATCH
+        case EIBMBADCONNECTIONMATCH: return "EIBMBADCONNECTIONMATCH";
+    #endif
+    #ifdef EIBMBADCONNECTIONSTATE
+        case EIBMBADCONNECTIONSTATE: return "EIBMBADCONNECTIONSTATE";
+    #endif
+    #ifdef EIBMBADREQUESTCODE
+        case EIBMBADREQUESTCODE: return "EIBMBADREQUESTCODE";
+    #endif
     #ifdef EIBMBADTCPNAME
         case EIBMBADTCPNAME: return "EIBMBADTCPNAME";
+    #endif
+    #ifdef EIBMCALLINPROGRESS
+        case EIBMCALLINPROGRESS: return "EIBMCALLINPROGRESS";
     #endif
     #ifdef EIBMCANCELLED
         case EIBMCANCELLED: return "EIBMCANCELLED";
@@ -244,11 +304,44 @@
     #ifdef EIBMCONFLICT
         case EIBMCONFLICT: return "EIBMCONFLICT";
     #endif
+    #ifdef EIBMINVDELETE
+        case EIBMINVDELETE: return "EIBMINVDELETE";
+    #endif
+    #ifdef EIBMINVSOCKET
+        case EIBMINVSOCKET: return "EIBMINVSOCKET";
+    #endif
+    #ifdef EIBMINVTCPCONNECTION
+        case EIBMINVTCPCONNECTION: return "EIBMINVTCPCONNECTION";
+    #endif
+    #ifdef EIBMINVTSRBUSERDATA
+        case EIBMINVTSRBUSERDATA: return "EIBMINVTSRBUSERDATA";
+    #endif
+    #ifdef EIBMINVUSERDATA
+        case EIBMINVUSERDATA: return "EIBMINVUSERDATA";
+    #endif
+    #ifdef EIBMIUCVERR
+        case EIBMIUCVERR: return "EIBMIUCVERR";
+    #endif
+    #ifdef EIBMNOACTIVETCP
+        case EIBMNOACTIVETCP: return "EIBMNOACTIVETCP";
+    #endif
+    #ifdef EIBMSELECTEXPOST
+        case EIBMSELECTEXPOST: return "EIBMSELECTEXPOST";
+    #endif
     #ifdef EIBMSOCKINUSE
         case EIBMSOCKINUSE: return "EIBMSOCKINUSE";
     #endif
     #ifdef EIBMSOCKOUTOFRANGE
         case EIBMSOCKOUTOFRANGE: return "EIBMSOCKOUTOFRANGE";
+    #endif
+    #ifdef EIBMTCPABEND
+        case EIBMTCPABEND: return "EIBMTCPABEND";
+    #endif
+    #ifdef EIBMTERMERROR
+        case EIBMTERMERROR: return "EIBMTERMERROR";
+    #endif
+    #ifdef EIBMUNAUTHORIZEDCALLER
+        case EIBMUNAUTHORIZEDCALLER: return "EIBMUNAUTHORIZEDCALLER";
     #endif
     #ifdef EIDRM
         case EIDRM: return "EIDRM";
@@ -279,11 +372,26 @@
     #ifdef EINVAL
         case EINVAL: return "EINVAL";
     #endif
+    #ifdef EINVALIDCLIENTID
+        case EINVALIDCLIENTID: return "EINVALIDCLIENTID";
+    #endif
+    #ifdef EINVALIDCOMBINATION
+        case EINVALIDCOMBINATION: return "EINVALIDCOMBINATION";
+    #endif
+    #ifdef EINVALIDNAME
+        case EINVALIDNAME: return "EINVALIDNAME";
+    #endif
+    #ifdef EINVALIDRXSOCKETCALL
+        case EINVALIDRXSOCKETCALL: return "EINVALIDRXSOCKETCALL";
+    #endif
     #ifdef EIO
         case EIO: return "EIO";
     #endif
     #ifdef EIOCBQUEUED
         case EIOCBQUEUED: return "EIOCBQUEUED";
+    #endif
+    #ifdef EIPADDRNOTFOUND
+        case EIPADDRNOTFOUND: return "EIPADDRNOTFOUND";
     #endif
     #ifdef EIPSEC
         case EIPSEC: return "EIPSEC";
@@ -345,6 +453,9 @@
     #ifdef ELIBSCN
         case ELIBSCN: return "ELIBSCN";
     #endif
+    #ifdef ELINKED
+        case ELINKED: return "ELINKED";
+    #endif
     #ifdef ELNRNG
         case ELNRNG: return "ELNRNG";
     #endif
@@ -354,6 +465,9 @@
     #ifdef ELOOP
         case ELOOP: return "ELOOP";
     #endif
+    #ifdef EMAXSOCKETSREACHED
+        case EMAXSOCKETSREACHED: return "EMAXSOCKETSREACHED";
+    #endif
     #ifdef EMEDIA
         case EMEDIA: return "EMEDIA";
     #endif
@@ -362,6 +476,9 @@
     #endif
     #ifdef EMFILE
         case EMFILE: return "EMFILE";
+    #endif
+    #ifdef EMISSED
+        case EMISSED: return "EMISSED";
     #endif
     #ifdef EMLINK
         case EMLINK: return "EMLINK";
@@ -459,6 +576,12 @@
     #ifdef ENFSREMOTE
         case ENFSREMOTE: return "ENFSREMOTE";
     #endif
+    #ifdef ENIVALIDFILENAME
+        case ENIVALIDFILENAME: return "ENIVALIDFILENAME";
+    #endif
+    #ifdef ENMELONG
+        case ENMELONG: return "ENMELONG";
+    #endif
     #ifdef ENMFILE
         case ENMFILE: return "ENMFILE";
     #endif
@@ -534,6 +657,9 @@
     #ifdef ENOPARAM
         case ENOPARAM: return "ENOPARAM";
     #endif
+    #ifdef ENOPARTNERINFO
+        case ENOPARTNERINFO: return "ENOPARTNERINFO";
+    #endif
     #ifdef ENOPKG
         case ENOPKG: return "ENOPKG";
     #endif
@@ -584,6 +710,9 @@
     #endif
     #ifdef ENOTDIR
         case ENOTDIR: return "ENOTDIR";
+    #endif
+    #ifdef ENOTEMPT
+        case ENOTEMPT: return "ENOTEMPT";
     #endif
     #ifdef ENOTEMPTY
         case ENOTEMPTY: return "ENOTEMPTY";
@@ -647,6 +776,9 @@
         case EOPNOTSUPP: return "EOPNOTSUPP";
         #endif
     #endif
+    #ifdef EOUTOFSTATE
+        case EOUTOFSTATE: return "EOUTOFSTATE";
+    #endif
     #ifdef EOVERFLOW
         case EOVERFLOW: return "EOVERFLOW";
     #endif
@@ -709,6 +841,9 @@
     #endif
     #ifdef ERECALLCONFLICT
         case ERECALLCONFLICT: return "ERECALLCONFLICT";
+    #endif
+    #ifdef ERECURSE
+        case ERECURSE: return "ERECURSE";
     #endif
     #ifdef ERECYCLE
         case ERECYCLE: return "ERECYCLE";
@@ -790,6 +925,12 @@
     #ifdef ESIGPARM
         case ESIGPARM: return "ESIGPARM";
     #endif
+    #ifdef ESOCKETNOTALLOCATED
+        case ESOCKETNOTALLOCATED: return "ESOCKETNOTALLOCATED";
+    #endif
+    #ifdef ESOCKETNOTDEFINED
+        case ESOCKETNOTDEFINED: return "ESOCKETNOTDEFINED";
+    #endif
     #ifdef ESOCKTNOSUPPORT
         case ESOCKTNOSUPPORT: return "ESOCKTNOSUPPORT";
     #endif
@@ -814,8 +955,20 @@
     #ifdef ESTRPIPE
         case ESTRPIPE: return "ESTRPIPE";
     #endif
+    #ifdef ESUBTASKALREADYACTIVE
+        case ESUBTASKALREADYACTIVE: return "ESUBTASKALREADYACTIVE";
+    #endif
+    #ifdef ESUBTASKINVALID
+        case ESUBTASKINVALID: return "ESUBTASKINVALID";
+    #endif
+    #ifdef ESUBTASKNOTACTIVE
+        case ESUBTASKNOTACTIVE: return "ESUBTASKNOTACTIVE";
+    #endif
     #ifdef ESYSERROR
         case ESYSERROR: return "ESYSERROR";
+    #endif
+    #ifdef ETERM
+        case ETERM: return "ETERM";
     #endif
     #ifdef ETIME
         case ETIME: return "ETIME";
@@ -855,6 +1008,9 @@
     #endif
     #ifdef EUNATCH
         case EUNATCH: return "EUNATCH";
+    #endif
+    #ifdef EUNKNOWN
+        case EUNKNOWN: return "EUNKNOWN";
     #endif
     #ifdef EUSERS
         case EUSERS: return "EUSERS";

@@ -88,8 +88,11 @@ haiku()
 
 zos()
 {
-    get 'https://www.ibm.com/docs/en/zos/latest?topic=codes-return-errnos' \
-    | grep ' class="nrule">E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
+    latest_zos_documentation='https://www.ibm.com/docs/en/zos/latest?topic='
+    get "$latest_zos_documentation"'codes-return-errnos' \
+    | grep 'nrule.*>E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1 &
+    get "$latest_zos_documentation"'calls-sockets-return-codes-errnos' \
+    | grep 'ncol.*>E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
 }
 
 aix()
