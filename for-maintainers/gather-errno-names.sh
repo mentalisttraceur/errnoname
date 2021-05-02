@@ -222,7 +222,7 @@ all()
         zos \
         _historical
     do
-        execute_with_prefixed_errors "$source"
+        execute_with_prefixed_errors "$source" &
     done
 }
 
