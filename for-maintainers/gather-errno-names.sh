@@ -97,16 +97,8 @@ aix()
 
 zos()
 {
-    # IBM does not seem to provide a stable URL to the latest
-    # z/OS errno list, so we have to find and extract it:
-
-    errno_documentation=`
-        get https://www.ibm.com/it-infrastructure/z/zos \
-        | grep 'Find z/OS documentation' | sed 's/.* href="//; s/".*//' \
-        | sed 's|/en/homepage.html$|.bpxbd00/errnoh.htm?view=embed|'
-    ` &&
-    get "$errno_documentation" \
-    | grep '<td class="nrule">E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
+    get 'https://www.ibm.com/docs/en/zos/latest?topic=codes-return-errnos' \
+    | grep ' class="nrule">E[^ ]*<' | cut -d\> -f2 | cut -d\< -f1
 }
 
 solaris()
