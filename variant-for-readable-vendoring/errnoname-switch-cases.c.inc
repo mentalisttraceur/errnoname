@@ -612,6 +612,9 @@
     #ifdef ENOEXEC
         case ENOEXEC: return "ENOEXEC";
     #endif
+    #ifdef ENOGRACE
+        case ENOGRACE: return "ENOGRACE";
+    #endif
     #ifdef ENOIOCTL
         case ENOIOCTL: return "ENOIOCTL";
     #endif

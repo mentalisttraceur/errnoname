@@ -626,6 +626,9 @@ char const * errnoname(int errno_)
     #ifdef ENOEXEC
         [ENOEXEC] = "ENOEXEC",
     #endif
+    #ifdef ENOGRACE
+        [ENOGRACE] = "ENOGRACE",
+    #endif
     #ifdef ENOIOCTL
         [ENOIOCTL] = "ENOIOCTL",
     #endif
@@ -1672,6 +1675,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOEXEC
         case ENOEXEC: return "ENOEXEC";
+    #endif
+    #ifdef ENOGRACE
+        case ENOGRACE: return "ENOGRACE";
     #endif
     #ifdef ENOIOCTL
         case ENOIOCTL: return "ENOIOCTL";

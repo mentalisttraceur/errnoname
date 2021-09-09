@@ -612,6 +612,9 @@
     #ifdef ENOEXEC
         [ENOEXEC] = "ENOEXEC",
     #endif
+    #ifdef ENOGRACE
+        [ENOGRACE] = "ENOGRACE",
+    #endif
     #ifdef ENOIOCTL
         [ENOIOCTL] = "ENOIOCTL",
     #endif
