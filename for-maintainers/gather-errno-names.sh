@@ -115,7 +115,7 @@ solaris()
     ` &&
     errno_documentation=`
         get https://docs.oracle.com/"$latest_solaris_documentation" \
-        | grep 'System Calls' | cut -d\" -f4 \
+        | grep 'System Calls' | cut -d\" -f2 \
         | sed 's/^http:/https:/; s|/index.html$|/intro-2.html|'
     ` &&
     get "$errno_documentation" \
