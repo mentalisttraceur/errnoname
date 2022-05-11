@@ -75,6 +75,9 @@ So names like `errno_name`, `errnoName`, `ErrnoName`, or
 
 Just compile and link `errnoname.c` as normal.
 
+`errnoname.c` also has an include guard, so you can use
+it instead of `errnoname.h` as a header-only library.
+
 ## Optimization
 
 If `errnoname.c` is compiled with the `ERRNONAME_SAFE_TO_USE_ARRAY`
