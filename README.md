@@ -81,8 +81,9 @@ it instead of `errnoname.h` as a header-only library.
 ## Optimization
 
 If `errnoname.c` is compiled with the `ERRNONAME_SAFE_TO_USE_ARRAY`
-preprocessor macro defined, it will use a C array of `errno` names
-indexed by `errno` values instead of a `switch` statement.
+preprocessor macro defined, it will use an array of `errno` names
+indexed by `errno` values instead of a `switch` statement. Your
+compiler must support designated initializers for this to work.
 
 Note that modern compilers can already automatically convert
 the switch to an array lookup when optimizations are turned
