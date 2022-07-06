@@ -6,6 +6,9 @@
 
 #include <errno.h>
 
+#if ERRNONAME_STATIC_INCLUDE
+static
+#endif
 char const * errnoname(int errno_)
 {
 #ifdef ERRNONAME_SAFE_TO_USE_ARRAY

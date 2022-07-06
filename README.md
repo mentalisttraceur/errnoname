@@ -71,12 +71,19 @@ whose first nine characters are `errnoname` or `ERRNONAME`.
 So names like `errno_name`, `errnoName`, `ErrnoName`, or
 `ERRNO_NAME` will always remain available for you to use.
 
+If you use static include or directly include `errnoname.c`,
+you will also pull in `#include <errno.h>`.
+
 ## Building
 
 Just compile and link `errnoname.c` as normal.
 
 `errnoname.c` also has an include guard, so you can use
 it instead of `errnoname.h` as a header-only library.
+
+Finally, `errnoname.h` supports
+[static include](https://github.com/mentalisttraceur/c-static-include)
+if you define `ERRNONAME_STATIC_INCLUDE` or `STATIC_INCLUDE`.
 
 ## Optimization
 
