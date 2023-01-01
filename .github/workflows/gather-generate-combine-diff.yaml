@@ -29,4 +29,4 @@ jobs:
         >errnoname.c
 
     - name: Check for changes
-      run: git diff --exit-code
+      run: git diff --exit-code for-maintainers/errno-list.txt
