@@ -390,6 +390,9 @@
     #ifdef EIOCBQUEUED
         case EIOCBQUEUED: return "EIOCBQUEUED";
     #endif
+    #ifdef EIORESID
+        case EIORESID: return "EIORESID";
+    #endif
     #ifdef EIPADDRNOTFOUND
         case EIPADDRNOTFOUND: return "EIPADDRNOTFOUND";
     #endif

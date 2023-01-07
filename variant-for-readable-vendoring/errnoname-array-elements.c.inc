@@ -390,6 +390,9 @@
     #ifdef EIOCBQUEUED
         [EIOCBQUEUED] = "EIOCBQUEUED",
     #endif
+    #ifdef EIORESID
+        [EIORESID] = "EIORESID",
+    #endif
     #ifdef EIPADDRNOTFOUND
         [EIPADDRNOTFOUND] = "EIPADDRNOTFOUND",
     #endif

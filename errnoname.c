@@ -404,6 +404,9 @@ char const * errnoname(int errno_)
     #ifdef EIOCBQUEUED
         [EIOCBQUEUED] = "EIOCBQUEUED",
     #endif
+    #ifdef EIORESID
+        [EIORESID] = "EIORESID",
+    #endif
     #ifdef EIPADDRNOTFOUND
         [EIPADDRNOTFOUND] = "EIPADDRNOTFOUND",
     #endif
@@ -1456,6 +1459,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EIOCBQUEUED
         case EIOCBQUEUED: return "EIOCBQUEUED";
+    #endif
+    #ifdef EIORESID
+        case EIORESID: return "EIORESID";
     #endif
     #ifdef EIPADDRNOTFOUND
         case EIPADDRNOTFOUND: return "EIPADDRNOTFOUND";
