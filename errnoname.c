@@ -716,6 +716,9 @@ char const * errnoname(int errno_)
     #ifdef ENOTACTIVE
         [ENOTACTIVE] = "ENOTACTIVE",
     #endif
+    #ifdef ENOTAUTH
+        [ENOTAUTH] = "ENOTAUTH",
+    #endif
     #ifdef ENOTBLK
         [ENOTBLK] = "ENOTBLK",
     #endif
@@ -1765,6 +1768,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOTACTIVE
         case ENOTACTIVE: return "ENOTACTIVE";
+    #endif
+    #ifdef ENOTAUTH
+        case ENOTAUTH: return "ENOTAUTH";
     #endif
     #ifdef ENOTBLK
         case ENOTBLK: return "ENOTBLK";

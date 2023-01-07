@@ -140,6 +140,15 @@ qnx()
     | grep -v EOK
 }
 
+unixware()
+{
+    # Xinuos does not seem to provide a stable URL to the latest
+    # UnixWare errno list, but newer releases seem unlikely:
+
+    get 'https://uw714doc.xinuos.com/en/man/html.2/Intro.2.html' \
+    | grep '<BR>[1-9][0-9]* *<B>E' | cut -d\> -f4 | cut -d\< -f1
+}
+
 hpux()
 {
     # HP does not seem to provide any URL to any HP-UX
@@ -171,22 +180,17 @@ _historical()
     printf '%s\n' \
         EAIO \
         EALIGN \
-        EBADVER \
-        ECONFIG \
         EDIRTY \
         EDUPPKG \
         EFAIL \
         EINPROG \
         EMTIMERS \
-        ENOLOAD \
-        ENOMATCH \
         ENOREG \
         ENOUNLD \
         ENOUNREG \
         EOPCOMPLETE \
         EPATHREMOTE \
         EPOWERF \
-        ERELOC \
         ERELOCATED \
         EVERSION
 }
@@ -219,6 +223,7 @@ all()
         opensolaris \
         qnx \
         solaris \
+        unixware \
         zos \
         _historical
     do

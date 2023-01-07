@@ -702,6 +702,9 @@
     #ifdef ENOTACTIVE
         [ENOTACTIVE] = "ENOTACTIVE",
     #endif
+    #ifdef ENOTAUTH
+        [ENOTAUTH] = "ENOTAUTH",
+    #endif
     #ifdef ENOTBLK
         [ENOTBLK] = "ENOTBLK",
     #endif

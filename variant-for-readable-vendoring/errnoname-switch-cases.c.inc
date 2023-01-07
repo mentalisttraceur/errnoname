@@ -702,6 +702,9 @@
     #ifdef ENOTACTIVE
         case ENOTACTIVE: return "ENOTACTIVE";
     #endif
+    #ifdef ENOTAUTH
+        case ENOTAUTH: return "ENOTAUTH";
+    #endif
     #ifdef ENOTBLK
         case ENOTBLK: return "ENOTBLK";
     #endif
