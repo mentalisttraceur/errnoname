@@ -4,6 +4,9 @@
     #ifdef EACCES
         case EACCES: return "EACCES";
     #endif
+    #ifdef EACTIVE
+        case EACTIVE: return "EACTIVE";
+    #endif
     #ifdef EADDRINUSE
         case EADDRINUSE: return "EADDRINUSE";
     #endif
@@ -235,11 +238,38 @@
     #ifdef EDQUOT
         case EDQUOT: return "EDQUOT";
     #endif
+    #ifdef EDUPBADOPCODE
+        case EDUPBADOPCODE: return "EDUPBADOPCODE";
+    #endif
     #ifdef EDUPFD
         case EDUPFD: return "EDUPFD";
     #endif
+    #ifdef EDUPINTRANSIT
+        case EDUPINTRANSIT: return "EDUPINTRANSIT";
+    #endif
+    #ifdef EDUPNOCONN
+        case EDUPNOCONN: return "EDUPNOCONN";
+    #endif
+    #ifdef EDUPNODISCONN
+        case EDUPNODISCONN: return "EDUPNODISCONN";
+    #endif
+    #ifdef EDUPNOTCNTD
+        case EDUPNOTCNTD: return "EDUPNOTCNTD";
+    #endif
+    #ifdef EDUPNOTIDLE
+        case EDUPNOTIDLE: return "EDUPNOTIDLE";
+    #endif
+    #ifdef EDUPNOTRUN
+        case EDUPNOTRUN: return "EDUPNOTRUN";
+    #endif
+    #ifdef EDUPNOTWAIT
+        case EDUPNOTWAIT: return "EDUPNOTWAIT";
+    #endif
     #ifdef EDUPPKG
         case EDUPPKG: return "EDUPPKG";
+    #endif
+    #ifdef EDUPTOOMANYCPUS
+        case EDUPTOOMANYCPUS: return "EDUPTOOMANYCPUS";
     #endif
     #ifdef EENDIAN
         case EENDIAN: return "EENDIAN";
@@ -588,6 +618,9 @@
     #ifdef ENMFILE
         case ENMFILE: return "ENMFILE";
     #endif
+    #ifdef ENOACTIVE
+        case ENOACTIVE: return "ENOACTIVE";
+    #endif
     #ifdef ENOANO
         case ENOANO: return "ENOANO";
     #endif
@@ -608,6 +641,9 @@
     #endif
     #ifdef ENODEV
         case ENODEV: return "ENODEV";
+    #endif
+    #ifdef ENODUST
+        case ENODUST: return "ENODUST";
     #endif
     #ifdef ENOENT
         case ENOENT: return "ENOENT";
@@ -681,6 +717,9 @@
     #ifdef ENOREMOTE
         case ENOREMOTE: return "ENOREMOTE";
     #endif
+    #ifdef ENORESOURCES
+        case ENORESOURCES: return "ENORESOURCES";
+    #endif
     #ifdef ENOREUSE
         case ENOREUSE: return "ENOREUSE";
     #endif
@@ -701,6 +740,9 @@
     #endif
     #ifdef ENOSYS
         case ENOSYS: return "ENOSYS";
+    #endif
+    #ifdef ENOSYSTEM
+        case ENOSYSTEM: return "ENOSYSTEM";
     #endif
     #ifdef ENOTACTIVE
         case ENOTACTIVE: return "ENOTACTIVE";

@@ -18,6 +18,9 @@ char const * errnoname(int errno_)
     #ifdef EACCES
         [EACCES] = "EACCES",
     #endif
+    #ifdef EACTIVE
+        [EACTIVE] = "EACTIVE",
+    #endif
     #ifdef EADDRINUSE
         [EADDRINUSE] = "EADDRINUSE",
     #endif
@@ -249,11 +252,38 @@ char const * errnoname(int errno_)
     #ifdef EDQUOT
         [EDQUOT] = "EDQUOT",
     #endif
+    #ifdef EDUPBADOPCODE
+        [EDUPBADOPCODE] = "EDUPBADOPCODE",
+    #endif
     #ifdef EDUPFD
         [EDUPFD] = "EDUPFD",
     #endif
+    #ifdef EDUPINTRANSIT
+        [EDUPINTRANSIT] = "EDUPINTRANSIT",
+    #endif
+    #ifdef EDUPNOCONN
+        [EDUPNOCONN] = "EDUPNOCONN",
+    #endif
+    #ifdef EDUPNODISCONN
+        [EDUPNODISCONN] = "EDUPNODISCONN",
+    #endif
+    #ifdef EDUPNOTCNTD
+        [EDUPNOTCNTD] = "EDUPNOTCNTD",
+    #endif
+    #ifdef EDUPNOTIDLE
+        [EDUPNOTIDLE] = "EDUPNOTIDLE",
+    #endif
+    #ifdef EDUPNOTRUN
+        [EDUPNOTRUN] = "EDUPNOTRUN",
+    #endif
+    #ifdef EDUPNOTWAIT
+        [EDUPNOTWAIT] = "EDUPNOTWAIT",
+    #endif
     #ifdef EDUPPKG
         [EDUPPKG] = "EDUPPKG",
+    #endif
+    #ifdef EDUPTOOMANYCPUS
+        [EDUPTOOMANYCPUS] = "EDUPTOOMANYCPUS",
     #endif
     #ifdef EENDIAN
         [EENDIAN] = "EENDIAN",
@@ -602,6 +632,9 @@ char const * errnoname(int errno_)
     #ifdef ENMFILE
         [ENMFILE] = "ENMFILE",
     #endif
+    #ifdef ENOACTIVE
+        [ENOACTIVE] = "ENOACTIVE",
+    #endif
     #ifdef ENOANO
         [ENOANO] = "ENOANO",
     #endif
@@ -622,6 +655,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENODEV
         [ENODEV] = "ENODEV",
+    #endif
+    #ifdef ENODUST
+        [ENODUST] = "ENODUST",
     #endif
     #ifdef ENOENT
         [ENOENT] = "ENOENT",
@@ -695,6 +731,9 @@ char const * errnoname(int errno_)
     #ifdef ENOREMOTE
         [ENOREMOTE] = "ENOREMOTE",
     #endif
+    #ifdef ENORESOURCES
+        [ENORESOURCES] = "ENORESOURCES",
+    #endif
     #ifdef ENOREUSE
         [ENOREUSE] = "ENOREUSE",
     #endif
@@ -715,6 +754,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOSYS
         [ENOSYS] = "ENOSYS",
+    #endif
+    #ifdef ENOSYSTEM
+        [ENOSYSTEM] = "ENOSYSTEM",
     #endif
     #ifdef ENOTACTIVE
         [ENOTACTIVE] = "ENOTACTIVE",
@@ -1074,6 +1116,9 @@ char const * errnoname(int errno_)
     #ifdef EACCES
         case EACCES: return "EACCES";
     #endif
+    #ifdef EACTIVE
+        case EACTIVE: return "EACTIVE";
+    #endif
     #ifdef EADDRINUSE
         case EADDRINUSE: return "EADDRINUSE";
     #endif
@@ -1305,11 +1350,38 @@ char const * errnoname(int errno_)
     #ifdef EDQUOT
         case EDQUOT: return "EDQUOT";
     #endif
+    #ifdef EDUPBADOPCODE
+        case EDUPBADOPCODE: return "EDUPBADOPCODE";
+    #endif
     #ifdef EDUPFD
         case EDUPFD: return "EDUPFD";
     #endif
+    #ifdef EDUPINTRANSIT
+        case EDUPINTRANSIT: return "EDUPINTRANSIT";
+    #endif
+    #ifdef EDUPNOCONN
+        case EDUPNOCONN: return "EDUPNOCONN";
+    #endif
+    #ifdef EDUPNODISCONN
+        case EDUPNODISCONN: return "EDUPNODISCONN";
+    #endif
+    #ifdef EDUPNOTCNTD
+        case EDUPNOTCNTD: return "EDUPNOTCNTD";
+    #endif
+    #ifdef EDUPNOTIDLE
+        case EDUPNOTIDLE: return "EDUPNOTIDLE";
+    #endif
+    #ifdef EDUPNOTRUN
+        case EDUPNOTRUN: return "EDUPNOTRUN";
+    #endif
+    #ifdef EDUPNOTWAIT
+        case EDUPNOTWAIT: return "EDUPNOTWAIT";
+    #endif
     #ifdef EDUPPKG
         case EDUPPKG: return "EDUPPKG";
+    #endif
+    #ifdef EDUPTOOMANYCPUS
+        case EDUPTOOMANYCPUS: return "EDUPTOOMANYCPUS";
     #endif
     #ifdef EENDIAN
         case EENDIAN: return "EENDIAN";
@@ -1658,6 +1730,9 @@ char const * errnoname(int errno_)
     #ifdef ENMFILE
         case ENMFILE: return "ENMFILE";
     #endif
+    #ifdef ENOACTIVE
+        case ENOACTIVE: return "ENOACTIVE";
+    #endif
     #ifdef ENOANO
         case ENOANO: return "ENOANO";
     #endif
@@ -1678,6 +1753,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENODEV
         case ENODEV: return "ENODEV";
+    #endif
+    #ifdef ENODUST
+        case ENODUST: return "ENODUST";
     #endif
     #ifdef ENOENT
         case ENOENT: return "ENOENT";
@@ -1751,6 +1829,9 @@ char const * errnoname(int errno_)
     #ifdef ENOREMOTE
         case ENOREMOTE: return "ENOREMOTE";
     #endif
+    #ifdef ENORESOURCES
+        case ENORESOURCES: return "ENORESOURCES";
+    #endif
     #ifdef ENOREUSE
         case ENOREUSE: return "ENOREUSE";
     #endif
@@ -1771,6 +1852,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOSYS
         case ENOSYS: return "ENOSYS";
+    #endif
+    #ifdef ENOSYSTEM
+        case ENOSYSTEM: return "ENOSYSTEM";
     #endif
     #ifdef ENOTACTIVE
         case ENOTACTIVE: return "ENOTACTIVE";

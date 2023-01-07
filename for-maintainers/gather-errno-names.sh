@@ -185,6 +185,14 @@ irix()
     | sed 's/\t/ /g; s/  */ /g' | grep '[1-9][0-9]*  *E' | cut -d' ' -f3
 }
 
+ultrix()
+{
+    # DEC no longer exists and ULTRIX is discontinued so we
+    # use a GitHub mirror of the source:
+
+    github calmsacibis995/ultrix42-src/master/sys/h/errno.h | extract_c
+}
+
 _historical()
 {
     # `errno` names should be manually added here if:
@@ -196,7 +204,6 @@ _historical()
     # this seems like the cleanest way to support old systems.
 
     printf '%s\n' \
-        EALIGN \
         ENOREG \
         ENOUNLD \
         ENOUNREG \
@@ -235,6 +242,7 @@ all()
         qnx \
         solaris \
         tru64 \
+        ultrix \
         unixware \
         zos \
         _historical

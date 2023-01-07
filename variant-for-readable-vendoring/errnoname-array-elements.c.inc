@@ -4,6 +4,9 @@
     #ifdef EACCES
         [EACCES] = "EACCES",
     #endif
+    #ifdef EACTIVE
+        [EACTIVE] = "EACTIVE",
+    #endif
     #ifdef EADDRINUSE
         [EADDRINUSE] = "EADDRINUSE",
     #endif
@@ -235,11 +238,38 @@
     #ifdef EDQUOT
         [EDQUOT] = "EDQUOT",
     #endif
+    #ifdef EDUPBADOPCODE
+        [EDUPBADOPCODE] = "EDUPBADOPCODE",
+    #endif
     #ifdef EDUPFD
         [EDUPFD] = "EDUPFD",
     #endif
+    #ifdef EDUPINTRANSIT
+        [EDUPINTRANSIT] = "EDUPINTRANSIT",
+    #endif
+    #ifdef EDUPNOCONN
+        [EDUPNOCONN] = "EDUPNOCONN",
+    #endif
+    #ifdef EDUPNODISCONN
+        [EDUPNODISCONN] = "EDUPNODISCONN",
+    #endif
+    #ifdef EDUPNOTCNTD
+        [EDUPNOTCNTD] = "EDUPNOTCNTD",
+    #endif
+    #ifdef EDUPNOTIDLE
+        [EDUPNOTIDLE] = "EDUPNOTIDLE",
+    #endif
+    #ifdef EDUPNOTRUN
+        [EDUPNOTRUN] = "EDUPNOTRUN",
+    #endif
+    #ifdef EDUPNOTWAIT
+        [EDUPNOTWAIT] = "EDUPNOTWAIT",
+    #endif
     #ifdef EDUPPKG
         [EDUPPKG] = "EDUPPKG",
+    #endif
+    #ifdef EDUPTOOMANYCPUS
+        [EDUPTOOMANYCPUS] = "EDUPTOOMANYCPUS",
     #endif
     #ifdef EENDIAN
         [EENDIAN] = "EENDIAN",
@@ -588,6 +618,9 @@
     #ifdef ENMFILE
         [ENMFILE] = "ENMFILE",
     #endif
+    #ifdef ENOACTIVE
+        [ENOACTIVE] = "ENOACTIVE",
+    #endif
     #ifdef ENOANO
         [ENOANO] = "ENOANO",
     #endif
@@ -608,6 +641,9 @@
     #endif
     #ifdef ENODEV
         [ENODEV] = "ENODEV",
+    #endif
+    #ifdef ENODUST
+        [ENODUST] = "ENODUST",
     #endif
     #ifdef ENOENT
         [ENOENT] = "ENOENT",
@@ -681,6 +717,9 @@
     #ifdef ENOREMOTE
         [ENOREMOTE] = "ENOREMOTE",
     #endif
+    #ifdef ENORESOURCES
+        [ENORESOURCES] = "ENORESOURCES",
+    #endif
     #ifdef ENOREUSE
         [ENOREUSE] = "ENOREUSE",
     #endif
@@ -701,6 +740,9 @@
     #endif
     #ifdef ENOSYS
         [ENOSYS] = "ENOSYS",
+    #endif
+    #ifdef ENOSYSTEM
+        [ENOSYSTEM] = "ENOSYSTEM",
     #endif
     #ifdef ENOTACTIVE
         [ENOTACTIVE] = "ENOTACTIVE",
