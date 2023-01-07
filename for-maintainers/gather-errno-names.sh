@@ -174,6 +174,17 @@ hpux()
 
     get https://nixdoc.net/man-pages/HP-UX/man2/errno.2.html \
     | grep '\[E.*\]' | cut -d\] -f1 | cut -d\[ -f2
+
+    # https://www.ioplex.com/~miallen/errcmp.html says these are
+    # all from HP-UX, even though they don't seem to be in any
+    # publicly available manpages:
+    printf '%s\n' \
+        ENOREG \
+        ENOUNLD \
+        ENOUNREG \
+        EOPCOMPLETE \
+        EPATHREMOTE \
+        EPOWERF
 }
 
 irix()
@@ -191,25 +202,6 @@ ultrix()
     # use a GitHub mirror of the source:
 
     github calmsacibis995/ultrix42-src/master/sys/h/errno.h | extract_c
-}
-
-_historical()
-{
-    # `errno` names should be manually added here if:
-    #
-    # 1. they do not show up in any downloaded current `errno` lists,
-    #    **and**
-    # 2. they come from old systems that no longer get new releases.
-    #
-    # this seems like the cleanest way to support old systems.
-
-    printf '%s\n' \
-        ENOREG \
-        ENOUNLD \
-        ENOUNREG \
-        EOPCOMPLETE \
-        EPATHREMOTE \
-        EPOWERF
 }
 
 execute_with_prefixed_errors()
@@ -244,8 +236,7 @@ all()
         tru64 \
         ultrix \
         unixware \
-        zos \
-        _historical
+        zos
     do
         execute_with_prefixed_errors "$source" &
     done
