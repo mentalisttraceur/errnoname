@@ -206,12 +206,12 @@ _historical()
 
 execute_with_prefixed_errors()
 {
- command=$1
- case $command in [!a-zA-Z_]* | ?*[!a-zA-Z0-9]*)
-  printf '%s\n' "bad subcommand: $command" 1>&2
-  return 1
- esac
- { "$command" 2>&1 1>&3 | sed "s/^/$command: /" 1>&2; } 3>&1
+    command=$1
+    case $command in [!a-zA-Z_]* | ?*[!a-zA-Z0-9]*)
+        printf '%s\n' "bad subcommand: $command" 1>&2
+        return 1
+    esac
+    { "$command" 2>&1 1>&3 | sed "s/^/$command: /" 1>&2; } 3>&1
 }
 
 all()
