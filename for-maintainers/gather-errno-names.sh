@@ -140,6 +140,15 @@ qnx()
     | grep -v EOK
 }
 
+tru64()
+{
+    # HP does not seem to provide any URL to any Tru64 UNIX
+    # errno list, so we use a mirror of OSF/1 v1.0 source:
+
+    github calmsacibis995/osf1-10-src/master/usr/opt/OSC200/src/kernel/sys/errno.h \
+    | extract_c | grep -v ESUCCESS
+}
+
 unixware()
 {
     # Xinuos does not seem to provide a stable URL to the latest
@@ -187,21 +196,13 @@ _historical()
     # this seems like the cleanest way to support old systems.
 
     printf '%s\n' \
-        EAIO \
         EALIGN \
-        EDIRTY \
-        EDUPPKG \
-        EFAIL \
-        EINPROG \
-        EMTIMERS \
         ENOREG \
         ENOUNLD \
         ENOUNREG \
         EOPCOMPLETE \
         EPATHREMOTE \
-        EPOWERF \
-        ERELOCATED \
-        EVERSION
+        EPOWERF
 }
 
 execute_with_prefixed_errors()
@@ -233,6 +234,7 @@ all()
         opensolaris \
         qnx \
         solaris \
+        tru64 \
         unixware \
         zos \
         _historical
