@@ -70,11 +70,20 @@
     #ifdef EBADARCH
         case EBADARCH: return "EBADARCH";
     #endif
+    #ifdef EBADCALL
+        case EBADCALL: return "EBADCALL";
+    #endif
     #ifdef EBADCOOKIE
         case EBADCOOKIE: return "EBADCOOKIE";
     #endif
+    #ifdef EBADCPU
+        case EBADCPU: return "EBADCPU";
+    #endif
     #ifdef EBADE
         case EBADE: return "EBADE";
+    #endif
+    #ifdef EBADEPT
+        case EBADEPT: return "EBADEPT";
     #endif
     #ifdef EBADEXEC
         case EBADEXEC: return "EBADEXEC";
@@ -94,6 +103,9 @@
     #ifdef EBADMACHO
         case EBADMACHO: return "EBADMACHO";
     #endif
+    #ifdef EBADMODE
+        case EBADMODE: return "EBADMODE";
+    #endif
     #ifdef EBADMSG
         case EBADMSG: return "EBADMSG";
     #endif
@@ -102,6 +114,9 @@
     #endif
     #ifdef EBADR
         case EBADR: return "EBADR";
+    #endif
+    #ifdef EBADREQUEST
+        case EBADREQUEST: return "EBADREQUEST";
     #endif
     #ifdef EBADRPC
         case EBADRPC: return "EBADRPC";
@@ -123,6 +138,9 @@
     #endif
     #ifdef EBUSY
         case EBUSY: return "EBUSY";
+    #endif
+    #ifdef ECALLDENIED
+        case ECALLDENIED: return "ECALLDENIED";
     #endif
     #ifdef ECANCEL
         case ECANCEL: return "ECANCEL";
@@ -195,6 +213,9 @@
     #ifdef EDATALESS
         case EDATALESS: return "EDATALESS";
     #endif
+    #ifdef EDEADEPT
+        case EDEADEPT: return "EDEADEPT";
+    #endif
     #ifdef EDEADLK
         case EDEADLK: return "EDEADLK";
     #endif
@@ -202,6 +223,9 @@
         #if !defined(EDEADLK) || EDEADLOCK != EDEADLK
         case EDEADLOCK: return "EDEADLOCK";
         #endif
+    #endif
+    #ifdef EDEADSRCDST
+        case EDEADSRCDST: return "EDEADSRCDST";
     #endif
     #ifdef EDESTADDREQ
         #if !defined(EDESTADDRREQ) || EDESTADDREQ != EDESTADDRREQ
@@ -228,6 +252,9 @@
     #endif
     #ifdef EDOMAINSERVERFAILURE
         case EDOMAINSERVERFAILURE: return "EDOMAINSERVERFAILURE";
+    #endif
+    #ifdef EDONTREPLY
+        case EDONTREPLY: return "EDONTREPLY";
     #endif
     #ifdef EDOOFUS
         case EDOOFUS: return "EDOOFUS";
@@ -300,6 +327,9 @@
     #endif
     #ifdef EFTYPE
         case EFTYPE: return "EFTYPE";
+    #endif
+    #ifdef EGENERIC
+        case EGENERIC: return "EGENERIC";
     #endif
     #ifdef EHOSTDOWN
         case EHOSTDOWN: return "EHOSTDOWN";
@@ -492,6 +522,9 @@
     #ifdef ELNRNG
         case ELNRNG: return "ELNRNG";
     #endif
+    #ifdef ELOCKED
+        case ELOCKED: return "ELOCKED";
+    #endif
     #ifdef ELOCKUNMAPPED
         case ELOCKUNMAPPED: return "ELOCKUNMAPPED";
     #endif
@@ -629,6 +662,9 @@
     #endif
     #ifdef ENOBUFS
         case ENOBUFS: return "ENOBUFS";
+    #endif
+    #ifdef ENOCONN
+        case ENOCONN: return "ENOCONN";
     #endif
     #ifdef ENOCONNECT
         case ENOCONNECT: return "ENOCONNECT";
@@ -804,6 +840,9 @@
     #ifdef ENOUNREG
         case ENOUNREG: return "ENOUNREG";
     #endif
+    #ifdef ENOURG
+        case ENOURG: return "ENOURG";
+    #endif
     #ifdef ENXIO
         case ENXIO: return "ENXIO";
     #endif
@@ -835,6 +874,9 @@
     #endif
     #ifdef EOWNERDEAD
         case EOWNERDEAD: return "EOWNERDEAD";
+    #endif
+    #ifdef EPACKSIZE
+        case EPACKSIZE: return "EPACKSIZE";
     #endif
     #ifdef EPASSTHROUGH
         case EPASSTHROUGH: return "EPASSTHROUGH";
@@ -1033,6 +1075,9 @@
     #ifdef ETOOSMALL
         case ETOOSMALL: return "ETOOSMALL";
     #endif
+    #ifdef ETRAPDENIED
+        case ETRAPDENIED: return "ETRAPDENIED";
+    #endif
     #ifdef ETXTBSY
         case ETXTBSY: return "ETXTBSY";
     #endif
@@ -1062,6 +1107,9 @@
     #endif
     #ifdef EUNKNOWN
         case EUNKNOWN: return "EUNKNOWN";
+    #endif
+    #ifdef EURG
+        case EURG: return "EURG";
     #endif
     #ifdef EUSERS
         case EUSERS: return "EUSERS";

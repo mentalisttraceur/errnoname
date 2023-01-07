@@ -70,11 +70,20 @@
     #ifdef EBADARCH
         [EBADARCH] = "EBADARCH",
     #endif
+    #ifdef EBADCALL
+        [EBADCALL] = "EBADCALL",
+    #endif
     #ifdef EBADCOOKIE
         [EBADCOOKIE] = "EBADCOOKIE",
     #endif
+    #ifdef EBADCPU
+        [EBADCPU] = "EBADCPU",
+    #endif
     #ifdef EBADE
         [EBADE] = "EBADE",
+    #endif
+    #ifdef EBADEPT
+        [EBADEPT] = "EBADEPT",
     #endif
     #ifdef EBADEXEC
         [EBADEXEC] = "EBADEXEC",
@@ -94,6 +103,9 @@
     #ifdef EBADMACHO
         [EBADMACHO] = "EBADMACHO",
     #endif
+    #ifdef EBADMODE
+        [EBADMODE] = "EBADMODE",
+    #endif
     #ifdef EBADMSG
         [EBADMSG] = "EBADMSG",
     #endif
@@ -102,6 +114,9 @@
     #endif
     #ifdef EBADR
         [EBADR] = "EBADR",
+    #endif
+    #ifdef EBADREQUEST
+        [EBADREQUEST] = "EBADREQUEST",
     #endif
     #ifdef EBADRPC
         [EBADRPC] = "EBADRPC",
@@ -123,6 +138,9 @@
     #endif
     #ifdef EBUSY
         [EBUSY] = "EBUSY",
+    #endif
+    #ifdef ECALLDENIED
+        [ECALLDENIED] = "ECALLDENIED",
     #endif
     #ifdef ECANCEL
         [ECANCEL] = "ECANCEL",
@@ -195,6 +213,9 @@
     #ifdef EDATALESS
         [EDATALESS] = "EDATALESS",
     #endif
+    #ifdef EDEADEPT
+        [EDEADEPT] = "EDEADEPT",
+    #endif
     #ifdef EDEADLK
         [EDEADLK] = "EDEADLK",
     #endif
@@ -202,6 +223,9 @@
         #if !defined(EDEADLK) || EDEADLOCK != EDEADLK
         [EDEADLOCK] = "EDEADLOCK",
         #endif
+    #endif
+    #ifdef EDEADSRCDST
+        [EDEADSRCDST] = "EDEADSRCDST",
     #endif
     #ifdef EDESTADDREQ
         #if !defined(EDESTADDRREQ) || EDESTADDREQ != EDESTADDRREQ
@@ -228,6 +252,9 @@
     #endif
     #ifdef EDOMAINSERVERFAILURE
         [EDOMAINSERVERFAILURE] = "EDOMAINSERVERFAILURE",
+    #endif
+    #ifdef EDONTREPLY
+        [EDONTREPLY] = "EDONTREPLY",
     #endif
     #ifdef EDOOFUS
         [EDOOFUS] = "EDOOFUS",
@@ -300,6 +327,9 @@
     #endif
     #ifdef EFTYPE
         [EFTYPE] = "EFTYPE",
+    #endif
+    #ifdef EGENERIC
+        [EGENERIC] = "EGENERIC",
     #endif
     #ifdef EHOSTDOWN
         [EHOSTDOWN] = "EHOSTDOWN",
@@ -492,6 +522,9 @@
     #ifdef ELNRNG
         [ELNRNG] = "ELNRNG",
     #endif
+    #ifdef ELOCKED
+        [ELOCKED] = "ELOCKED",
+    #endif
     #ifdef ELOCKUNMAPPED
         [ELOCKUNMAPPED] = "ELOCKUNMAPPED",
     #endif
@@ -629,6 +662,9 @@
     #endif
     #ifdef ENOBUFS
         [ENOBUFS] = "ENOBUFS",
+    #endif
+    #ifdef ENOCONN
+        [ENOCONN] = "ENOCONN",
     #endif
     #ifdef ENOCONNECT
         [ENOCONNECT] = "ENOCONNECT",
@@ -804,6 +840,9 @@
     #ifdef ENOUNREG
         [ENOUNREG] = "ENOUNREG",
     #endif
+    #ifdef ENOURG
+        [ENOURG] = "ENOURG",
+    #endif
     #ifdef ENXIO
         [ENXIO] = "ENXIO",
     #endif
@@ -835,6 +874,9 @@
     #endif
     #ifdef EOWNERDEAD
         [EOWNERDEAD] = "EOWNERDEAD",
+    #endif
+    #ifdef EPACKSIZE
+        [EPACKSIZE] = "EPACKSIZE",
     #endif
     #ifdef EPASSTHROUGH
         [EPASSTHROUGH] = "EPASSTHROUGH",
@@ -1033,6 +1075,9 @@
     #ifdef ETOOSMALL
         [ETOOSMALL] = "ETOOSMALL",
     #endif
+    #ifdef ETRAPDENIED
+        [ETRAPDENIED] = "ETRAPDENIED",
+    #endif
     #ifdef ETXTBSY
         [ETXTBSY] = "ETXTBSY",
     #endif
@@ -1062,6 +1107,9 @@
     #endif
     #ifdef EUNKNOWN
         [EUNKNOWN] = "EUNKNOWN",
+    #endif
+    #ifdef EURG
+        [EURG] = "EURG",
     #endif
     #ifdef EUSERS
         [EUSERS] = "EUSERS",

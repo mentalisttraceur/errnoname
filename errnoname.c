@@ -84,11 +84,20 @@ char const * errnoname(int errno_)
     #ifdef EBADARCH
         [EBADARCH] = "EBADARCH",
     #endif
+    #ifdef EBADCALL
+        [EBADCALL] = "EBADCALL",
+    #endif
     #ifdef EBADCOOKIE
         [EBADCOOKIE] = "EBADCOOKIE",
     #endif
+    #ifdef EBADCPU
+        [EBADCPU] = "EBADCPU",
+    #endif
     #ifdef EBADE
         [EBADE] = "EBADE",
+    #endif
+    #ifdef EBADEPT
+        [EBADEPT] = "EBADEPT",
     #endif
     #ifdef EBADEXEC
         [EBADEXEC] = "EBADEXEC",
@@ -108,6 +117,9 @@ char const * errnoname(int errno_)
     #ifdef EBADMACHO
         [EBADMACHO] = "EBADMACHO",
     #endif
+    #ifdef EBADMODE
+        [EBADMODE] = "EBADMODE",
+    #endif
     #ifdef EBADMSG
         [EBADMSG] = "EBADMSG",
     #endif
@@ -116,6 +128,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBADR
         [EBADR] = "EBADR",
+    #endif
+    #ifdef EBADREQUEST
+        [EBADREQUEST] = "EBADREQUEST",
     #endif
     #ifdef EBADRPC
         [EBADRPC] = "EBADRPC",
@@ -137,6 +152,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBUSY
         [EBUSY] = "EBUSY",
+    #endif
+    #ifdef ECALLDENIED
+        [ECALLDENIED] = "ECALLDENIED",
     #endif
     #ifdef ECANCEL
         [ECANCEL] = "ECANCEL",
@@ -209,6 +227,9 @@ char const * errnoname(int errno_)
     #ifdef EDATALESS
         [EDATALESS] = "EDATALESS",
     #endif
+    #ifdef EDEADEPT
+        [EDEADEPT] = "EDEADEPT",
+    #endif
     #ifdef EDEADLK
         [EDEADLK] = "EDEADLK",
     #endif
@@ -216,6 +237,9 @@ char const * errnoname(int errno_)
         #if !defined(EDEADLK) || EDEADLOCK != EDEADLK
         [EDEADLOCK] = "EDEADLOCK",
         #endif
+    #endif
+    #ifdef EDEADSRCDST
+        [EDEADSRCDST] = "EDEADSRCDST",
     #endif
     #ifdef EDESTADDREQ
         #if !defined(EDESTADDRREQ) || EDESTADDREQ != EDESTADDRREQ
@@ -242,6 +266,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EDOMAINSERVERFAILURE
         [EDOMAINSERVERFAILURE] = "EDOMAINSERVERFAILURE",
+    #endif
+    #ifdef EDONTREPLY
+        [EDONTREPLY] = "EDONTREPLY",
     #endif
     #ifdef EDOOFUS
         [EDOOFUS] = "EDOOFUS",
@@ -314,6 +341,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EFTYPE
         [EFTYPE] = "EFTYPE",
+    #endif
+    #ifdef EGENERIC
+        [EGENERIC] = "EGENERIC",
     #endif
     #ifdef EHOSTDOWN
         [EHOSTDOWN] = "EHOSTDOWN",
@@ -506,6 +536,9 @@ char const * errnoname(int errno_)
     #ifdef ELNRNG
         [ELNRNG] = "ELNRNG",
     #endif
+    #ifdef ELOCKED
+        [ELOCKED] = "ELOCKED",
+    #endif
     #ifdef ELOCKUNMAPPED
         [ELOCKUNMAPPED] = "ELOCKUNMAPPED",
     #endif
@@ -643,6 +676,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOBUFS
         [ENOBUFS] = "ENOBUFS",
+    #endif
+    #ifdef ENOCONN
+        [ENOCONN] = "ENOCONN",
     #endif
     #ifdef ENOCONNECT
         [ENOCONNECT] = "ENOCONNECT",
@@ -818,6 +854,9 @@ char const * errnoname(int errno_)
     #ifdef ENOUNREG
         [ENOUNREG] = "ENOUNREG",
     #endif
+    #ifdef ENOURG
+        [ENOURG] = "ENOURG",
+    #endif
     #ifdef ENXIO
         [ENXIO] = "ENXIO",
     #endif
@@ -849,6 +888,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EOWNERDEAD
         [EOWNERDEAD] = "EOWNERDEAD",
+    #endif
+    #ifdef EPACKSIZE
+        [EPACKSIZE] = "EPACKSIZE",
     #endif
     #ifdef EPASSTHROUGH
         [EPASSTHROUGH] = "EPASSTHROUGH",
@@ -1047,6 +1089,9 @@ char const * errnoname(int errno_)
     #ifdef ETOOSMALL
         [ETOOSMALL] = "ETOOSMALL",
     #endif
+    #ifdef ETRAPDENIED
+        [ETRAPDENIED] = "ETRAPDENIED",
+    #endif
     #ifdef ETXTBSY
         [ETXTBSY] = "ETXTBSY",
     #endif
@@ -1076,6 +1121,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EUNKNOWN
         [EUNKNOWN] = "EUNKNOWN",
+    #endif
+    #ifdef EURG
+        [EURG] = "EURG",
     #endif
     #ifdef EUSERS
         [EUSERS] = "EUSERS",
@@ -1182,11 +1230,20 @@ char const * errnoname(int errno_)
     #ifdef EBADARCH
         case EBADARCH: return "EBADARCH";
     #endif
+    #ifdef EBADCALL
+        case EBADCALL: return "EBADCALL";
+    #endif
     #ifdef EBADCOOKIE
         case EBADCOOKIE: return "EBADCOOKIE";
     #endif
+    #ifdef EBADCPU
+        case EBADCPU: return "EBADCPU";
+    #endif
     #ifdef EBADE
         case EBADE: return "EBADE";
+    #endif
+    #ifdef EBADEPT
+        case EBADEPT: return "EBADEPT";
     #endif
     #ifdef EBADEXEC
         case EBADEXEC: return "EBADEXEC";
@@ -1206,6 +1263,9 @@ char const * errnoname(int errno_)
     #ifdef EBADMACHO
         case EBADMACHO: return "EBADMACHO";
     #endif
+    #ifdef EBADMODE
+        case EBADMODE: return "EBADMODE";
+    #endif
     #ifdef EBADMSG
         case EBADMSG: return "EBADMSG";
     #endif
@@ -1214,6 +1274,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBADR
         case EBADR: return "EBADR";
+    #endif
+    #ifdef EBADREQUEST
+        case EBADREQUEST: return "EBADREQUEST";
     #endif
     #ifdef EBADRPC
         case EBADRPC: return "EBADRPC";
@@ -1235,6 +1298,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EBUSY
         case EBUSY: return "EBUSY";
+    #endif
+    #ifdef ECALLDENIED
+        case ECALLDENIED: return "ECALLDENIED";
     #endif
     #ifdef ECANCEL
         case ECANCEL: return "ECANCEL";
@@ -1307,6 +1373,9 @@ char const * errnoname(int errno_)
     #ifdef EDATALESS
         case EDATALESS: return "EDATALESS";
     #endif
+    #ifdef EDEADEPT
+        case EDEADEPT: return "EDEADEPT";
+    #endif
     #ifdef EDEADLK
         case EDEADLK: return "EDEADLK";
     #endif
@@ -1314,6 +1383,9 @@ char const * errnoname(int errno_)
         #if !defined(EDEADLK) || EDEADLOCK != EDEADLK
         case EDEADLOCK: return "EDEADLOCK";
         #endif
+    #endif
+    #ifdef EDEADSRCDST
+        case EDEADSRCDST: return "EDEADSRCDST";
     #endif
     #ifdef EDESTADDREQ
         #if !defined(EDESTADDRREQ) || EDESTADDREQ != EDESTADDRREQ
@@ -1340,6 +1412,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EDOMAINSERVERFAILURE
         case EDOMAINSERVERFAILURE: return "EDOMAINSERVERFAILURE";
+    #endif
+    #ifdef EDONTREPLY
+        case EDONTREPLY: return "EDONTREPLY";
     #endif
     #ifdef EDOOFUS
         case EDOOFUS: return "EDOOFUS";
@@ -1412,6 +1487,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EFTYPE
         case EFTYPE: return "EFTYPE";
+    #endif
+    #ifdef EGENERIC
+        case EGENERIC: return "EGENERIC";
     #endif
     #ifdef EHOSTDOWN
         case EHOSTDOWN: return "EHOSTDOWN";
@@ -1604,6 +1682,9 @@ char const * errnoname(int errno_)
     #ifdef ELNRNG
         case ELNRNG: return "ELNRNG";
     #endif
+    #ifdef ELOCKED
+        case ELOCKED: return "ELOCKED";
+    #endif
     #ifdef ELOCKUNMAPPED
         case ELOCKUNMAPPED: return "ELOCKUNMAPPED";
     #endif
@@ -1741,6 +1822,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ENOBUFS
         case ENOBUFS: return "ENOBUFS";
+    #endif
+    #ifdef ENOCONN
+        case ENOCONN: return "ENOCONN";
     #endif
     #ifdef ENOCONNECT
         case ENOCONNECT: return "ENOCONNECT";
@@ -1916,6 +2000,9 @@ char const * errnoname(int errno_)
     #ifdef ENOUNREG
         case ENOUNREG: return "ENOUNREG";
     #endif
+    #ifdef ENOURG
+        case ENOURG: return "ENOURG";
+    #endif
     #ifdef ENXIO
         case ENXIO: return "ENXIO";
     #endif
@@ -1947,6 +2034,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EOWNERDEAD
         case EOWNERDEAD: return "EOWNERDEAD";
+    #endif
+    #ifdef EPACKSIZE
+        case EPACKSIZE: return "EPACKSIZE";
     #endif
     #ifdef EPASSTHROUGH
         case EPASSTHROUGH: return "EPASSTHROUGH";
@@ -2145,6 +2235,9 @@ char const * errnoname(int errno_)
     #ifdef ETOOSMALL
         case ETOOSMALL: return "ETOOSMALL";
     #endif
+    #ifdef ETRAPDENIED
+        case ETRAPDENIED: return "ETRAPDENIED";
+    #endif
     #ifdef ETXTBSY
         case ETXTBSY: return "ETXTBSY";
     #endif
@@ -2174,6 +2267,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EUNKNOWN
         case EUNKNOWN: return "EUNKNOWN";
+    #endif
+    #ifdef EURG
+        case EURG: return "EURG";
     #endif
     #ifdef EUSERS
         case EUSERS: return "EUSERS";

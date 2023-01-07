@@ -80,6 +80,12 @@ cygwin()
     github cygwin/cygwin/master/newlib/libc/include/sys/errno.h | extract_c
 }
 
+minix()
+{
+    github Stichting-MINIX-Research-Foundation/minix/master/sys/sys/errno.h \
+    | extract_c | grep -v ELAST
+}
+
 haiku()
 {
     github haiku/haiku/master/headers/os/support/Errors.h | extract_c &
@@ -227,6 +233,7 @@ all()
         illumos \
         irix \
         linux \
+        minix \
         netbsd \
         openbsd \
         openserver \
