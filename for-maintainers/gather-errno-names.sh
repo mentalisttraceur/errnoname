@@ -217,8 +217,8 @@ all()
         netbsd \
         openbsd \
         opensolaris \
-        solaris \
         qnx \
+        solaris \
         zos \
         _historical
     do
