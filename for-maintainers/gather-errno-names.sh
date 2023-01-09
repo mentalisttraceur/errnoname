@@ -183,14 +183,18 @@ hpux()
 
     # https://www.ioplex.com/~miallen/errcmp.html says these are
     # all from HP-UX, even though they don't seem to be in any
-    # publicly available manpages:
+    # publicly available manpages. EOPCOMPLETE and EPATHREMOTE
+    # were in the OS-internal `_errno.h` in HP-UX 9.10. EPOWERF
+    # shows up in some HP community support discussion threads.
+    # ENOREG is only found in the modload(2) manpage. ENOUNLD
+    # and ENOUNREG don't get mentioned in any manpage.
     printf '%s\n' \
-        ENOREG \
-        ENOUNLD \
-        ENOUNREG \
         EOPCOMPLETE \
         EPATHREMOTE \
-        EPOWERF
+        EPOWERF \
+        ENOREG \
+        ENOUNLD \
+        ENOUNREG
 }
 
 irix()
