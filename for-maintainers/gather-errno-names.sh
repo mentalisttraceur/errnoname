@@ -16,7 +16,8 @@ github()
 
 extract_c()
 {
-    sed 's/\t/ /g; s/  */ /g; s/^ //' | grep '#define E' | cut -d' ' -f2
+    sed 's/\t/ /g; s/  */ /g; s/^ //; s/# define/#define/' \
+    | grep '#define E' | cut -d' ' -f2
 }
 
 linux()
@@ -175,26 +176,21 @@ openserver()
 
 hpux()
 {
-    # HP does not seem to provide any URL to any HP-UX
-    # errno list, so we use a public manpage mirror:
+    # HP does not seem to provide any URL to any HP-UX errno list, so we
+    # try to make the most complete combination of dumps found online:
 
-    get https://nixdoc.net/man-pages/HP-UX/man2/errno.2.html \
-    | grep '\[E.*\]' | cut -d\] -f1 | cut -d\[ -f2
+    get 'https://m.cafe.daum.net/realhpux/4qAH/13?svc=cafeapi' \
+    | sed 's/<BR>/\n/g; s/&nbsp;/ /g' \
+    | grep '#define E' | sed 's/.*#define E/E/' | cut -d' ' -f1
 
-    # https://www.ioplex.com/~miallen/errcmp.html says these are
-    # all from HP-UX, even though they don't seem to be in any
-    # publicly available manpages. EOPCOMPLETE and EPATHREMOTE
-    # were in the OS-internal `_errno.h` in HP-UX 9.10. EPOWERF
-    # shows up in some HP community support discussion threads.
-    # ENOREG is only found in the modload(2) manpage. ENOUNLD
-    # and ENOUNREG don't get mentioned in any manpage.
-    printf '%s\n' \
-        EOPCOMPLETE \
-        EPATHREMOTE \
-        EPOWERF \
-        ENOREG \
-        ENOUNLD \
-        ENOUNREG
+    github calmsacibis995/hpux-910-src/master/source_product/9.10/sys.A.B9.10/h/_errno.h \
+    | extract_c | grep -v ESUCCESS
+    github calmsacibis995/hpux-910-src/master/source_product/9.10/sys.A.B9.10/h/errno.h \
+    | extract_c
+
+    # EPOWERF shows up on https://www.ioplex.com/~miallen/errcmp.html
+    # and a couple HP community support discussion threads:
+    printf '%s\n' EPOWERF
 }
 
 irix()
