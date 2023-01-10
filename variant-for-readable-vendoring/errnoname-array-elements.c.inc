@@ -67,6 +67,9 @@
     #ifdef EAUTH
         [EAUTH] = "EAUTH",
     #endif
+    #ifdef EBACKGROUND
+        [EBACKGROUND] = "EBACKGROUND",
+    #endif
     #ifdef EBADARCH
         [EBADARCH] = "EBADARCH",
     #endif
@@ -210,6 +213,9 @@
     #ifdef ECVPERORR
         [ECVPERORR] = "ECVPERORR",
     #endif
+    #ifdef ED
+        [ED] = "ED",
+    #endif
     #ifdef EDATALESS
         [EDATALESS] = "EDATALESS",
     #endif
@@ -237,6 +243,9 @@
     #endif
     #ifdef EDEVERR
         [EDEVERR] = "EDEVERR",
+    #endif
+    #ifdef EDIED
+        [EDIED] = "EDIED",
     #endif
     #ifdef EDIRIOCTL
         [EDIRIOCTL] = "EDIRIOCTL",
@@ -298,6 +307,36 @@
     #ifdef EDUPTOOMANYCPUS
         [EDUPTOOMANYCPUS] = "EDUPTOOMANYCPUS",
     #endif
+    #ifdef ED_ALREADY_OPEN
+        [ED_ALREADY_OPEN] = "ED_ALREADY_OPEN",
+    #endif
+    #ifdef ED_DEVICE_DOWN
+        [ED_DEVICE_DOWN] = "ED_DEVICE_DOWN",
+    #endif
+    #ifdef ED_INVALID_OPERATION
+        [ED_INVALID_OPERATION] = "ED_INVALID_OPERATION",
+    #endif
+    #ifdef ED_INVALID_RECNUM
+        [ED_INVALID_RECNUM] = "ED_INVALID_RECNUM",
+    #endif
+    #ifdef ED_INVALID_SIZE
+        [ED_INVALID_SIZE] = "ED_INVALID_SIZE",
+    #endif
+    #ifdef ED_IO_ERROR
+        [ED_IO_ERROR] = "ED_IO_ERROR",
+    #endif
+    #ifdef ED_NO_MEMORY
+        [ED_NO_MEMORY] = "ED_NO_MEMORY",
+    #endif
+    #ifdef ED_NO_SUCH_DEVICE
+        [ED_NO_SUCH_DEVICE] = "ED_NO_SUCH_DEVICE",
+    #endif
+    #ifdef ED_READ_ONLY
+        [ED_READ_ONLY] = "ED_READ_ONLY",
+    #endif
+    #ifdef ED_WOULD_BLOCK
+        [ED_WOULD_BLOCK] = "ED_WOULD_BLOCK",
+    #endif
     #ifdef EENDIAN
         [EENDIAN] = "EENDIAN",
     #endif
@@ -330,6 +369,12 @@
     #endif
     #ifdef EGENERIC
         [EGENERIC] = "EGENERIC",
+    #endif
+    #ifdef EGRATUITOUS
+        [EGRATUITOUS] = "EGRATUITOUS",
+    #endif
+    #ifdef EGREGIOUS
+        [EGREGIOUS] = "EGREGIOUS",
     #endif
     #ifdef EHOSTDOWN
         [EHOSTDOWN] = "EHOSTDOWN",
@@ -406,6 +451,9 @@
     #ifdef EIDRM
         [EIDRM] = "EIDRM",
     #endif
+    #ifdef EIEIO
+        [EIEIO] = "EIEIO",
+    #endif
     #ifdef EILSEQ
         [EILSEQ] = "EILSEQ",
     #endif
@@ -477,6 +525,84 @@
     #ifdef EKEEPLOOKING
         [EKEEPLOOKING] = "EKEEPLOOKING",
     #endif
+    #ifdef EKERN_ABORTED
+        [EKERN_ABORTED] = "EKERN_ABORTED",
+    #endif
+    #ifdef EKERN_FAILURE
+        [EKERN_FAILURE] = "EKERN_FAILURE",
+    #endif
+    #ifdef EKERN_INTERRUPTED
+        [EKERN_INTERRUPTED] = "EKERN_INTERRUPTED",
+    #endif
+    #ifdef EKERN_INVALID_ADDRESS
+        [EKERN_INVALID_ADDRESS] = "EKERN_INVALID_ADDRESS",
+    #endif
+    #ifdef EKERN_INVALID_ARGUMENT
+        [EKERN_INVALID_ARGUMENT] = "EKERN_INVALID_ARGUMENT",
+    #endif
+    #ifdef EKERN_INVALID_CAPABILITY
+        [EKERN_INVALID_CAPABILITY] = "EKERN_INVALID_CAPABILITY",
+    #endif
+    #ifdef EKERN_INVALID_HOST
+        [EKERN_INVALID_HOST] = "EKERN_INVALID_HOST",
+    #endif
+    #ifdef EKERN_INVALID_NAME
+        [EKERN_INVALID_NAME] = "EKERN_INVALID_NAME",
+    #endif
+    #ifdef EKERN_INVALID_RIGHT
+        [EKERN_INVALID_RIGHT] = "EKERN_INVALID_RIGHT",
+    #endif
+    #ifdef EKERN_INVALID_TASK
+        [EKERN_INVALID_TASK] = "EKERN_INVALID_TASK",
+    #endif
+    #ifdef EKERN_INVALID_VALUE
+        [EKERN_INVALID_VALUE] = "EKERN_INVALID_VALUE",
+    #endif
+    #ifdef EKERN_MEMORY_ERROR
+        [EKERN_MEMORY_ERROR] = "EKERN_MEMORY_ERROR",
+    #endif
+    #ifdef EKERN_MEMORY_FAILURE
+        [EKERN_MEMORY_FAILURE] = "EKERN_MEMORY_FAILURE",
+    #endif
+    #ifdef EKERN_MEMORY_PRESENT
+        [EKERN_MEMORY_PRESENT] = "EKERN_MEMORY_PRESENT",
+    #endif
+    #ifdef EKERN_NAME_EXISTS
+        [EKERN_NAME_EXISTS] = "EKERN_NAME_EXISTS",
+    #endif
+    #ifdef EKERN_NOT_IN_SET
+        [EKERN_NOT_IN_SET] = "EKERN_NOT_IN_SET",
+    #endif
+    #ifdef EKERN_NOT_RECEIVER
+        [EKERN_NOT_RECEIVER] = "EKERN_NOT_RECEIVER",
+    #endif
+    #ifdef EKERN_NO_ACCESS
+        [EKERN_NO_ACCESS] = "EKERN_NO_ACCESS",
+    #endif
+    #ifdef EKERN_NO_SPACE
+        [EKERN_NO_SPACE] = "EKERN_NO_SPACE",
+    #endif
+    #ifdef EKERN_PROTECTION_FAILURE
+        [EKERN_PROTECTION_FAILURE] = "EKERN_PROTECTION_FAILURE",
+    #endif
+    #ifdef EKERN_RESOURCE_SHORTAGE
+        [EKERN_RESOURCE_SHORTAGE] = "EKERN_RESOURCE_SHORTAGE",
+    #endif
+    #ifdef EKERN_RIGHT_EXISTS
+        [EKERN_RIGHT_EXISTS] = "EKERN_RIGHT_EXISTS",
+    #endif
+    #ifdef EKERN_TERMINATED
+        [EKERN_TERMINATED] = "EKERN_TERMINATED",
+    #endif
+    #ifdef EKERN_TIMEDOUT
+        [EKERN_TIMEDOUT] = "EKERN_TIMEDOUT",
+    #endif
+    #ifdef EKERN_UREFS_OVERFLOW
+        [EKERN_UREFS_OVERFLOW] = "EKERN_UREFS_OVERFLOW",
+    #endif
+    #ifdef EKERN_WRITE_PROTECTION_FAILURE
+        [EKERN_WRITE_PROTECTION_FAILURE] = "EKERN_WRITE_PROTECTION_FAILURE",
+    #endif
     #ifdef EKEYEXPIRED
         [EKEYEXPIRED] = "EKEYEXPIRED",
     #endif
@@ -531,6 +657,90 @@
     #ifdef ELOOP
         [ELOOP] = "ELOOP",
     #endif
+    #ifdef EMACH_RCV_BODY_ERROR
+        [EMACH_RCV_BODY_ERROR] = "EMACH_RCV_BODY_ERROR",
+    #endif
+    #ifdef EMACH_RCV_HEADER_ERROR
+        [EMACH_RCV_HEADER_ERROR] = "EMACH_RCV_HEADER_ERROR",
+    #endif
+    #ifdef EMACH_RCV_INTERRUPTED
+        [EMACH_RCV_INTERRUPTED] = "EMACH_RCV_INTERRUPTED",
+    #endif
+    #ifdef EMACH_RCV_INVALID_DATA
+        [EMACH_RCV_INVALID_DATA] = "EMACH_RCV_INVALID_DATA",
+    #endif
+    #ifdef EMACH_RCV_INVALID_NAME
+        [EMACH_RCV_INVALID_NAME] = "EMACH_RCV_INVALID_NAME",
+    #endif
+    #ifdef EMACH_RCV_INVALID_NOTIFY
+        [EMACH_RCV_INVALID_NOTIFY] = "EMACH_RCV_INVALID_NOTIFY",
+    #endif
+    #ifdef EMACH_RCV_IN_PROGRESS
+        [EMACH_RCV_IN_PROGRESS] = "EMACH_RCV_IN_PROGRESS",
+    #endif
+    #ifdef EMACH_RCV_IN_SET
+        [EMACH_RCV_IN_SET] = "EMACH_RCV_IN_SET",
+    #endif
+    #ifdef EMACH_RCV_PORT_CHANGED
+        [EMACH_RCV_PORT_CHANGED] = "EMACH_RCV_PORT_CHANGED",
+    #endif
+    #ifdef EMACH_RCV_PORT_DIED
+        [EMACH_RCV_PORT_DIED] = "EMACH_RCV_PORT_DIED",
+    #endif
+    #ifdef EMACH_RCV_TIMED_OUT
+        [EMACH_RCV_TIMED_OUT] = "EMACH_RCV_TIMED_OUT",
+    #endif
+    #ifdef EMACH_RCV_TOO_LARGE
+        [EMACH_RCV_TOO_LARGE] = "EMACH_RCV_TOO_LARGE",
+    #endif
+    #ifdef EMACH_SEND_INTERRUPTED
+        [EMACH_SEND_INTERRUPTED] = "EMACH_SEND_INTERRUPTED",
+    #endif
+    #ifdef EMACH_SEND_INVALID_DATA
+        [EMACH_SEND_INVALID_DATA] = "EMACH_SEND_INVALID_DATA",
+    #endif
+    #ifdef EMACH_SEND_INVALID_DEST
+        [EMACH_SEND_INVALID_DEST] = "EMACH_SEND_INVALID_DEST",
+    #endif
+    #ifdef EMACH_SEND_INVALID_HEADER
+        [EMACH_SEND_INVALID_HEADER] = "EMACH_SEND_INVALID_HEADER",
+    #endif
+    #ifdef EMACH_SEND_INVALID_MEMORY
+        [EMACH_SEND_INVALID_MEMORY] = "EMACH_SEND_INVALID_MEMORY",
+    #endif
+    #ifdef EMACH_SEND_INVALID_NOTIFY
+        [EMACH_SEND_INVALID_NOTIFY] = "EMACH_SEND_INVALID_NOTIFY",
+    #endif
+    #ifdef EMACH_SEND_INVALID_REPLY
+        [EMACH_SEND_INVALID_REPLY] = "EMACH_SEND_INVALID_REPLY",
+    #endif
+    #ifdef EMACH_SEND_INVALID_RIGHT
+        [EMACH_SEND_INVALID_RIGHT] = "EMACH_SEND_INVALID_RIGHT",
+    #endif
+    #ifdef EMACH_SEND_INVALID_TYPE
+        [EMACH_SEND_INVALID_TYPE] = "EMACH_SEND_INVALID_TYPE",
+    #endif
+    #ifdef EMACH_SEND_IN_PROGRESS
+        [EMACH_SEND_IN_PROGRESS] = "EMACH_SEND_IN_PROGRESS",
+    #endif
+    #ifdef EMACH_SEND_MSG_TOO_SMALL
+        [EMACH_SEND_MSG_TOO_SMALL] = "EMACH_SEND_MSG_TOO_SMALL",
+    #endif
+    #ifdef EMACH_SEND_NOTIFY_IN_PROGRESS
+        [EMACH_SEND_NOTIFY_IN_PROGRESS] = "EMACH_SEND_NOTIFY_IN_PROGRESS",
+    #endif
+    #ifdef EMACH_SEND_NO_BUFFER
+        [EMACH_SEND_NO_BUFFER] = "EMACH_SEND_NO_BUFFER",
+    #endif
+    #ifdef EMACH_SEND_NO_NOTIFY
+        [EMACH_SEND_NO_NOTIFY] = "EMACH_SEND_NO_NOTIFY",
+    #endif
+    #ifdef EMACH_SEND_TIMED_OUT
+        [EMACH_SEND_TIMED_OUT] = "EMACH_SEND_TIMED_OUT",
+    #endif
+    #ifdef EMACH_SEND_WILL_NOTIFY
+        [EMACH_SEND_WILL_NOTIFY] = "EMACH_SEND_WILL_NOTIFY",
+    #endif
     #ifdef EMAXSOCKETSREACHED
         [EMAXSOCKETSREACHED] = "EMAXSOCKETSREACHED",
     #endif
@@ -542,6 +752,36 @@
     #endif
     #ifdef EMFILE
         [EMFILE] = "EMFILE",
+    #endif
+    #ifdef EMIG_ARRAY_TOO_LARGE
+        [EMIG_ARRAY_TOO_LARGE] = "EMIG_ARRAY_TOO_LARGE",
+    #endif
+    #ifdef EMIG_BAD_ARGUMENTS
+        [EMIG_BAD_ARGUMENTS] = "EMIG_BAD_ARGUMENTS",
+    #endif
+    #ifdef EMIG_BAD_ID
+        [EMIG_BAD_ID] = "EMIG_BAD_ID",
+    #endif
+    #ifdef EMIG_DESTROY_REQUEST
+        [EMIG_DESTROY_REQUEST] = "EMIG_DESTROY_REQUEST",
+    #endif
+    #ifdef EMIG_EXCEPTION
+        [EMIG_EXCEPTION] = "EMIG_EXCEPTION",
+    #endif
+    #ifdef EMIG_NO_REPLY
+        [EMIG_NO_REPLY] = "EMIG_NO_REPLY",
+    #endif
+    #ifdef EMIG_REMOTE_ERROR
+        [EMIG_REMOTE_ERROR] = "EMIG_REMOTE_ERROR",
+    #endif
+    #ifdef EMIG_REPLY_MISMATCH
+        [EMIG_REPLY_MISMATCH] = "EMIG_REPLY_MISMATCH",
+    #endif
+    #ifdef EMIG_SERVER_DIED
+        [EMIG_SERVER_DIED] = "EMIG_SERVER_DIED",
+    #endif
+    #ifdef EMIG_TYPE_ERROR
+        [EMIG_TYPE_ERROR] = "EMIG_TYPE_ERROR",
     #endif
     #ifdef EMISSED
         [EMISSED] = "EMISSED",

@@ -67,6 +67,9 @@
     #ifdef EAUTH
         case EAUTH: return "EAUTH";
     #endif
+    #ifdef EBACKGROUND
+        case EBACKGROUND: return "EBACKGROUND";
+    #endif
     #ifdef EBADARCH
         case EBADARCH: return "EBADARCH";
     #endif
@@ -210,6 +213,9 @@
     #ifdef ECVPERORR
         case ECVPERORR: return "ECVPERORR";
     #endif
+    #ifdef ED
+        case ED: return "ED";
+    #endif
     #ifdef EDATALESS
         case EDATALESS: return "EDATALESS";
     #endif
@@ -237,6 +243,9 @@
     #endif
     #ifdef EDEVERR
         case EDEVERR: return "EDEVERR";
+    #endif
+    #ifdef EDIED
+        case EDIED: return "EDIED";
     #endif
     #ifdef EDIRIOCTL
         case EDIRIOCTL: return "EDIRIOCTL";
@@ -298,6 +307,36 @@
     #ifdef EDUPTOOMANYCPUS
         case EDUPTOOMANYCPUS: return "EDUPTOOMANYCPUS";
     #endif
+    #ifdef ED_ALREADY_OPEN
+        case ED_ALREADY_OPEN: return "ED_ALREADY_OPEN";
+    #endif
+    #ifdef ED_DEVICE_DOWN
+        case ED_DEVICE_DOWN: return "ED_DEVICE_DOWN";
+    #endif
+    #ifdef ED_INVALID_OPERATION
+        case ED_INVALID_OPERATION: return "ED_INVALID_OPERATION";
+    #endif
+    #ifdef ED_INVALID_RECNUM
+        case ED_INVALID_RECNUM: return "ED_INVALID_RECNUM";
+    #endif
+    #ifdef ED_INVALID_SIZE
+        case ED_INVALID_SIZE: return "ED_INVALID_SIZE";
+    #endif
+    #ifdef ED_IO_ERROR
+        case ED_IO_ERROR: return "ED_IO_ERROR";
+    #endif
+    #ifdef ED_NO_MEMORY
+        case ED_NO_MEMORY: return "ED_NO_MEMORY";
+    #endif
+    #ifdef ED_NO_SUCH_DEVICE
+        case ED_NO_SUCH_DEVICE: return "ED_NO_SUCH_DEVICE";
+    #endif
+    #ifdef ED_READ_ONLY
+        case ED_READ_ONLY: return "ED_READ_ONLY";
+    #endif
+    #ifdef ED_WOULD_BLOCK
+        case ED_WOULD_BLOCK: return "ED_WOULD_BLOCK";
+    #endif
     #ifdef EENDIAN
         case EENDIAN: return "EENDIAN";
     #endif
@@ -330,6 +369,12 @@
     #endif
     #ifdef EGENERIC
         case EGENERIC: return "EGENERIC";
+    #endif
+    #ifdef EGRATUITOUS
+        case EGRATUITOUS: return "EGRATUITOUS";
+    #endif
+    #ifdef EGREGIOUS
+        case EGREGIOUS: return "EGREGIOUS";
     #endif
     #ifdef EHOSTDOWN
         case EHOSTDOWN: return "EHOSTDOWN";
@@ -406,6 +451,9 @@
     #ifdef EIDRM
         case EIDRM: return "EIDRM";
     #endif
+    #ifdef EIEIO
+        case EIEIO: return "EIEIO";
+    #endif
     #ifdef EILSEQ
         case EILSEQ: return "EILSEQ";
     #endif
@@ -477,6 +525,84 @@
     #ifdef EKEEPLOOKING
         case EKEEPLOOKING: return "EKEEPLOOKING";
     #endif
+    #ifdef EKERN_ABORTED
+        case EKERN_ABORTED: return "EKERN_ABORTED";
+    #endif
+    #ifdef EKERN_FAILURE
+        case EKERN_FAILURE: return "EKERN_FAILURE";
+    #endif
+    #ifdef EKERN_INTERRUPTED
+        case EKERN_INTERRUPTED: return "EKERN_INTERRUPTED";
+    #endif
+    #ifdef EKERN_INVALID_ADDRESS
+        case EKERN_INVALID_ADDRESS: return "EKERN_INVALID_ADDRESS";
+    #endif
+    #ifdef EKERN_INVALID_ARGUMENT
+        case EKERN_INVALID_ARGUMENT: return "EKERN_INVALID_ARGUMENT";
+    #endif
+    #ifdef EKERN_INVALID_CAPABILITY
+        case EKERN_INVALID_CAPABILITY: return "EKERN_INVALID_CAPABILITY";
+    #endif
+    #ifdef EKERN_INVALID_HOST
+        case EKERN_INVALID_HOST: return "EKERN_INVALID_HOST";
+    #endif
+    #ifdef EKERN_INVALID_NAME
+        case EKERN_INVALID_NAME: return "EKERN_INVALID_NAME";
+    #endif
+    #ifdef EKERN_INVALID_RIGHT
+        case EKERN_INVALID_RIGHT: return "EKERN_INVALID_RIGHT";
+    #endif
+    #ifdef EKERN_INVALID_TASK
+        case EKERN_INVALID_TASK: return "EKERN_INVALID_TASK";
+    #endif
+    #ifdef EKERN_INVALID_VALUE
+        case EKERN_INVALID_VALUE: return "EKERN_INVALID_VALUE";
+    #endif
+    #ifdef EKERN_MEMORY_ERROR
+        case EKERN_MEMORY_ERROR: return "EKERN_MEMORY_ERROR";
+    #endif
+    #ifdef EKERN_MEMORY_FAILURE
+        case EKERN_MEMORY_FAILURE: return "EKERN_MEMORY_FAILURE";
+    #endif
+    #ifdef EKERN_MEMORY_PRESENT
+        case EKERN_MEMORY_PRESENT: return "EKERN_MEMORY_PRESENT";
+    #endif
+    #ifdef EKERN_NAME_EXISTS
+        case EKERN_NAME_EXISTS: return "EKERN_NAME_EXISTS";
+    #endif
+    #ifdef EKERN_NOT_IN_SET
+        case EKERN_NOT_IN_SET: return "EKERN_NOT_IN_SET";
+    #endif
+    #ifdef EKERN_NOT_RECEIVER
+        case EKERN_NOT_RECEIVER: return "EKERN_NOT_RECEIVER";
+    #endif
+    #ifdef EKERN_NO_ACCESS
+        case EKERN_NO_ACCESS: return "EKERN_NO_ACCESS";
+    #endif
+    #ifdef EKERN_NO_SPACE
+        case EKERN_NO_SPACE: return "EKERN_NO_SPACE";
+    #endif
+    #ifdef EKERN_PROTECTION_FAILURE
+        case EKERN_PROTECTION_FAILURE: return "EKERN_PROTECTION_FAILURE";
+    #endif
+    #ifdef EKERN_RESOURCE_SHORTAGE
+        case EKERN_RESOURCE_SHORTAGE: return "EKERN_RESOURCE_SHORTAGE";
+    #endif
+    #ifdef EKERN_RIGHT_EXISTS
+        case EKERN_RIGHT_EXISTS: return "EKERN_RIGHT_EXISTS";
+    #endif
+    #ifdef EKERN_TERMINATED
+        case EKERN_TERMINATED: return "EKERN_TERMINATED";
+    #endif
+    #ifdef EKERN_TIMEDOUT
+        case EKERN_TIMEDOUT: return "EKERN_TIMEDOUT";
+    #endif
+    #ifdef EKERN_UREFS_OVERFLOW
+        case EKERN_UREFS_OVERFLOW: return "EKERN_UREFS_OVERFLOW";
+    #endif
+    #ifdef EKERN_WRITE_PROTECTION_FAILURE
+        case EKERN_WRITE_PROTECTION_FAILURE: return "EKERN_WRITE_PROTECTION_FAILURE";
+    #endif
     #ifdef EKEYEXPIRED
         case EKEYEXPIRED: return "EKEYEXPIRED";
     #endif
@@ -531,6 +657,90 @@
     #ifdef ELOOP
         case ELOOP: return "ELOOP";
     #endif
+    #ifdef EMACH_RCV_BODY_ERROR
+        case EMACH_RCV_BODY_ERROR: return "EMACH_RCV_BODY_ERROR";
+    #endif
+    #ifdef EMACH_RCV_HEADER_ERROR
+        case EMACH_RCV_HEADER_ERROR: return "EMACH_RCV_HEADER_ERROR";
+    #endif
+    #ifdef EMACH_RCV_INTERRUPTED
+        case EMACH_RCV_INTERRUPTED: return "EMACH_RCV_INTERRUPTED";
+    #endif
+    #ifdef EMACH_RCV_INVALID_DATA
+        case EMACH_RCV_INVALID_DATA: return "EMACH_RCV_INVALID_DATA";
+    #endif
+    #ifdef EMACH_RCV_INVALID_NAME
+        case EMACH_RCV_INVALID_NAME: return "EMACH_RCV_INVALID_NAME";
+    #endif
+    #ifdef EMACH_RCV_INVALID_NOTIFY
+        case EMACH_RCV_INVALID_NOTIFY: return "EMACH_RCV_INVALID_NOTIFY";
+    #endif
+    #ifdef EMACH_RCV_IN_PROGRESS
+        case EMACH_RCV_IN_PROGRESS: return "EMACH_RCV_IN_PROGRESS";
+    #endif
+    #ifdef EMACH_RCV_IN_SET
+        case EMACH_RCV_IN_SET: return "EMACH_RCV_IN_SET";
+    #endif
+    #ifdef EMACH_RCV_PORT_CHANGED
+        case EMACH_RCV_PORT_CHANGED: return "EMACH_RCV_PORT_CHANGED";
+    #endif
+    #ifdef EMACH_RCV_PORT_DIED
+        case EMACH_RCV_PORT_DIED: return "EMACH_RCV_PORT_DIED";
+    #endif
+    #ifdef EMACH_RCV_TIMED_OUT
+        case EMACH_RCV_TIMED_OUT: return "EMACH_RCV_TIMED_OUT";
+    #endif
+    #ifdef EMACH_RCV_TOO_LARGE
+        case EMACH_RCV_TOO_LARGE: return "EMACH_RCV_TOO_LARGE";
+    #endif
+    #ifdef EMACH_SEND_INTERRUPTED
+        case EMACH_SEND_INTERRUPTED: return "EMACH_SEND_INTERRUPTED";
+    #endif
+    #ifdef EMACH_SEND_INVALID_DATA
+        case EMACH_SEND_INVALID_DATA: return "EMACH_SEND_INVALID_DATA";
+    #endif
+    #ifdef EMACH_SEND_INVALID_DEST
+        case EMACH_SEND_INVALID_DEST: return "EMACH_SEND_INVALID_DEST";
+    #endif
+    #ifdef EMACH_SEND_INVALID_HEADER
+        case EMACH_SEND_INVALID_HEADER: return "EMACH_SEND_INVALID_HEADER";
+    #endif
+    #ifdef EMACH_SEND_INVALID_MEMORY
+        case EMACH_SEND_INVALID_MEMORY: return "EMACH_SEND_INVALID_MEMORY";
+    #endif
+    #ifdef EMACH_SEND_INVALID_NOTIFY
+        case EMACH_SEND_INVALID_NOTIFY: return "EMACH_SEND_INVALID_NOTIFY";
+    #endif
+    #ifdef EMACH_SEND_INVALID_REPLY
+        case EMACH_SEND_INVALID_REPLY: return "EMACH_SEND_INVALID_REPLY";
+    #endif
+    #ifdef EMACH_SEND_INVALID_RIGHT
+        case EMACH_SEND_INVALID_RIGHT: return "EMACH_SEND_INVALID_RIGHT";
+    #endif
+    #ifdef EMACH_SEND_INVALID_TYPE
+        case EMACH_SEND_INVALID_TYPE: return "EMACH_SEND_INVALID_TYPE";
+    #endif
+    #ifdef EMACH_SEND_IN_PROGRESS
+        case EMACH_SEND_IN_PROGRESS: return "EMACH_SEND_IN_PROGRESS";
+    #endif
+    #ifdef EMACH_SEND_MSG_TOO_SMALL
+        case EMACH_SEND_MSG_TOO_SMALL: return "EMACH_SEND_MSG_TOO_SMALL";
+    #endif
+    #ifdef EMACH_SEND_NOTIFY_IN_PROGRESS
+        case EMACH_SEND_NOTIFY_IN_PROGRESS: return "EMACH_SEND_NOTIFY_IN_PROGRESS";
+    #endif
+    #ifdef EMACH_SEND_NO_BUFFER
+        case EMACH_SEND_NO_BUFFER: return "EMACH_SEND_NO_BUFFER";
+    #endif
+    #ifdef EMACH_SEND_NO_NOTIFY
+        case EMACH_SEND_NO_NOTIFY: return "EMACH_SEND_NO_NOTIFY";
+    #endif
+    #ifdef EMACH_SEND_TIMED_OUT
+        case EMACH_SEND_TIMED_OUT: return "EMACH_SEND_TIMED_OUT";
+    #endif
+    #ifdef EMACH_SEND_WILL_NOTIFY
+        case EMACH_SEND_WILL_NOTIFY: return "EMACH_SEND_WILL_NOTIFY";
+    #endif
     #ifdef EMAXSOCKETSREACHED
         case EMAXSOCKETSREACHED: return "EMAXSOCKETSREACHED";
     #endif
@@ -542,6 +752,36 @@
     #endif
     #ifdef EMFILE
         case EMFILE: return "EMFILE";
+    #endif
+    #ifdef EMIG_ARRAY_TOO_LARGE
+        case EMIG_ARRAY_TOO_LARGE: return "EMIG_ARRAY_TOO_LARGE";
+    #endif
+    #ifdef EMIG_BAD_ARGUMENTS
+        case EMIG_BAD_ARGUMENTS: return "EMIG_BAD_ARGUMENTS";
+    #endif
+    #ifdef EMIG_BAD_ID
+        case EMIG_BAD_ID: return "EMIG_BAD_ID";
+    #endif
+    #ifdef EMIG_DESTROY_REQUEST
+        case EMIG_DESTROY_REQUEST: return "EMIG_DESTROY_REQUEST";
+    #endif
+    #ifdef EMIG_EXCEPTION
+        case EMIG_EXCEPTION: return "EMIG_EXCEPTION";
+    #endif
+    #ifdef EMIG_NO_REPLY
+        case EMIG_NO_REPLY: return "EMIG_NO_REPLY";
+    #endif
+    #ifdef EMIG_REMOTE_ERROR
+        case EMIG_REMOTE_ERROR: return "EMIG_REMOTE_ERROR";
+    #endif
+    #ifdef EMIG_REPLY_MISMATCH
+        case EMIG_REPLY_MISMATCH: return "EMIG_REPLY_MISMATCH";
+    #endif
+    #ifdef EMIG_SERVER_DIED
+        case EMIG_SERVER_DIED: return "EMIG_SERVER_DIED";
+    #endif
+    #ifdef EMIG_TYPE_ERROR
+        case EMIG_TYPE_ERROR: return "EMIG_TYPE_ERROR";
     #endif
     #ifdef EMISSED
         case EMISSED: return "EMISSED";

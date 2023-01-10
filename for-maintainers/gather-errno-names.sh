@@ -93,6 +93,15 @@ haiku()
     github haiku/haiku/master/headers/build/os/support/Errors.h | extract_c
 }
 
+hurd()
+{
+    # GNU's glibc seems like the most canonical source on how
+    # the error codes in GNU's Hurd translate to errno names:
+
+    get 'https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=sysdeps/mach/hurd/bits/errno.h;hb=HEAD' \
+    | extract_c
+}
+
 zos()
 {
     latest_zos_documentation='https://www.ibm.com/docs/en/zos/latest?topic='
@@ -229,6 +238,7 @@ all()
         dragonflybsd \
         freebsd \
         haiku \
+        hurd \
         hpux \
         illumos \
         irix \
