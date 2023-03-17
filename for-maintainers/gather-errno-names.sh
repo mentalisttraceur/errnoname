@@ -102,6 +102,12 @@ hurd()
     | extract_c
 }
 
+redox()
+{
+    get 'https://gitlab.redox-os.org/redox-os/relibc/-/raw/master/src/header/errno/mod.rs' \
+    | grep 'pub const E' | cut -d' ' -f3 | cut -d: -f1
+}
+
 zos()
 {
     latest_zos_documentation='https://www.ibm.com/docs/en/zos/latest?topic='
@@ -249,6 +255,7 @@ all()
         openserver \
         opensolaris \
         qnx \
+        redox \
         solaris \
         tru64 \
         ultrix \
