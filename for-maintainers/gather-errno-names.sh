@@ -268,4 +268,4 @@ all()
 
 for argument
 do execute_with_prefixed_errors "$argument" &
-done | sort -u
+done | LC_ALL=C sort -u
