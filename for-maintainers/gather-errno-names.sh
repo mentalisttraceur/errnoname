@@ -73,7 +73,7 @@ illumos()
 
 opensolaris()
 {
-    github nxmirrors/onnv/master/usr/src/uts/common/sys/errno.h | extract_c
+    github kofemann/opensolaris/master/usr/src/uts/common/sys/errno.h | extract_c
 }
 
 cygwin()
