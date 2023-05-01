@@ -373,6 +373,9 @@
     #ifdef EGRATUITOUS
         [EGRATUITOUS] = "EGRATUITOUS",
     #endif
+    #ifdef EGRBUSY
+        [EGRBUSY] = "EGRBUSY",
+    #endif
     #ifdef EGREGIOUS
         [EGREGIOUS] = "EGREGIOUS",
     #endif
@@ -459,6 +462,9 @@
     #endif
     #ifdef EINIT
         [EINIT] = "EINIT",
+    #endif
+    #ifdef EINODETABLEFULL
+        [EINODETABLEFULL] = "EINODETABLEFULL",
     #endif
     #ifdef EINPROG
         #if !defined(EINPROGRESS) || EINPROG != EINPROGRESS
@@ -927,6 +933,12 @@
     #ifdef ENOEXEC
         [ENOEXEC] = "ENOEXEC",
     #endif
+    #ifdef ENOFPA
+        [ENOFPA] = "ENOFPA",
+    #endif
+    #ifdef ENOGR
+        [ENOGR] = "ENOGR",
+    #endif
     #ifdef ENOGRACE
         [ENOGRACE] = "ENOGRACE",
     #endif
@@ -1302,6 +1314,9 @@
     #endif
     #ifdef ETERM
         [ETERM] = "ETERM",
+    #endif
+    #ifdef ETEXTABLEFULL
+        [ETEXTABLEFULL] = "ETEXTABLEFULL",
     #endif
     #ifdef ETIME
         [ETIME] = "ETIME",

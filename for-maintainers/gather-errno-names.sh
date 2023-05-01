@@ -210,11 +210,16 @@ hpux()
 
 irix()
 {
-    # SGI no longer exists and IRIX is discontinued but was
-    # not open-sourced, so we use a public manpage mirror:
+    # SGI no longer exists and IRIX is discontinued so we
+    # use a GitHub mirror of the source (newest I found):
+    github JohnDTX/irix-3.x-src/main/sys/h/errno.h | extract_c &
 
-    get https://nixdoc.net/man-pages/IRIX/man2/intro.2.html \
-    | sed 's/\t/ /g; s/  */ /g' | grep '[1-9][0-9]*  *E' | cut -d' ' -f3
+    # These four errno show up on the public manpage mirror
+    # https://nixdoc.net/man-pages/IRIX/man2/intro.2.html
+    printf '%s\n' ECKPT
+    printf '%s\n' EFSCORRUPTED
+    printf '%s\n' ENFSREMOTE
+    printf '%s\n' EWRONGFS
 }
 
 ultrix()

@@ -387,6 +387,9 @@ char const * errnoname(int errno_)
     #ifdef EGRATUITOUS
         [EGRATUITOUS] = "EGRATUITOUS",
     #endif
+    #ifdef EGRBUSY
+        [EGRBUSY] = "EGRBUSY",
+    #endif
     #ifdef EGREGIOUS
         [EGREGIOUS] = "EGREGIOUS",
     #endif
@@ -473,6 +476,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EINIT
         [EINIT] = "EINIT",
+    #endif
+    #ifdef EINODETABLEFULL
+        [EINODETABLEFULL] = "EINODETABLEFULL",
     #endif
     #ifdef EINPROG
         #if !defined(EINPROGRESS) || EINPROG != EINPROGRESS
@@ -941,6 +947,12 @@ char const * errnoname(int errno_)
     #ifdef ENOEXEC
         [ENOEXEC] = "ENOEXEC",
     #endif
+    #ifdef ENOFPA
+        [ENOFPA] = "ENOFPA",
+    #endif
+    #ifdef ENOGR
+        [ENOGR] = "ENOGR",
+    #endif
     #ifdef ENOGRACE
         [ENOGRACE] = "ENOGRACE",
     #endif
@@ -1316,6 +1328,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ETERM
         [ETERM] = "ETERM",
+    #endif
+    #ifdef ETEXTABLEFULL
+        [ETEXTABLEFULL] = "ETEXTABLEFULL",
     #endif
     #ifdef ETIME
         [ETIME] = "ETIME",
@@ -1773,6 +1788,9 @@ char const * errnoname(int errno_)
     #ifdef EGRATUITOUS
         case EGRATUITOUS: return "EGRATUITOUS";
     #endif
+    #ifdef EGRBUSY
+        case EGRBUSY: return "EGRBUSY";
+    #endif
     #ifdef EGREGIOUS
         case EGREGIOUS: return "EGREGIOUS";
     #endif
@@ -1859,6 +1877,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EINIT
         case EINIT: return "EINIT";
+    #endif
+    #ifdef EINODETABLEFULL
+        case EINODETABLEFULL: return "EINODETABLEFULL";
     #endif
     #ifdef EINPROG
         #if !defined(EINPROGRESS) || EINPROG != EINPROGRESS
@@ -2327,6 +2348,12 @@ char const * errnoname(int errno_)
     #ifdef ENOEXEC
         case ENOEXEC: return "ENOEXEC";
     #endif
+    #ifdef ENOFPA
+        case ENOFPA: return "ENOFPA";
+    #endif
+    #ifdef ENOGR
+        case ENOGR: return "ENOGR";
+    #endif
     #ifdef ENOGRACE
         case ENOGRACE: return "ENOGRACE";
     #endif
@@ -2702,6 +2729,9 @@ char const * errnoname(int errno_)
     #endif
     #ifdef ETERM
         case ETERM: return "ETERM";
+    #endif
+    #ifdef ETEXTABLEFULL
+        case ETEXTABLEFULL: return "ETEXTABLEFULL";
     #endif
     #ifdef ETIME
         case ETIME: return "ETIME";
