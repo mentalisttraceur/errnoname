@@ -111,11 +111,17 @@ char const * errnoname(int errno_)
     #ifdef EBADFD
         [EBADFD] = "EBADFD",
     #endif
+    #ifdef EBADFILT
+        [EBADFILT] = "EBADFILT",
+    #endif
     #ifdef EBADFSYS
         [EBADFSYS] = "EBADFSYS",
     #endif
     #ifdef EBADHANDLE
         [EBADHANDLE] = "EBADHANDLE",
+    #endif
+    #ifdef EBADIOCTL
+        [EBADIOCTL] = "EBADIOCTL",
     #endif
     #ifdef EBADMACHO
         [EBADMACHO] = "EBADMACHO",
@@ -141,8 +147,14 @@ char const * errnoname(int errno_)
     #ifdef EBADRQC
         [EBADRQC] = "EBADRQC",
     #endif
+    #ifdef EBADRSPEC
+        [EBADRSPEC] = "EBADRSPEC",
+    #endif
     #ifdef EBADSLT
         [EBADSLT] = "EBADSLT",
+    #endif
+    #ifdef EBADTSPEC
+        [EBADTSPEC] = "EBADTSPEC",
     #endif
     #ifdef EBADTYPE
         [EBADTYPE] = "EBADTYPE",
@@ -150,8 +162,14 @@ char const * errnoname(int errno_)
     #ifdef EBADVER
         [EBADVER] = "EBADVER",
     #endif
+    #ifdef EBDHDL
+        [EBDHDL] = "EBDHDL",
+    #endif
     #ifdef EBFONT
         [EBFONT] = "EBFONT",
+    #endif
+    #ifdef EBUFSIZE
+        [EBUFSIZE] = "EBUFSIZE",
     #endif
     #ifdef EBUSY
         [EBUSY] = "EBUSY",
@@ -1512,11 +1530,17 @@ char const * errnoname(int errno_)
     #ifdef EBADFD
         case EBADFD: return "EBADFD";
     #endif
+    #ifdef EBADFILT
+        case EBADFILT: return "EBADFILT";
+    #endif
     #ifdef EBADFSYS
         case EBADFSYS: return "EBADFSYS";
     #endif
     #ifdef EBADHANDLE
         case EBADHANDLE: return "EBADHANDLE";
+    #endif
+    #ifdef EBADIOCTL
+        case EBADIOCTL: return "EBADIOCTL";
     #endif
     #ifdef EBADMACHO
         case EBADMACHO: return "EBADMACHO";
@@ -1542,8 +1566,14 @@ char const * errnoname(int errno_)
     #ifdef EBADRQC
         case EBADRQC: return "EBADRQC";
     #endif
+    #ifdef EBADRSPEC
+        case EBADRSPEC: return "EBADRSPEC";
+    #endif
     #ifdef EBADSLT
         case EBADSLT: return "EBADSLT";
+    #endif
+    #ifdef EBADTSPEC
+        case EBADTSPEC: return "EBADTSPEC";
     #endif
     #ifdef EBADTYPE
         case EBADTYPE: return "EBADTYPE";
@@ -1551,8 +1581,14 @@ char const * errnoname(int errno_)
     #ifdef EBADVER
         case EBADVER: return "EBADVER";
     #endif
+    #ifdef EBDHDL
+        case EBDHDL: return "EBDHDL";
+    #endif
     #ifdef EBFONT
         case EBFONT: return "EBFONT";
+    #endif
+    #ifdef EBUFSIZE
+        case EBUFSIZE: return "EBUFSIZE";
     #endif
     #ifdef EBUSY
         case EBUSY: return "EBUSY";

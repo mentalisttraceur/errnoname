@@ -97,11 +97,17 @@
     #ifdef EBADFD
         case EBADFD: return "EBADFD";
     #endif
+    #ifdef EBADFILT
+        case EBADFILT: return "EBADFILT";
+    #endif
     #ifdef EBADFSYS
         case EBADFSYS: return "EBADFSYS";
     #endif
     #ifdef EBADHANDLE
         case EBADHANDLE: return "EBADHANDLE";
+    #endif
+    #ifdef EBADIOCTL
+        case EBADIOCTL: return "EBADIOCTL";
     #endif
     #ifdef EBADMACHO
         case EBADMACHO: return "EBADMACHO";
@@ -127,8 +133,14 @@
     #ifdef EBADRQC
         case EBADRQC: return "EBADRQC";
     #endif
+    #ifdef EBADRSPEC
+        case EBADRSPEC: return "EBADRSPEC";
+    #endif
     #ifdef EBADSLT
         case EBADSLT: return "EBADSLT";
+    #endif
+    #ifdef EBADTSPEC
+        case EBADTSPEC: return "EBADTSPEC";
     #endif
     #ifdef EBADTYPE
         case EBADTYPE: return "EBADTYPE";
@@ -136,8 +148,14 @@
     #ifdef EBADVER
         case EBADVER: return "EBADVER";
     #endif
+    #ifdef EBDHDL
+        case EBDHDL: return "EBDHDL";
+    #endif
     #ifdef EBFONT
         case EBFONT: return "EBFONT";
+    #endif
+    #ifdef EBUFSIZE
+        case EBUFSIZE: return "EBUFSIZE";
     #endif
     #ifdef EBUSY
         case EBUSY: return "EBUSY";

@@ -85,6 +85,9 @@ minix()
 {
     github Stichting-MINIX-Research-Foundation/minix/master/sys/sys/errno.h \
     | extract_c | grep -v ELAST
+
+    # Alleged in https://www.mail-archive.com/bug-gnulib@gnu.org/msg39118.html
+    printf '%s\n' EBADIOCTL
 }
 
 haiku()
@@ -220,6 +223,13 @@ irix()
     printf '%s\n' EFSCORRUPTED
     printf '%s\n' ENFSREMOTE
     printf '%s\n' EWRONGFS
+
+    # Alleged in https://www.mail-archive.com/bug-gnulib@gnu.org/msg39118.html
+    printf '%s\n' EBADFILT
+    printf '%s\n' EBADRSPEC
+    printf '%s\n' EBADTSPEC
+    printf '%s\n' EBDHDL
+    printf '%s\n' EBUFSIZE
 }
 
 ultrix()

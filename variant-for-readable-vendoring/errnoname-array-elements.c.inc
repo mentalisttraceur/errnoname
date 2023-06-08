@@ -97,11 +97,17 @@
     #ifdef EBADFD
         [EBADFD] = "EBADFD",
     #endif
+    #ifdef EBADFILT
+        [EBADFILT] = "EBADFILT",
+    #endif
     #ifdef EBADFSYS
         [EBADFSYS] = "EBADFSYS",
     #endif
     #ifdef EBADHANDLE
         [EBADHANDLE] = "EBADHANDLE",
+    #endif
+    #ifdef EBADIOCTL
+        [EBADIOCTL] = "EBADIOCTL",
     #endif
     #ifdef EBADMACHO
         [EBADMACHO] = "EBADMACHO",
@@ -127,8 +133,14 @@
     #ifdef EBADRQC
         [EBADRQC] = "EBADRQC",
     #endif
+    #ifdef EBADRSPEC
+        [EBADRSPEC] = "EBADRSPEC",
+    #endif
     #ifdef EBADSLT
         [EBADSLT] = "EBADSLT",
+    #endif
+    #ifdef EBADTSPEC
+        [EBADTSPEC] = "EBADTSPEC",
     #endif
     #ifdef EBADTYPE
         [EBADTYPE] = "EBADTYPE",
@@ -136,8 +148,14 @@
     #ifdef EBADVER
         [EBADVER] = "EBADVER",
     #endif
+    #ifdef EBDHDL
+        [EBDHDL] = "EBDHDL",
+    #endif
     #ifdef EBFONT
         [EBFONT] = "EBFONT",
+    #endif
+    #ifdef EBUFSIZE
+        [EBUFSIZE] = "EBUFSIZE",
     #endif
     #ifdef EBUSY
         [EBUSY] = "EBUSY",
