@@ -155,7 +155,7 @@ qnx()
     errno_documentation=`
         get https://www.qnx.com/developers/docs/ \
         | grep -A1 'QNX Software Development Platform' \
-        | head -n2 | tail -n1 \
+        | head -n5 | tail -n1 \
         | sed 's/.*href="//; s/".*//' \
         | sed 's|#.*|com.qnx.doc.neutrino.lib_ref/topic/e/errno.html|' \
         | sed 's/^http:/https:/'
