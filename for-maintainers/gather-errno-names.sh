@@ -152,17 +152,21 @@ qnx()
     # BlackBerry does not seem to provide a stable URL to the latest
     # QNX errno list, so we have to find and extract it:
 
+    qnx_documentation='https://www.qnx.com/developers/docs'
     errno_documentation=`
-        get https://www.qnx.com/developers/docs/ \
-        | grep -A1 'QNX Software Development Platform' \
-        | head -n5 | tail -n1 \
+        get "$qnx_documentation/" \
+        | grep "$qnx_documentation/[1-9][0-9]*\.[0-9][0-9]*/#" \
+        | head -n1 \
         | sed 's/.*href="//; s/".*//' \
-        | sed 's|#.*|com.qnx.doc.neutrino.lib_ref/topic/e/errno.html|' \
-        | sed 's/^http:/https:/'
+        | sed 's|#.*|com.qnx.doc.neutrino.lib_ref/topic/e/errno.html|'
     ` &&
     get "$errno_documentation" \
     | grep 'keyword const">E' | sed 's/.*>E/E/; s/<.*//' \
     | grep -v EOK
+
+    # Removed from the documentation as of QNX 8.0,
+    # but present in 7.1 and maybe earlier:
+    printf '%s\n' ENOREMOTE
 }
 
 tru64()
