@@ -522,6 +522,9 @@
     #ifdef EIOCBQUEUED
         case EIOCBQUEUED: return "EIOCBQUEUED";
     #endif
+    #ifdef EIOCBRETRY
+        case EIOCBRETRY: return "EIOCBRETRY";
+    #endif
     #ifdef EIORESID
         case EIORESID: return "EIORESID";
     #endif

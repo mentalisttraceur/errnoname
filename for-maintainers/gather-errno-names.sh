@@ -37,6 +37,10 @@ linux()
     | extract_c &
     github torvalds/linux/master/include/uapi/asm-generic/errno.h \
     | extract_c
+
+    # Retry-based AIO was removed on 2013-05-08 in
+    # commit 41003a7bcfed1255032e1e7c7b487e505b22e298:
+    printf '%s\n' EIOCBRETRY
 }
 
 darwin()  # MacOS, iOS, etc.

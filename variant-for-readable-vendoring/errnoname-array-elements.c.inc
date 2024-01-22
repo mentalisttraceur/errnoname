@@ -522,6 +522,9 @@
     #ifdef EIOCBQUEUED
         [EIOCBQUEUED] = "EIOCBQUEUED",
     #endif
+    #ifdef EIOCBRETRY
+        [EIOCBRETRY] = "EIOCBRETRY",
+    #endif
     #ifdef EIORESID
         [EIORESID] = "EIORESID",
     #endif
