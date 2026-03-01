@@ -379,6 +379,11 @@
     #ifdef EFRAGS
         [EFRAGS] = "EFRAGS",
     #endif
+    #ifdef EFSBADCRC
+        #if !defined(EBADMSG) || EFSBADCRC != EBADMSG
+        [EFSBADCRC] = "EFSBADCRC",
+        #endif
+    #endif
     #ifdef EFSCORRUPTED
         [EFSCORRUPTED] = "EFSCORRUPTED",
     #endif

@@ -393,6 +393,11 @@ char const * errnoname(int errno_)
     #ifdef EFRAGS
         [EFRAGS] = "EFRAGS",
     #endif
+    #ifdef EFSBADCRC
+        #if !defined(EBADMSG) || EFSBADCRC != EBADMSG
+        [EFSBADCRC] = "EFSBADCRC",
+        #endif
+    #endif
     #ifdef EFSCORRUPTED
         [EFSCORRUPTED] = "EFSCORRUPTED",
     #endif
@@ -1814,6 +1819,11 @@ char const * errnoname(int errno_)
     #endif
     #ifdef EFRAGS
         case EFRAGS: return "EFRAGS";
+    #endif
+    #ifdef EFSBADCRC
+        #if !defined(EBADMSG) || EFSBADCRC != EBADMSG
+        case EFSBADCRC: return "EFSBADCRC";
+        #endif
     #endif
     #ifdef EFSCORRUPTED
         case EFSCORRUPTED: return "EFSCORRUPTED";
